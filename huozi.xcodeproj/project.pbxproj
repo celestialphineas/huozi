@@ -61,6 +61,7 @@
 		139BDE3520FED546007C3675 /* StoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3420FED546007C3675 /* StoryCard.swift */; };
 		139BDE3820FEE6B5007C3675 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */; };
 		139BDE3A20FF1A93007C3675 /* StoryCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3920FF1A93007C3675 /* StoryCardCell.swift */; };
+		139BDE3C20FF2D89007C3675 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3B20FF2D89007C3675 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,7 @@
 		139BDE3420FED546007C3675 /* StoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCard.swift; sourceTree = "<group>"; };
 		139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		139BDE3920FF1A93007C3675 /* StoryCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCell.swift; sourceTree = "<group>"; };
+		139BDE3B20FF2D89007C3675 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 				139BDE3420FED546007C3675 /* StoryCard.swift */,
 				139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */,
 				139BDE3920FF1A93007C3675 /* StoryCardCell.swift */,
+				139BDE3B20FF2D89007C3675 /* GradientView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				131066D920FDE40600B27090 /* HeroTransitionState.swift in Sources */,
 				131066D220FDE40600B27090 /* HeroTransition+CustomTransition.swift in Sources */,
 				131066AF20FDE40600B27090 /* HeroViewPropertyViewContext.swift in Sources */,
+				139BDE3C20FF2D89007C3675 /* GradientView.swift in Sources */,
 				131066B820FDE40600B27090 /* UIView+Hero.swift in Sources */,
 				131066BF20FDE40600B27090 /* HeroTargetState.swift in Sources */,
 				131066D720FDE40600B27090 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */,
