@@ -58,15 +58,16 @@
 		131066D720FDE40600B27090 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131066A920FDE40600B27090 /* HeroTransition+UIViewControllerTransitioningDelegate.swift */; };
 		131066D820FDE40600B27090 /* HeroTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131066AA20FDE40600B27090 /* HeroTransition.swift */; };
 		131066D920FDE40600B27090 /* HeroTransitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131066AB20FDE40600B27090 /* HeroTransitionState.swift */; };
+		139BDE3520FED546007C3675 /* StoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3420FED546007C3675 /* StoryCard.swift */; };
+		139BDE3820FEE6B5007C3675 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */; };
+		139BDE3A20FF1A93007C3675 /* StoryCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3920FF1A93007C3675 /* StoryCardCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1310666120FDE3E700B27090 /* huozi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = huozi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1310666420FDE3E700B27090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1310666620FDE3E700B27090 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1310666920FDE3E700B27090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1310666B20FDE3E800B27090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1310666E20FDE3E800B27090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1310667020FDE3E800B27090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1310667820FDE40600B27090 /* HeroAnimatorViewContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAnimatorViewContext.swift; sourceTree = "<group>"; };
 		1310667920FDE40600B27090 /* HeroCoreAnimationViewContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCoreAnimationViewContext.swift; sourceTree = "<group>"; };
@@ -115,12 +116,11 @@
 		131066A920FDE40600B27090 /* HeroTransition+UIViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HeroTransition+UIViewControllerTransitioningDelegate.swift"; sourceTree = "<group>"; };
 		131066AA20FDE40600B27090 /* HeroTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTransition.swift; sourceTree = "<group>"; };
 		131066AB20FDE40600B27090 /* HeroTransitionState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTransitionState.swift; sourceTree = "<group>"; };
-		131066DA20FDE46700B27090 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		131066DB20FDE46700B27090 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		131066DC20FDE47700B27090 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		131066DD20FDE47700B27090 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		131066DE20FDE47B00B27090 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		131066DF20FDE47B00B27090 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		139BDE2C20FDFA47007C3675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		139BDE2D20FDFA47007C3675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		139BDE3420FED546007C3675 /* StoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCard.swift; sourceTree = "<group>"; };
+		139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		139BDE3920FF1A93007C3675 /* StoryCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +154,7 @@
 		1310666320FDE3E700B27090 /* huozi */ = {
 			isa = PBXGroup;
 			children = (
+				139BDE3620FEE661007C3675 /* components */,
 				1310666420FDE3E700B27090 /* AppDelegate.swift */,
 				1310666620FDE3E700B27090 /* ViewController.swift */,
 				1310666820FDE3E700B27090 /* Main.storyboard */,
@@ -266,6 +267,16 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
+		139BDE3620FEE661007C3675 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				139BDE3420FED546007C3675 /* StoryCard.swift */,
+				139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */,
+				139BDE3920FF1A93007C3675 /* StoryCardCell.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -303,7 +314,7 @@
 			};
 			buildConfigurationList = 1310665C20FDE3E700B27090 /* Build configuration list for PBXProject "huozi" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
@@ -348,6 +359,7 @@
 				131066B420FDE40600B27090 /* CAMediaTimingFunction+Hero.swift in Sources */,
 				131066AD20FDE40600B27090 /* HeroCoreAnimationViewContext.swift in Sources */,
 				131066C320FDE40600B27090 /* HeroStringConvertible.swift in Sources */,
+				139BDE3820FEE6B5007C3675 /* HomeTableViewController.swift in Sources */,
 				131066AE20FDE40600B27090 /* HeroDefaultAnimator.swift in Sources */,
 				131066B220FDE40600B27090 /* Array+HeroModifier.swift in Sources */,
 				131066D620FDE40600B27090 /* HeroTransition+UITabBarControllerDelegate.swift in Sources */,
@@ -365,6 +377,7 @@
 				131066B720FDE40600B27090 /* UIKit+Hero.swift in Sources */,
 				131066D320FDE40600B27090 /* HeroTransition+Interactive.swift in Sources */,
 				131066CA20FDE40600B27090 /* ConditionalPreprocessor.swift in Sources */,
+				139BDE3A20FF1A93007C3675 /* StoryCardCell.swift in Sources */,
 				131066BB20FDE40600B27090 /* HeroContext.swift in Sources */,
 				131066C520FDE40600B27090 /* Nodes.swift in Sources */,
 				131066C620FDE40600B27090 /* Parser.swift in Sources */,
@@ -374,6 +387,7 @@
 				131066B320FDE40600B27090 /* CALayer+Hero.swift in Sources */,
 				131066BD20FDE40600B27090 /* HeroModifier.swift in Sources */,
 				131066C120FDE40600B27090 /* HeroViewControllerDelegate.swift in Sources */,
+				139BDE3520FED546007C3675 /* StoryCard.swift in Sources */,
 				131066B520FDE40600B27090 /* CG+Hero.swift in Sources */,
 				131066CD20FDE40600B27090 /* MatchPreprocessor.swift in Sources */,
 				131066D820FDE40600B27090 /* HeroTransition.swift in Sources */,
@@ -393,10 +407,7 @@
 		1310666820FDE3E700B27090 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1310666920FDE3E700B27090 /* Base */,
-				131066DA20FDE46700B27090 /* zh-Hans */,
-				131066DC20FDE47700B27090 /* zh-Hant */,
-				131066DE20FDE47B00B27090 /* en */,
+				139BDE2C20FDFA47007C3675 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -404,10 +415,7 @@
 		1310666D20FDE3E800B27090 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1310666E20FDE3E800B27090 /* Base */,
-				131066DB20FDE46700B27090 /* zh-Hans */,
-				131066DD20FDE47700B27090 /* zh-Hant */,
-				131066DF20FDE47B00B27090 /* en */,
+				139BDE2D20FDFA47007C3675 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
