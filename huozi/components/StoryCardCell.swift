@@ -9,7 +9,10 @@
 import UIKit
 
 @IBDesignable
-class StoryCardCell: UITableViewCell {
+class StoryCardCell: UITableViewCell, StoryCardContainable {
+    var backgroundImageName: String = "defaultStoryBackground"
+    var title: String = "无标题"
+    
     override func draw(_ rect: CGRect) {
         self.layer.masksToBounds = false
         super.draw(rect)

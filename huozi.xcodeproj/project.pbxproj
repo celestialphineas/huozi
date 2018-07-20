@@ -62,6 +62,8 @@
 		139BDE3820FEE6B5007C3675 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */; };
 		139BDE3A20FF1A93007C3675 /* StoryCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3920FF1A93007C3675 /* StoryCardCell.swift */; };
 		139BDE3C20FF2D89007C3675 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3B20FF2D89007C3675 /* GradientView.swift */; };
+		139BDE3E20FF4FF1007C3675 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3D20FF4FF1007C3675 /* DataHandler.swift */; };
+		139BDE4020FF613A007C3675 /* StoryCardContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3F20FF613A007C3675 /* StoryCardContainable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +125,8 @@
 		139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		139BDE3920FF1A93007C3675 /* StoryCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCell.swift; sourceTree = "<group>"; };
 		139BDE3B20FF2D89007C3675 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		139BDE3D20FF4FF1007C3675 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		139BDE3F20FF613A007C3675 /* StoryCardContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardContainable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				1310666B20FDE3E800B27090 /* Assets.xcassets */,
 				1310666D20FDE3E800B27090 /* LaunchScreen.storyboard */,
 				1310667020FDE3E800B27090 /* Info.plist */,
+				139BDE3D20FF4FF1007C3675 /* DataHandler.swift */,
 			);
 			path = huozi;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */,
 				139BDE3920FF1A93007C3675 /* StoryCardCell.swift */,
 				139BDE3B20FF2D89007C3675 /* GradientView.swift */,
+				139BDE3F20FF613A007C3675 /* StoryCardContainable.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 				131066C320FDE40600B27090 /* HeroStringConvertible.swift in Sources */,
 				139BDE3820FEE6B5007C3675 /* HomeTableViewController.swift in Sources */,
 				131066AE20FDE40600B27090 /* HeroDefaultAnimator.swift in Sources */,
+				139BDE4020FF613A007C3675 /* StoryCardContainable.swift in Sources */,
 				131066B220FDE40600B27090 /* Array+HeroModifier.swift in Sources */,
 				131066D620FDE40600B27090 /* HeroTransition+UITabBarControllerDelegate.swift in Sources */,
 				131066C020FDE40600B27090 /* HeroTypes.swift in Sources */,
@@ -375,6 +382,7 @@
 				1310666720FDE3E700B27090 /* ViewController.swift in Sources */,
 				131066AC20FDE40600B27090 /* HeroAnimatorViewContext.swift in Sources */,
 				131066CE20FDE40600B27090 /* SourcePreprocessor.swift in Sources */,
+				139BDE3E20FF4FF1007C3675 /* DataHandler.swift in Sources */,
 				131066C720FDE40600B27090 /* Regex.swift in Sources */,
 				131066B020FDE40600B27090 /* HeroDebugPlugin.swift in Sources */,
 				131066B120FDE40600B27090 /* HeroDebugView.swift in Sources */,

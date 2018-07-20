@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Foundation
 
 @IBDesignable
 class GradientView: UIView {
+    @IBInspectable var cornerRadius     : CGFloat = 0
     @IBInspectable var color1   : UIColor = UIColor.white
     @IBInspectable var color2   : UIColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0)
 
@@ -23,6 +25,7 @@ class GradientView: UIView {
                                      locations      : colorLocations)!
         let startPoint  = CGPoint.zero
         let endPoint    = CGPoint(x: 0, y: bounds.height)
+        self.layer.cornerRadius   = cornerRadius
         ctx.drawLinearGradient(gradient,
                                start: startPoint,
                                end: endPoint,
