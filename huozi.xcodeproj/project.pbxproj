@@ -57,12 +57,9 @@
 		131066D720FDE40600B27090 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131066A920FDE40600B27090 /* HeroTransition+UIViewControllerTransitioningDelegate.swift */; };
 		131066D820FDE40600B27090 /* HeroTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131066AA20FDE40600B27090 /* HeroTransition.swift */; };
 		131066D920FDE40600B27090 /* HeroTransitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131066AB20FDE40600B27090 /* HeroTransitionState.swift */; };
-		139BDE3520FED546007C3675 /* StoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3420FED546007C3675 /* StoryCard.swift */; };
-		139BDE3820FEE6B5007C3675 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */; };
-		139BDE3A20FF1A93007C3675 /* StoryCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3920FF1A93007C3675 /* StoryCardCell.swift */; };
-		139BDE3C20FF2D89007C3675 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3B20FF2D89007C3675 /* GradientView.swift */; };
-		139BDE3E20FF4FF1007C3675 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3D20FF4FF1007C3675 /* DataHandler.swift */; };
-		139BDE4020FF613A007C3675 /* StoryCardContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BDE3F20FF613A007C3675 /* StoryCardContainable.swift */; };
+		13C8D8C22101A4CF00E49384 /* StoryCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13C8D8C12101A4CF00E49384 /* StoryCard.xib */; };
+		13C8D8C42101A53200E49384 /* StoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8D8C32101A53200E49384 /* StoryCard.swift */; };
+		13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8D8C62101AA0B00E49384 /* DropShadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,12 +116,9 @@
 		131066AB20FDE40600B27090 /* HeroTransitionState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTransitionState.swift; sourceTree = "<group>"; };
 		139BDE2C20FDFA47007C3675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		139BDE2D20FDFA47007C3675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		139BDE3420FED546007C3675 /* StoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCard.swift; sourceTree = "<group>"; };
-		139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		139BDE3920FF1A93007C3675 /* StoryCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCell.swift; sourceTree = "<group>"; };
-		139BDE3B20FF2D89007C3675 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		139BDE3D20FF4FF1007C3675 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
-		139BDE3F20FF613A007C3675 /* StoryCardContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardContainable.swift; sourceTree = "<group>"; };
+		13C8D8C12101A4CF00E49384 /* StoryCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCard.xib; sourceTree = "<group>"; };
+		13C8D8C32101A53200E49384 /* StoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCard.swift; sourceTree = "<group>"; };
+		13C8D8C62101AA0B00E49384 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,13 +152,11 @@
 		1310666320FDE3E700B27090 /* huozi */ = {
 			isa = PBXGroup;
 			children = (
-				139BDE3620FEE661007C3675 /* components */,
-				1310666420FDE3E700B27090 /* AppDelegate.swift */,
-				1310666820FDE3E700B27090 /* Main.storyboard */,
+				13C8D8C02101913200E49384 /* storyboards */,
+				13C8D8BF2101911300E49384 /* utils */,
+				139BDE3620FEE661007C3675 /* views */,
 				1310666B20FDE3E800B27090 /* Assets.xcassets */,
-				1310666D20FDE3E800B27090 /* LaunchScreen.storyboard */,
 				1310667020FDE3E800B27090 /* Info.plist */,
-				139BDE3D20FF4FF1007C3675 /* DataHandler.swift */,
 			);
 			path = huozi;
 			sourceTree = "<group>";
@@ -173,8 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				1310667720FDE40600B27090 /* Animator */,
-				1310667C20FDE40600B27090 /* Debug Plugin */,
 				1310667F20FDE40600B27090 /* Extensions */,
+				1310667C20FDE40600B27090 /* Debug Plugin */,
 				1310668820FDE40600B27090 /* Hero.h */,
 				1310668920FDE40600B27090 /* HeroCompatible.swift */,
 				1310668A20FDE40600B27090 /* HeroContext.swift */,
@@ -271,16 +263,47 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
-		139BDE3620FEE661007C3675 /* components */ = {
+		139BDE3620FEE661007C3675 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				139BDE3420FED546007C3675 /* StoryCard.swift */,
-				139BDE3720FEE6B5007C3675 /* HomeTableViewController.swift */,
-				139BDE3920FF1A93007C3675 /* StoryCardCell.swift */,
-				139BDE3B20FF2D89007C3675 /* GradientView.swift */,
-				139BDE3F20FF613A007C3675 /* StoryCardContainable.swift */,
+				13C8D8C52101A9F900E49384 /* commons */,
+				13C8D8BE21018F7F00E49384 /* home */,
 			);
-			path = components;
+			path = views;
+			sourceTree = "<group>";
+		};
+		13C8D8BE21018F7F00E49384 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				13C8D8C12101A4CF00E49384 /* StoryCard.xib */,
+				13C8D8C32101A53200E49384 /* StoryCard.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		13C8D8BF2101911300E49384 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				1310666420FDE3E700B27090 /* AppDelegate.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		13C8D8C02101913200E49384 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1310666D20FDE3E800B27090 /* LaunchScreen.storyboard */,
+				1310666820FDE3E700B27090 /* Main.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		13C8D8C52101A9F900E49384 /* commons */ = {
+			isa = PBXGroup;
+			children = (
+				13C8D8C62101AA0B00E49384 /* DropShadow.swift */,
+			);
+			path = commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C8D8C22101A4CF00E49384 /* StoryCard.xib in Resources */,
 				131066C220FDE40600B27090 /* Info.plist in Resources */,
 				1310666F20FDE3E800B27090 /* LaunchScreen.storyboard in Resources */,
 				1310666C20FDE3E800B27090 /* Assets.xcassets in Resources */,
@@ -359,16 +383,14 @@
 				131066D920FDE40600B27090 /* HeroTransitionState.swift in Sources */,
 				131066D220FDE40600B27090 /* HeroTransition+CustomTransition.swift in Sources */,
 				131066AF20FDE40600B27090 /* HeroViewPropertyViewContext.swift in Sources */,
-				139BDE3C20FF2D89007C3675 /* GradientView.swift in Sources */,
 				131066B820FDE40600B27090 /* UIView+Hero.swift in Sources */,
 				131066BF20FDE40600B27090 /* HeroTargetState.swift in Sources */,
 				131066D720FDE40600B27090 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */,
+				13C8D8C42101A53200E49384 /* StoryCard.swift in Sources */,
 				131066B420FDE40600B27090 /* CAMediaTimingFunction+Hero.swift in Sources */,
 				131066AD20FDE40600B27090 /* HeroCoreAnimationViewContext.swift in Sources */,
 				131066C320FDE40600B27090 /* HeroStringConvertible.swift in Sources */,
-				139BDE3820FEE6B5007C3675 /* HomeTableViewController.swift in Sources */,
 				131066AE20FDE40600B27090 /* HeroDefaultAnimator.swift in Sources */,
-				139BDE4020FF613A007C3675 /* StoryCardContainable.swift in Sources */,
 				131066B220FDE40600B27090 /* Array+HeroModifier.swift in Sources */,
 				131066D620FDE40600B27090 /* HeroTransition+UITabBarControllerDelegate.swift in Sources */,
 				131066C020FDE40600B27090 /* HeroTypes.swift in Sources */,
@@ -378,14 +400,13 @@
 				131066BE20FDE40600B27090 /* HeroPlugin.swift in Sources */,
 				131066AC20FDE40600B27090 /* HeroAnimatorViewContext.swift in Sources */,
 				131066CE20FDE40600B27090 /* SourcePreprocessor.swift in Sources */,
-				139BDE3E20FF4FF1007C3675 /* DataHandler.swift in Sources */,
+				13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */,
 				131066C720FDE40600B27090 /* Regex.swift in Sources */,
 				131066B020FDE40600B27090 /* HeroDebugPlugin.swift in Sources */,
 				131066B120FDE40600B27090 /* HeroDebugView.swift in Sources */,
 				131066B720FDE40600B27090 /* UIKit+Hero.swift in Sources */,
 				131066D320FDE40600B27090 /* HeroTransition+Interactive.swift in Sources */,
 				131066CA20FDE40600B27090 /* ConditionalPreprocessor.swift in Sources */,
-				139BDE3A20FF1A93007C3675 /* StoryCardCell.swift in Sources */,
 				131066BB20FDE40600B27090 /* HeroContext.swift in Sources */,
 				131066C520FDE40600B27090 /* Nodes.swift in Sources */,
 				131066C620FDE40600B27090 /* Parser.swift in Sources */,
@@ -395,7 +416,6 @@
 				131066B320FDE40600B27090 /* CALayer+Hero.swift in Sources */,
 				131066BD20FDE40600B27090 /* HeroModifier.swift in Sources */,
 				131066C120FDE40600B27090 /* HeroViewControllerDelegate.swift in Sources */,
-				139BDE3520FED546007C3675 /* StoryCard.swift in Sources */,
 				131066B520FDE40600B27090 /* CG+Hero.swift in Sources */,
 				131066CD20FDE40600B27090 /* MatchPreprocessor.swift in Sources */,
 				131066D820FDE40600B27090 /* HeroTransition.swift in Sources */,
