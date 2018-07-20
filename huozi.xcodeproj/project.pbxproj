@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1310666520FDE3E700B27090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1310666420FDE3E700B27090 /* AppDelegate.swift */; };
-		1310666720FDE3E700B27090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1310666620FDE3E700B27090 /* ViewController.swift */; };
 		1310666A20FDE3E700B27090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1310666820FDE3E700B27090 /* Main.storyboard */; };
 		1310666C20FDE3E800B27090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1310666B20FDE3E800B27090 /* Assets.xcassets */; };
 		1310666F20FDE3E800B27090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1310666D20FDE3E800B27090 /* LaunchScreen.storyboard */; };
@@ -69,7 +68,6 @@
 /* Begin PBXFileReference section */
 		1310666120FDE3E700B27090 /* huozi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = huozi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1310666420FDE3E700B27090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1310666620FDE3E700B27090 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1310666B20FDE3E800B27090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1310667020FDE3E800B27090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1310667820FDE40600B27090 /* HeroAnimatorViewContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAnimatorViewContext.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 			children = (
 				139BDE3620FEE661007C3675 /* components */,
 				1310666420FDE3E700B27090 /* AppDelegate.swift */,
-				1310666620FDE3E700B27090 /* ViewController.swift */,
 				1310666820FDE3E700B27090 /* Main.storyboard */,
 				1310666B20FDE3E800B27090 /* Assets.xcassets */,
 				1310666D20FDE3E800B27090 /* LaunchScreen.storyboard */,
@@ -379,7 +376,6 @@
 				131066BA20FDE40600B27090 /* HeroCompatible.swift in Sources */,
 				131066CF20FDE40600B27090 /* HeroProgressRunner.swift in Sources */,
 				131066BE20FDE40600B27090 /* HeroPlugin.swift in Sources */,
-				1310666720FDE3E700B27090 /* ViewController.swift in Sources */,
 				131066AC20FDE40600B27090 /* HeroAnimatorViewContext.swift in Sources */,
 				131066CE20FDE40600B27090 /* SourcePreprocessor.swift in Sources */,
 				139BDE3E20FF4FF1007C3675 /* DataHandler.swift in Sources */,
