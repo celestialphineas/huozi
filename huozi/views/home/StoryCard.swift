@@ -12,7 +12,9 @@ import UIKit
 class StoryCard: UIView, DropsShadow {
 
     @IBOutlet var storyCard: UIView!
-    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var container: UIView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     private func initialize() {
         Bundle.main.loadNibNamed("StoryCard", owner: self, options: nil)
@@ -34,6 +36,7 @@ class StoryCard: UIView, DropsShadow {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         drawShadow()
-        backgroundView.layer.cornerRadius = cornerRadius
+        container.layer.cornerRadius = cornerRadius
+        container.clipsToBounds = true
     }
 }
