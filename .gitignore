@@ -122,4 +122,6 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 
+# CocoaPod
 Pods
+Podfile.lock

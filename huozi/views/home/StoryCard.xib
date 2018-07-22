@@ -28,6 +28,10 @@
                     <subviews>
                         <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultStoryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="9nf-9K-gci">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                         </imageView>
                         <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqk-hP-Kvi" customClass="GradientView" customModule="huozi" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="116" width="375" height="64"/>
@@ -45,10 +49,14 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUh-2e-t8x">
-                            <rect key="frame" x="20" y="138.5" width="335" height="31.5"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <rect key="frame" x="20" y="141" width="335" height="24"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,7 +64,7 @@
                         <constraint firstItem="Sqk-hP-Kvi" firstAttribute="leading" secondItem="59y-pA-ybJ" secondAttribute="leading" id="2sl-Ae-seU"/>
                         <constraint firstAttribute="bottom" secondItem="Sqk-hP-Kvi" secondAttribute="bottom" id="5ci-bJ-bbQ"/>
                         <constraint firstAttribute="trailing" secondItem="9nf-9K-gci" secondAttribute="trailing" id="9H1-Q1-Oep"/>
-                        <constraint firstAttribute="bottom" secondItem="oUh-2e-t8x" secondAttribute="bottom" constant="10" id="9o3-Tj-oSL"/>
+                        <constraint firstAttribute="bottom" secondItem="oUh-2e-t8x" secondAttribute="bottom" constant="15" id="9o3-Tj-oSL"/>
                         <constraint firstItem="oUh-2e-t8x" firstAttribute="leading" secondItem="59y-pA-ybJ" secondAttribute="leading" constant="20" id="HRn-nO-2xo"/>
                         <constraint firstItem="9nf-9K-gci" firstAttribute="leading" secondItem="59y-pA-ybJ" secondAttribute="leading" id="Mb3-7j-YH3"/>
                         <constraint firstAttribute="trailing" secondItem="Sqk-hP-Kvi" secondAttribute="trailing" id="SFf-aP-0ea"/>
