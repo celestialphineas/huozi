@@ -14,7 +14,6 @@
         <!--Designable View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="DesignableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIq-U2-JHz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -59,6 +58,7 @@
                     </view>
                     <toolbarItems/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.399999999999999" y="29.55665024630542"/>
         </scene>
@@ -117,7 +117,6 @@
         <!--Course Home View Controller-->
         <scene sceneID="o5A-ij-VDq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wes-Fp-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="xy1-4m-eQr" customClass="CourseHomeViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="agb-0K-1HW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="774"/>
@@ -183,16 +182,28 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="gradient"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-15-nTd">
+                                <rect key="frame" x="0.0" y="167" width="375" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OQL-15-nTd" secondAttribute="height" multiplier="5:6" id="kpI-N1-fZu"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="PNE-O1-CeO" kind="embed" id="XM8-LR-n2r"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="OQL-15-nTd" firstAttribute="leading" secondItem="tt2-51-UUV" secondAttribute="leading" id="J2X-yd-alv"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="top" secondItem="jY1-6v-DTe" secondAttribute="top" constant="60" id="JUH-aP-kNg"/>
                             <constraint firstItem="fIx-aN-tTB" firstAttribute="leading" secondItem="tt2-51-UUV" secondAttribute="leading" id="TdU-gl-GhA"/>
                             <constraint firstItem="jY1-6v-DTe" firstAttribute="leading" secondItem="tt2-51-UUV" secondAttribute="leading" id="URU-DE-vcm"/>
                             <constraint firstItem="fIx-aN-tTB" firstAttribute="top" secondItem="tt2-51-UUV" secondAttribute="top" constant="-60" id="X0X-c8-yie"/>
                             <constraint firstItem="IZ9-9B-tj6" firstAttribute="top" secondItem="tt2-51-UUV" secondAttribute="top" constant="10" id="beb-dZ-TrX"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="trailing" secondItem="jY1-6v-DTe" secondAttribute="trailing" id="jgc-eL-HmN"/>
+                            <constraint firstItem="tt2-51-UUV" firstAttribute="trailing" secondItem="OQL-15-nTd" secondAttribute="trailing" id="ldx-ot-Mkx"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="trailing" secondItem="fIx-aN-tTB" secondAttribute="trailing" id="ogg-za-FCD"/>
+                            <constraint firstItem="OQL-15-nTd" firstAttribute="centerY" secondItem="tt2-51-UUV" secondAttribute="centerY" id="ruO-Ab-W8J"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="bottom" secondItem="fIx-aN-tTB" secondAttribute="bottom" constant="-40" id="vXC-0S-ZiI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tt2-51-UUV"/>
@@ -206,8 +217,41 @@
                         <outlet property="titleLabel" destination="IZ9-9B-tj6" id="7tz-au-1Zz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wes-Fp-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1677.5999999999999" y="29.55665024630542"/>
+        </scene>
+        <!--Data Source-->
+        <scene sceneID="PFv-bt-sIB">
+            <objects>
+                <viewController id="PNE-O1-CeO" customClass="CourseCarouselViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pbe-Hh-iVn" customClass="iCarousel">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dT-fY-yZ9">
+                                <rect key="frame" x="16" y="44" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RSZ-1w-Nx3"/>
+                        <connections>
+                            <outlet property="dataSource" destination="PNE-O1-CeO" id="gbj-Rq-V0F"/>
+                            <outlet property="delegate" destination="PNE-O1-CeO" id="q2g-35-g8I"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="carouselView" destination="Pbe-Hh-iVn" id="sw8-JJ-Aa2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="if2-Oa-n59" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="29"/>
         </scene>
     </scenes>
     <resources>

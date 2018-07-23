@@ -11,6 +11,8 @@
 		1310666A20FDE3E700B27090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1310666820FDE3E700B27090 /* Main.storyboard */; };
 		1310666C20FDE3E800B27090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1310666B20FDE3E800B27090 /* Assets.xcassets */; };
 		1310666F20FDE3E800B27090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1310666D20FDE3E800B27090 /* LaunchScreen.storyboard */; };
+		1333E9FA21059F0C00E26A47 /* CourseCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333E9F921059F0C00E26A47 /* CourseCarouselViewController.swift */; };
+		1333E9FC21059FF100E26A47 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1333E9FB21059FF100E26A47 /* QuartzCore.framework */; };
 		1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */; };
 		1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9E21020B5F00B4DBF0 /* GradientView.swift */; };
 		1383AEA121020DD100B4DBF0 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AEA021020DD100B4DBF0 /* DataHandler.swift */; };
@@ -20,7 +22,7 @@
 		13C8D8C22101A4CF00E49384 /* StoryCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13C8D8C12101A4CF00E49384 /* StoryCard.xib */; };
 		13C8D8C42101A53200E49384 /* StoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8D8C32101A53200E49384 /* StoryCard.swift */; };
 		13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8D8C62101AA0B00E49384 /* DropShadow.swift */; };
-		F1EBFDEC874B6495673D53B3 /* libPods-huozi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7346558FA226EF29DBAFDF /* libPods-huozi.a */; };
+		FF2D118F13BABEC33B477F55 /* libPods-huozi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C81A4C61214843770CE93EE5 /* libPods-huozi.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		1310666420FDE3E700B27090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1310666B20FDE3E800B27090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1310667020FDE3E800B27090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1333E9F921059F0C00E26A47 /* CourseCarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCarouselViewController.swift; sourceTree = "<group>"; };
+		1333E9FB21059FF100E26A47 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1333E9FF2105A25B00E26A47 /* huozi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "huozi-Bridging-Header.h"; sourceTree = "<group>"; };
 		1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		1383AE9E21020B5F00B4DBF0 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1383AEA021020DD100B4DBF0 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
@@ -40,7 +45,7 @@
 		13C8D8C32101A53200E49384 /* StoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCard.swift; sourceTree = "<group>"; };
 		13C8D8C62101AA0B00E49384 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		5275C9E8138BBD70BA0F80E2 /* Pods-huozi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-huozi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-huozi/Pods-huozi.debug.xcconfig"; sourceTree = "<group>"; };
-		CB7346558FA226EF29DBAFDF /* libPods-huozi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-huozi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81A4C61214843770CE93EE5 /* libPods-huozi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-huozi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A8E0C04133335C83407910 /* Pods-huozi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-huozi.release.xcconfig"; path = "Pods/Target Support Files/Pods-huozi/Pods-huozi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1EBFDEC874B6495673D53B3 /* libPods-huozi.a in Frameworks */,
+				1333E9FC21059FF100E26A47 /* QuartzCore.framework in Frameworks */,
+				FF2D118F13BABEC33B477F55 /* libPods-huozi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 				13C8D8BF2101911300E49384 /* utils */,
 				139BDE3620FEE661007C3675 /* views */,
 				1310666B20FDE3E800B27090 /* Assets.xcassets */,
+				1333E9FF2105A25B00E26A47 /* huozi-Bridging-Header.h */,
 				1310667020FDE3E800B27090 /* Info.plist */,
 			);
 			path = huozi;
@@ -90,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				1383AEA32102CFF300B4DBF0 /* CourseHomeView.swift */,
+				1333E9F921059F0C00E26A47 /* CourseCarouselViewController.swift */,
 			);
 			path = courseHome;
 			sourceTree = "<group>";
@@ -146,7 +154,8 @@
 		D2B45A9E8ABA461A7B2E7F59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CB7346558FA226EF29DBAFDF /* libPods-huozi.a */,
+				1333E9FB21059FF100E26A47 /* QuartzCore.framework */,
+				C81A4C61214843770CE93EE5 /* libPods-huozi.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -258,6 +267,7 @@
 				13A31A7721043E06000CCDAD /* DesignableViewController.swift in Sources */,
 				1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */,
 				1383AEA42102CFF300B4DBF0 /* CourseHomeView.swift in Sources */,
+				1333E9FA21059F0C00E26A47 /* CourseCarouselViewController.swift in Sources */,
 				1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */,
 				13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */,
 				1383AEA121020DD100B4DBF0 /* DataHandler.swift in Sources */,
@@ -418,6 +428,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.celestialphineas.huozi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "huozi/huozi-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -438,6 +449,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.celestialphineas.huozi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "huozi/huozi-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

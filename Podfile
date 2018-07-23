@@ -8,5 +8,6 @@ post_install do |installer|
 end
 
 target 'huozi' do
-    pod 'Hero', '1.2.0'
+    pod 'Hero',         '1.2.0'
+    pod 'iCarousel',    '1.8.3'
 end
