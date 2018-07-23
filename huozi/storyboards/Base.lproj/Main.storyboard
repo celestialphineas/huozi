@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,17 +16,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DesignableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIq-U2-JHz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ON-sc-Xe7">
-                                <rect key="frame" x="0.0" y="44" width="375" height="774"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="500"/>
                                 <connections>
                                     <segue destination="vny-Sa-cEs" kind="embed" id="a0W-1v-6kQ"/>
                                 </connections>
                             </containerView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8n6-we-doQ" customClass="GradientView" customModule="huozi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="mSV-bo-ajO"/>
@@ -68,15 +68,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y96-Ou-7mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vny-Sa-cEs" customClass="HomeTableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="64" sectionFooterHeight="40" id="o1T-z8-i6f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="774"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableCell" rowHeight="200" id="ArX-Qz-TG4" customClass="HomeTableCell" customModule="huozi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ArX-Qz-TG4" id="LBB-7d-BU2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rT5-aJ-gac" customClass="StoryCard" customModule="huozi" customModuleProvider="target">
@@ -112,28 +112,28 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="848.79999999999995" y="28.817733990147783"/>
+            <point key="canvasLocation" x="750" y="28"/>
         </scene>
         <!--Course Home View Controller-->
         <scene sceneID="o5A-ij-VDq">
             <objects>
                 <viewController id="xy1-4m-eQr" customClass="CourseHomeViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="agb-0K-1HW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="774"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-aN-tTB">
-                                <rect key="frame" x="0.0" y="-16" width="375" height="796"/>
+                                <rect key="frame" x="0.0" y="-40" width="320" height="580"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jY1-6v-DTe" customClass="GradientView" customModule="huozi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-16" width="375" height="104"/>
+                                <rect key="frame" x="0.0" y="-40" width="320" height="104"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ9-9B-tj6">
-                                        <rect key="frame" x="163.66666666666666" y="70" width="48" height="22"/>
+                                        <rect key="frame" x="136" y="70" width="48" height="22"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -183,10 +183,14 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-15-nTd">
-                                <rect key="frame" x="0.0" y="167" width="375" height="450"/>
+                                <rect key="frame" x="0.0" y="68" width="320" height="384"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OQL-15-nTd" secondAttribute="height" multiplier="5:6" id="kpI-N1-fZu"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="PNE-O1-CeO" kind="embed" id="XM8-LR-n2r"/>
                                 </connections>
@@ -219,27 +223,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wes-Fp-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677.5999999999999" y="29.55665024630542"/>
+            <point key="canvasLocation" x="1534" y="29"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="PFv-bt-sIB">
             <objects>
                 <viewController id="PNE-O1-CeO" customClass="CourseCarouselViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Pbe-Hh-iVn" customClass="iCarousel">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Pbe-Hh-iVn" customClass="iCarousel">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dT-fY-yZ9">
-                                <rect key="frame" x="16" y="44" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Su-eG-jFG">
+                                <rect key="frame" x="100" y="347" width="119" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.99404761904761907" green="0.98809523809523814" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Su-eG-jFG" firstAttribute="centerX" secondItem="RSZ-1w-Nx3" secondAttribute="centerX" id="0PQ-NB-ynZ"/>
+                            <constraint firstItem="RSZ-1w-Nx3" firstAttribute="bottom" secondItem="3Su-eG-jFG" secondAttribute="bottom" id="90W-T7-fX0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RSZ-1w-Nx3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="PNE-O1-CeO" id="gbj-Rq-V0F"/>
                             <outlet property="delegate" destination="PNE-O1-CeO" id="q2g-35-g8I"/>
@@ -247,11 +256,12 @@
                     </view>
                     <connections>
                         <outlet property="carouselView" destination="Pbe-Hh-iVn" id="sw8-JJ-Aa2"/>
+                        <outlet property="pageControl" destination="3Su-eG-jFG" id="pDS-tA-QZD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="if2-Oa-n59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2438" y="29"/>
+            <point key="canvasLocation" x="2317.5" y="27.5"/>
         </scene>
     </scenes>
     <resources>

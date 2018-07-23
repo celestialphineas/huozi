@@ -9,10 +9,39 @@
 import UIKit
 
 class CourseCarouselViewController: UIViewController, iCarouselDataSource, iCarouselDelegate {
+    
     @IBOutlet var carouselView: iCarousel!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     override func viewDidLoad() {
-        carouselView.type = .rotary
+        if carouselView != nil {
+            carouselView.type = .rotary
+            if pageControl != nil {
+                pageControl.numberOfPages = numberOfItems(in: carouselView)
+            }
+        }
+    }
+    
+    // This function allows the cards to animate when entering!
+    override func viewDidAppear(_ animated: Bool) {
+        for view in self.carouselView.subviews {
+            if view as? UIPageControl == nil {
+                for view in view.subviews {
+                    let oldAlpha = view.alpha
+                    view.alpha = 0
+                    UIView.animate(withDuration: 1 - Double(oldAlpha) * 0.8) {
+                        view.alpha = oldAlpha
+                    }
+                }
+            }
+        }
+    }
+    
+    // Update index of the item
+    func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
+        if pageControl != nil {
+            pageControl.currentPage = carousel.currentItemIndex
+        }
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {
@@ -20,22 +49,19 @@ class CourseCarouselViewController: UIViewController, iCarouselDataSource, iCaro
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 400))
-        let frame = CGRect(x: 0, y: 0, width: 200, height: 300)
-        let imageView = UIImageView()
-        imageView.frame = frame
-        imageView.contentMode = .scaleAspectFill
+        let animationCard = AnimationCard(frame: AnimationCard.expectedFrame)
+        animationCard.isOpaque = false
         
-        imageView.image = #imageLiteral(resourceName: "defaultStoryBackground")
-        view.addSubview(imageView)
-        
-        return view
+        return animationCard
     }
     
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
-        if option == iCarouselOption.spacing {
-            return value * 0.2
+        switch option {
+        case .spacing   : return value * 0.2
+        case .fadeMin   : return 0
+        case .fadeMax   : return 0
+        case .fadeRange : return 4
+        default         : return value
         }
-        return value
     }
 }

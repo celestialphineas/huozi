@@ -13,6 +13,9 @@
 		1310666F20FDE3E800B27090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1310666D20FDE3E800B27090 /* LaunchScreen.storyboard */; };
 		1333E9FA21059F0C00E26A47 /* CourseCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333E9F921059F0C00E26A47 /* CourseCarouselViewController.swift */; };
 		1333E9FC21059FF100E26A47 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1333E9FB21059FF100E26A47 /* QuartzCore.framework */; };
+		1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333EA002105AC2500E26A47 /* AnimationCard.swift */; };
+		1333EA032105AC3A00E26A47 /* AnimationCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1333EA022105AC3A00E26A47 /* AnimationCard.xib */; };
+		1333EA052105CD2900E26A47 /* FAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333EA042105CD2900E26A47 /* FAButton.swift */; };
 		1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */; };
 		1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9E21020B5F00B4DBF0 /* GradientView.swift */; };
 		1383AEA121020DD100B4DBF0 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AEA021020DD100B4DBF0 /* DataHandler.swift */; };
@@ -33,6 +36,9 @@
 		1333E9F921059F0C00E26A47 /* CourseCarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCarouselViewController.swift; sourceTree = "<group>"; };
 		1333E9FB21059FF100E26A47 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1333E9FF2105A25B00E26A47 /* huozi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "huozi-Bridging-Header.h"; sourceTree = "<group>"; };
+		1333EA002105AC2500E26A47 /* AnimationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCard.swift; sourceTree = "<group>"; };
+		1333EA022105AC3A00E26A47 /* AnimationCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationCard.xib; sourceTree = "<group>"; };
+		1333EA042105CD2900E26A47 /* FAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAButton.swift; sourceTree = "<group>"; };
 		1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		1383AE9E21020B5F00B4DBF0 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1383AEA021020DD100B4DBF0 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
@@ -98,6 +104,8 @@
 			children = (
 				1383AEA32102CFF300B4DBF0 /* CourseHomeView.swift */,
 				1333E9F921059F0C00E26A47 /* CourseCarouselViewController.swift */,
+				1333EA002105AC2500E26A47 /* AnimationCard.swift */,
+				1333EA022105AC3A00E26A47 /* AnimationCard.xib */,
 			);
 			path = courseHome;
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 				1383AE9E21020B5F00B4DBF0 /* GradientView.swift */,
 				13A31A74210436C8000CCDAD /* IconButton.swift */,
 				13A31A7621043E06000CCDAD /* DesignableViewController.swift */,
+				1333EA042105CD2900E26A47 /* FAButton.swift */,
 			);
 			path = commons;
 			sourceTree = "<group>";
@@ -228,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13C8D8C22101A4CF00E49384 /* StoryCard.xib in Resources */,
+				1333EA032105AC3A00E26A47 /* AnimationCard.xib in Resources */,
 				1310666F20FDE3E800B27090 /* LaunchScreen.storyboard in Resources */,
 				1310666C20FDE3E800B27090 /* Assets.xcassets in Resources */,
 				1310666A20FDE3E700B27090 /* Main.storyboard in Resources */,
@@ -264,11 +274,13 @@
 			files = (
 				13A31A75210436C8000CCDAD /* IconButton.swift in Sources */,
 				13C8D8C42101A53200E49384 /* StoryCard.swift in Sources */,
+				1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */,
 				13A31A7721043E06000CCDAD /* DesignableViewController.swift in Sources */,
 				1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */,
 				1383AEA42102CFF300B4DBF0 /* CourseHomeView.swift in Sources */,
 				1333E9FA21059F0C00E26A47 /* CourseCarouselViewController.swift in Sources */,
 				1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */,
+				1333EA052105CD2900E26A47 /* FAButton.swift in Sources */,
 				13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */,
 				1383AEA121020DD100B4DBF0 /* DataHandler.swift in Sources */,
 				1310666520FDE3E700B27090 /* AppDelegate.swift in Sources */,

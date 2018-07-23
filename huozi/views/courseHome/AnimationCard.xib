@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationCard" customModule="huozi" customModuleProvider="target">
+            <connections>
+                <outlet property="animationCard" destination="iN0-l3-epB" id="bMu-KB-Y53"/>
+                <outlet property="container" destination="vAF-xV-CRl" id="qs8-27-bdZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="360"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAF-xV-CRl">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="360"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-84-Z5q" customClass="FAButton" customModule="huozi" customModuleProvider="target">
+                            <rect key="frame" x="88" y="276" width="64" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="64" id="Gtt-33-rSX"/>
+                                <constraint firstAttribute="width" secondItem="a5w-84-Z5q" secondAttribute="height" multiplier="1:1" id="M6Y-OX-rUb"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="hand"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                    <color key="value" red="1" green="0.25098039215686274" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="a5w-84-Z5q" secondAttribute="bottom" constant="20" id="YEj-QH-8ar"/>
+                        <constraint firstItem="a5w-84-Z5q" firstAttribute="centerX" secondItem="vAF-xV-CRl" secondAttribute="centerX" id="svD-FA-f3q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vAF-xV-CRl" secondAttribute="trailing" id="3NC-Hx-vHI"/>
+                <constraint firstItem="vAF-xV-CRl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="VAg-qF-IfN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vAF-xV-CRl" secondAttribute="bottom" id="hKk-tm-OUQ"/>
+                <constraint firstItem="vAF-xV-CRl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hZ1-zX-8mz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-48" y="42"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hand" width="284" height="284"/>
+    </resources>
+</document>
