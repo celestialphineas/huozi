@@ -1,12 +1,10 @@
 //
-//  
-
+//
 //  CarouselViewExample
 //
 //  Created by Matteo Tagliafico on 03/04/16.
 //  Copyright © 2016 Matteo Tagliafico. All rights reserved.
 //
-
 import UIKit
 
 public enum CarouselType {
@@ -42,7 +40,7 @@ open class TGLParallaxCarousel: UIView {
             reloadData()
         }
     }
-    open var type: CarouselType = .threeDimensional {
+    open var type_: CarouselType = .threeDimensional {
         didSet {
             reloadData()
         }
@@ -80,17 +78,17 @@ open class TGLParallaxCarousel: UIView {
     }
     
     var xDisplacement: CGFloat {
-        if type == .normal {
+        if type_ == .normal {
             if let _ = itemWidth { return itemWidth! }
             else { return 0 }
         }
-        else if type == .threeDimensional { return 50 }        // TODO
+        else if type_ == .threeDimensional { return 50 }        // TODO
         else { return 0 }
     }
     
     var zDisplacementFactor: CGFloat {
-        if type == .normal { return 0 }
-        else if type == .threeDimensional { return 1 }
+        if type_ == .normal { return 0 }
+        else if type_ == .threeDimensional { return 1 }
         else { return 0 }
     }
     
@@ -126,7 +124,7 @@ open class TGLParallaxCarousel: UIView {
     }
     
     func loadViewFromNib() -> UIView {
-        let bundle = Bundle(for: CarouselType.self as! AnyClass)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         return view
@@ -150,9 +148,9 @@ open class TGLParallaxCarousel: UIView {
     
     func reloadData() {
         guard let delegate = delegate else { return }
-    
+        
         layoutIfNeeded()
-
+        
         pageControl.numberOfPages = delegate.numberOfItemsInCarouselView(self)
         
         for index in 0..<delegate.numberOfItemsInCarouselView(self) {
@@ -166,9 +164,9 @@ open class TGLParallaxCarousel: UIView {
         
         item.center = mainView.center
         
-            self.mainView.layer.insertSublayer(item.layer, at: UInt32(self.items.count))
-            self.items.append(item)
-            self.resetItemsPosition(true)
+        self.mainView.layer.insertSublayer(item.layer, at: UInt32(self.items.count))
+        self.items.append(item)
+        self.resetItemsPosition(true)
     }
     
     
@@ -230,7 +228,7 @@ open class TGLParallaxCarousel: UIView {
             
             let xOffset = (startGesturePoint.x - endGesturePoint.x ) * (1 / parallaxFactor)
             moveCarousel(xOffset)
-                
+            
             startGesturePoint = endGesturePoint
             
         case .ended, .cancelled, .failed:
@@ -247,7 +245,7 @@ open class TGLParallaxCarousel: UIView {
         currentTargetLayer = mainView.layer.hitTest(targetPoint)!
         
         guard let targetItem = findItemOnScreen() else { return }
-            
+        
         let firstItemOffset = (items.first?.xDisp ?? 0) - targetItem.xDisp
         let tappedIndex = -Int(round(firstItemOffset / xDisplacement))
         
@@ -263,7 +261,7 @@ open class TGLParallaxCarousel: UIView {
     // MARK: - find item
     fileprivate func findItemOnScreen() -> TGLParallaxCarouselItem? {
         currentFoundItem = nil
-
+        
         for item in items {
             currentItem = item
             checkInSubviews(item)
