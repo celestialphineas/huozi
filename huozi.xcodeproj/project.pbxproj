@@ -11,9 +11,6 @@
 		1310666A20FDE3E700B27090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1310666820FDE3E700B27090 /* Main.storyboard */; };
 		1310666C20FDE3E800B27090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1310666B20FDE3E800B27090 /* Assets.xcassets */; };
 		1310666F20FDE3E800B27090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1310666D20FDE3E800B27090 /* LaunchScreen.storyboard */; };
-		1333E9F421057EE000E26A47 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333E9F321057EE000E26A47 /* CarouselViewController.swift */; };
-		1333E9F6210581B000E26A47 /* AnimationCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1333E9F5210581B000E26A47 /* AnimationCard.xib */; };
-		1333E9F8210581C500E26A47 /* AnimationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333E9F7210581C500E26A47 /* AnimationCard.swift */; };
 		1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */; };
 		1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9E21020B5F00B4DBF0 /* GradientView.swift */; };
 		1383AEA121020DD100B4DBF0 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AEA021020DD100B4DBF0 /* DataHandler.swift */; };
@@ -23,8 +20,6 @@
 		13C8D8C22101A4CF00E49384 /* StoryCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13C8D8C12101A4CF00E49384 /* StoryCard.xib */; };
 		13C8D8C42101A53200E49384 /* StoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8D8C32101A53200E49384 /* StoryCard.swift */; };
 		13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8D8C62101AA0B00E49384 /* DropShadow.swift */; };
-		13F7B9D12104256F00F80B87 /* TGLParallaxCarousel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13F7B9CF2104256F00F80B87 /* TGLParallaxCarousel.xib */; };
-		13F7B9D22104256F00F80B87 /* TGLParallaxCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7B9D02104256F00F80B87 /* TGLParallaxCarousel.swift */; };
 		F1EBFDEC874B6495673D53B3 /* libPods-huozi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7346558FA226EF29DBAFDF /* libPods-huozi.a */; };
 /* End PBXBuildFile section */
 
@@ -33,9 +28,6 @@
 		1310666420FDE3E700B27090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1310666B20FDE3E800B27090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1310667020FDE3E800B27090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1333E9F321057EE000E26A47 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
-		1333E9F5210581B000E26A47 /* AnimationCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationCard.xib; sourceTree = "<group>"; };
-		1333E9F7210581C500E26A47 /* AnimationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCard.swift; sourceTree = "<group>"; };
 		1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		1383AE9E21020B5F00B4DBF0 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1383AEA021020DD100B4DBF0 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
@@ -47,8 +39,6 @@
 		13C8D8C12101A4CF00E49384 /* StoryCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCard.xib; sourceTree = "<group>"; };
 		13C8D8C32101A53200E49384 /* StoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCard.swift; sourceTree = "<group>"; };
 		13C8D8C62101AA0B00E49384 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
-		13F7B9CF2104256F00F80B87 /* TGLParallaxCarousel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGLParallaxCarousel.xib; sourceTree = "<group>"; };
-		13F7B9D02104256F00F80B87 /* TGLParallaxCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGLParallaxCarousel.swift; sourceTree = "<group>"; };
 		5275C9E8138BBD70BA0F80E2 /* Pods-huozi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-huozi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-huozi/Pods-huozi.debug.xcconfig"; sourceTree = "<group>"; };
 		CB7346558FA226EF29DBAFDF /* libPods-huozi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-huozi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A8E0C04133335C83407910 /* Pods-huozi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-huozi.release.xcconfig"; path = "Pods/Target Support Files/Pods-huozi/Pods-huozi.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,9 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				1383AEA32102CFF300B4DBF0 /* CourseHomeView.swift */,
-				1333E9F321057EE000E26A47 /* CarouselViewController.swift */,
-				1333E9F5210581B000E26A47 /* AnimationCard.xib */,
-				1333E9F7210581C500E26A47 /* AnimationCard.swift */,
 			);
 			path = courseHome;
 			sourceTree = "<group>";
@@ -148,8 +135,6 @@
 		13C8D8C52101A9F900E49384 /* commons */ = {
 			isa = PBXGroup;
 			children = (
-				13F7B9D02104256F00F80B87 /* TGLParallaxCarousel.swift */,
-				13F7B9CF2104256F00F80B87 /* TGLParallaxCarousel.xib */,
 				13C8D8C62101AA0B00E49384 /* DropShadow.swift */,
 				1383AE9E21020B5F00B4DBF0 /* GradientView.swift */,
 				13A31A74210436C8000CCDAD /* IconButton.swift */,
@@ -236,8 +221,6 @@
 				13C8D8C22101A4CF00E49384 /* StoryCard.xib in Resources */,
 				1310666F20FDE3E800B27090 /* LaunchScreen.storyboard in Resources */,
 				1310666C20FDE3E800B27090 /* Assets.xcassets in Resources */,
-				13F7B9D12104256F00F80B87 /* TGLParallaxCarousel.xib in Resources */,
-				1333E9F6210581B000E26A47 /* AnimationCard.xib in Resources */,
 				1310666A20FDE3E700B27090 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,13 +257,10 @@
 				13C8D8C42101A53200E49384 /* StoryCard.swift in Sources */,
 				13A31A7721043E06000CCDAD /* DesignableViewController.swift in Sources */,
 				1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */,
-				1333E9F8210581C500E26A47 /* AnimationCard.swift in Sources */,
 				1383AEA42102CFF300B4DBF0 /* CourseHomeView.swift in Sources */,
 				1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */,
 				13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */,
 				1383AEA121020DD100B4DBF0 /* DataHandler.swift in Sources */,
-				13F7B9D22104256F00F80B87 /* TGLParallaxCarousel.swift in Sources */,
-				1333E9F421057EE000E26A47 /* CarouselViewController.swift in Sources */,
 				1310666520FDE3E700B27090 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
