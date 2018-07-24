@@ -6,6 +6,8 @@
 //  Copyright © 2018年 Celestial Phineas. All rights reserved.
 //
 
+// This file is connected to the animation card view .xib file
+
 import UIKit
 
 class AnimationCard: UIView, DropsShadow {
@@ -14,12 +16,15 @@ class AnimationCard: UIView, DropsShadow {
     
     @IBOutlet var animationCard: UIView!
     @IBOutlet weak var container: UIView!
+    @IBOutlet weak var animationView: SVGAImageView!
     
     private func initialize() {
         Bundle.main.loadNibNamed("AnimationCard", owner: self, options: nil)
         addSubview(animationCard)
         animationCard.frame = self.bounds
         animationCard.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
+        // Setting corner radius of the card
         self.cornerRadius(20)
     }
     

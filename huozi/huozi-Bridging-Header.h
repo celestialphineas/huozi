@@ -10,5 +10,6 @@
 #define huozi_Bridging_Header_h
 
 #import "iCarousel.h"
+#import "SVGA.h"
 
 #endif /* huozi_Bridging_Header_h */

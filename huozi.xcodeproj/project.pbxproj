@@ -19,6 +19,7 @@
 		1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9E21020B5F00B4DBF0 /* GradientView.swift */; };
 		1383AEA121020DD100B4DBF0 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AEA021020DD100B4DBF0 /* DataHandler.swift */; };
 		1383AEA42102CFF300B4DBF0 /* CourseHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AEA32102CFF300B4DBF0 /* CourseHomeView.swift */; };
+		138F05AF2106D58200EB81CA /* res in Resources */ = {isa = PBXBuildFile; fileRef = 138F05AE2106D58200EB81CA /* res */; };
 		13A31A75210436C8000CCDAD /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A31A74210436C8000CCDAD /* IconButton.swift */; };
 		13A31A7721043E06000CCDAD /* DesignableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A31A7621043E06000CCDAD /* DesignableViewController.swift */; };
 		13C8D8C22101A4CF00E49384 /* StoryCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13C8D8C12101A4CF00E49384 /* StoryCard.xib */; };
@@ -41,6 +42,7 @@
 		1383AE9E21020B5F00B4DBF0 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1383AEA021020DD100B4DBF0 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		1383AEA32102CFF300B4DBF0 /* CourseHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseHomeView.swift; sourceTree = "<group>"; };
+		138F05AE2106D58200EB81CA /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		139BDE2C20FDFA47007C3675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		139BDE2D20FDFA47007C3675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13A31A74210436C8000CCDAD /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		1310665820FDE3E700B27090 = {
 			isa = PBXGroup;
 			children = (
+				138F05AE2106D58200EB81CA /* res */,
 				1310666320FDE3E700B27090 /* huozi */,
 				1310666220FDE3E700B27090 /* Products */,
 				D85A91FD5169FEE76A8D192B /* Pods */,
@@ -236,6 +239,7 @@
 				13C8D8C22101A4CF00E49384 /* StoryCard.xib in Resources */,
 				1333EA032105AC3A00E26A47 /* AnimationCard.xib in Resources */,
 				1310666F20FDE3E800B27090 /* LaunchScreen.storyboard in Resources */,
+				138F05AF2106D58200EB81CA /* res in Resources */,
 				1310666C20FDE3E800B27090 /* Assets.xcassets in Resources */,
 				1310666A20FDE3E700B27090 /* Main.storyboard in Resources */,
 			);

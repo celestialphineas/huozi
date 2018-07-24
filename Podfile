@@ -1,5 +1,8 @@
 platform:ios, '9.0'
 
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
 post_install do |installer|
     installer.pods_project.build_configurations.each do |config|
         config.build_settings.delete('CODE_SIGNING_ALLOWED')
@@ -10,4 +13,5 @@ end
 target 'huozi' do
     pod 'Hero',         '1.2.0'
     pod 'iCarousel',    '1.8.3'
+    pod 'SVGAPlayer',   '2.1.4'
 end

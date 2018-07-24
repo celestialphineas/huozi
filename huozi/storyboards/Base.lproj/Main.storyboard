@@ -14,6 +14,7 @@
         <!--Designable View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="DesignableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIq-U2-JHz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
@@ -58,7 +59,6 @@
                     </view>
                     <toolbarItems/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.399999999999999" y="29.55665024630542"/>
         </scene>
@@ -80,7 +80,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rT5-aJ-gac" customClass="StoryCard" customModule="huozi" customModuleProvider="target">
-                                            <rect key="frame" x="25" y="10" width="325" height="180"/>
+                                            <rect key="frame" x="25" y="10" width="270" height="180"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <gestureRecognizers/>
                                             <constraints>
@@ -117,6 +117,7 @@
         <!--Course Home View Controller-->
         <scene sceneID="o5A-ij-VDq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wes-Fp-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="xy1-4m-eQr" customClass="CourseHomeViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="agb-0K-1HW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
@@ -221,13 +222,13 @@
                         <outlet property="titleLabel" destination="IZ9-9B-tj6" id="7tz-au-1Zz"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wes-Fp-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1534" y="29"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="PFv-bt-sIB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="if2-Oa-n59" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PNE-O1-CeO" customClass="CourseCarouselViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="Pbe-Hh-iVn" customClass="iCarousel">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
@@ -259,7 +260,6 @@
                         <outlet property="pageControl" destination="3Su-eG-jFG" id="pDS-tA-QZD"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="if2-Oa-n59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2317.5" y="27.5"/>
         </scene>

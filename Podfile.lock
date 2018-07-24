@@ -1,20 +1,37 @@
 PODS:
   - Hero (1.2.0)
   - iCarousel (1.8.3)
+  - Protobuf (3.6.0)
+  - SSZipArchive (1.8.1)
+  - SVGAPlayer (2.1.4):
+    - SVGAPlayer/Core (= 2.1.4)
+    - SVGAPlayer/ProtoFiles (= 2.1.4)
+  - SVGAPlayer/Core (2.1.4):
+    - SSZipArchive (= 1.8.1)
+    - SVGAPlayer/ProtoFiles
+  - SVGAPlayer/ProtoFiles (2.1.4):
+    - Protobuf (~> 3.4)
 
 DEPENDENCIES:
   - Hero (= 1.2.0)
   - iCarousel (= 1.8.3)
+  - SVGAPlayer (= 2.1.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Hero
     - iCarousel
+    - Protobuf
+    - SSZipArchive
+    - SVGAPlayer
 
 SPEC CHECKSUMS:
   Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
+  SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
+  SVGAPlayer: 1533f8e009fa6cdf3dc4867efa994739ab3cf250
 
-PODFILE CHECKSUM: 5cc38afc83047d7dc024b9ad3e650f724de02a9d
+PODFILE CHECKSUM: 00475aae65c6fb80973ac89e7142ca7424ac3750
 
 COCOAPODS: 1.5.3
