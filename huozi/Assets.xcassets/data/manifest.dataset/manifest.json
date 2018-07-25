@@ -1,0 +1,16 @@
+{
+    "books": [
+        {
+            "name": "一年级（上）",
+            "index": 1,
+            "file": "book-1",
+            "storycount": 1
+        }
+    ],
+    "charpackages": [
+        {
+            "index": 1,
+            "file": "characters-1"
+        }
+    ]
+}

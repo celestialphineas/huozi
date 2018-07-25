@@ -1,0 +1,38 @@
+{
+    "门": {
+        "components": ["门"],
+        "candidates": ["门", "同", "口", "日"],
+        "pinyin": "mén",
+        "definition": "房屋、车船或用围墙、篱笆围起来的地方的出入口。"
+    },
+    "木": {
+        "components": ["木"],
+        "candidates": ["木", "大", "十", "不"],
+        "pinyin": "mù",
+        "definition": "表示树木或木器的名称。"
+    },
+    "走": {
+        "components": ["走"],
+        "candidates": ["走", "足", "过", "远"],
+        "pinyin": "zǒu",
+        "definition": "人或鸟兽的脚交互向前移动。"
+    },
+    "火": {
+        "components": ["火"],
+        "candidates": ["火", "天", "人", "未"],
+        "pinyin": "huǒ",
+        "definition": "物质燃烧时所发出的光和焰。"
+    },
+    "见": {
+        "components": ["见"],
+        "candidates": ["见", "尤", "日", "大"],
+        "pinyin": "jiàn",
+        "definition": "看到。"
+    },
+    "果": {
+        "components": ["田", "木"],
+        "candidates": ["田", "日", "十", "木"],
+        "pinyin": "guǒ",
+        "definition": "某些植物花落后含有种子的部分。"
+    }
+}

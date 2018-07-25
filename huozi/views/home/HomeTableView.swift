@@ -22,15 +22,14 @@ class HomeTableCell: UITableViewCell {
 class HomeTableViewController: UITableViewController {
     let headerHeight: CGFloat = 64
     let footerHeight: CGFloat = 40
+    let characterSegueIdentifier = "homeToStory"
 
-    let characterSegueIdentifier = "homeToCourse"
-
-    let dataHandler = NaiveDataHandler.instance
+    let dataHandler = StoryDataOf("book-1")
 
     // Segue configuring
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == characterSegueIdentifier,
-            let destination = segue.destination as? CourseHomeViewController,
+            let destination = segue.destination as? StoryHomeViewController,
             let itemIndex   = tableView.indexPathForSelectedRow?.row {
             destination.storyData = dataHandler.data?[itemIndex]
             destination.heroIndex = itemIndex
@@ -48,10 +47,13 @@ class HomeTableViewController: UITableViewController {
                 titleLabel.hero.id = "title-\(indexPath.item)"
             }
         }
-        if let img = dataHandler.data?[indexPath.item].cardImage {
-            if let backgroundImageView = cell.storyCard?.backgroundImageView {
-                backgroundImageView.image = img
-                backgroundImageView.hero.id = "img-\(indexPath.item)"
+        
+        if let imageName = dataHandler.data?[indexPath.item].imageName {
+            if let img = UIImage(named: imageName) {
+                if let backgroundImageView = cell.storyCard?.backgroundImageView {
+                    backgroundImageView.image = img
+                    backgroundImageView.hero.id = "img-\(indexPath.item)"
+                }
             }
         }
         return cell

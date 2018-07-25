@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationCard" customModule="huozi" customModuleProvider="target">
+            <connections>
+                <outlet property="animationCard" destination="iN0-l3-epB" id="bMu-KB-Y53"/>
+                <outlet property="animationView" destination="Sr2-ZN-SV0" id="v5n-0u-Bxb"/>
+                <outlet property="container" destination="vAF-xV-CRl" id="qs8-27-bdZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="360"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAF-xV-CRl">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="360"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sr2-ZN-SV0" customClass="SVGAImageView">
+                            <rect key="frame" x="8" y="12" width="224" height="336"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Sr2-ZN-SV0" secondAttribute="height" multiplier="2:3" id="joo-hZ-2hD"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="imageName" value="res/animations/default"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="autoPlay" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Sr2-ZN-SV0" firstAttribute="leading" secondItem="vAF-xV-CRl" secondAttribute="leading" constant="8" id="gli-KD-gxk"/>
+                        <constraint firstAttribute="trailing" secondItem="Sr2-ZN-SV0" secondAttribute="trailing" constant="8" id="vgn-hI-Jeu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vAF-xV-CRl" secondAttribute="trailing" id="3NC-Hx-vHI"/>
+                <constraint firstItem="vAF-xV-CRl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="VAg-qF-IfN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vAF-xV-CRl" secondAttribute="bottom" id="hKk-tm-OUQ"/>
+                <constraint firstItem="vAF-xV-CRl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hZ1-zX-8mz"/>
+                <constraint firstItem="Sr2-ZN-SV0" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="sZ9-EZ-bYy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-48" y="42"/>
+        </view>
+    </objects>
+</document>

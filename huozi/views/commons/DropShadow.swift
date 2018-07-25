@@ -12,7 +12,7 @@ import UIKit
 // Why could I do this?
 // This will allow you to extend a view with functionality to drop a shadow
 // Why not simply extend the UIView class?
-// Swift does not suppor multiple
+// Swift does not support multiple inheritance
 public class DropShadowExtension {
     var cornerRadius    : CGFloat   = 5
     var shadowOpacity   : Float     = 0.3
