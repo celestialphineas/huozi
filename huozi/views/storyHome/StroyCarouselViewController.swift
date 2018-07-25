@@ -76,6 +76,7 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let animationCard = AnimationCard(frame: AnimationCard.expectedFrame)
         animationCard.isOpaque = false
+        animationCard.characterToDisplay = CharacterData(characterData[index])
         
         return animationCard
     }

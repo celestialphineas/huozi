@@ -6,11 +6,10 @@
 //  Copyright © 2018年 Celestial Phineas. All rights reserved.
 //
 
-import UIKit
 import Foundation
 
 // Abstract of each story data, initialized with a dict of [String:Any]
-struct StoryData {
+class StoryData {
     var index:          Int!
     var category:       String!
     var title:          String!
@@ -39,37 +38,7 @@ protocol StoryDataHandler {
     var count: Int! { get }
 }
 
-// This class is currently the only DataHandler
-// and it is a singleton
-final class NaiveDataHandler: StoryDataHandler {
-    static let instance = NaiveDataHandler()
-    private var objs: [StoryData]!
-    
-    var data: [StoryData]! {
-        get { return objs }
-    }
-    var count: Int! {
-        get { return objs?.count }
-    }
-    
-    private init() {
-        let asset = NSDataAsset(name: "book-1")
-        let serialized = try? JSONSerialization.jsonObject(with: asset!.data, options: JSONSerialization.ReadingOptions.allowFragments)
-        if serialized != nil {
-            let json = serialized as! NSObject
-            objs = []
-            for obj in json as! [[String:Any]] {
-                objs.append(StoryData(obj))
-            }
-        }
-    }
-    
-    static var data: [StoryData]!   { get { return instance.data  }}
-    static var count: Int!          { get { return instance.count }}
-}
-
-// Since the story data is read-only, this factory class returns pointers to instances
-// and it is assured that the instances are not duplicated
+// This class returns a StoryDataHandler object of
 class StoryDataOf: StoryDataHandler {
     private var objs: [StoryData]!
     
@@ -81,17 +50,20 @@ class StoryDataOf: StoryDataHandler {
     }
     
     init(_ assetName: String) {
-        let asset = NSDataAsset(name: assetName)
-        // Serialize the asset data
-        let serialized = try? JSONSerialization.jsonObject(with: asset!.data, options: JSONSerialization.ReadingOptions.allowFragments)
-        if serialized != nil {
-            let json = serialized as! NSObject
-            objs = []
-            if let jsonAsDict = json as? [[String: Any]] {
-                for obj in jsonAsDict {
-                    objs.append(StoryData(obj))
+        if let asset = NSDataAsset(name: assetName) {
+            // Serialize the asset data
+            let serialized = try? JSONSerialization.jsonObject(with: asset.data, options: JSONSerialization.ReadingOptions.allowFragments)
+            if serialized != nil {
+                let json = serialized as! NSObject
+                objs = []
+                if let jsonAsDict = json as? [[String: Any]] {
+                    for obj in jsonAsDict {
+                        objs.append(StoryData(obj))
+                    }
                 }
             }
+        } else {
+            print("Cannot find asset \"\(assetName)\"")
         }
     }
 }

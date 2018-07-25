@@ -105,16 +105,16 @@
         "components": ["田", "木"],
         "candidates": [{
                 "name": "田",
-                "img": "tian2-field-top"
+                "img": "tian2-guo3-fruit"
             }, {
                 "name": "日",
-                "img": "ri4-sun-top"
+                "img": "ri4-guo3-fruit"
             }, {
                 "name": "十",
-                "img": "shi2-ten-bottom"
+                "img": "shi2-guo3-fruit"
             }, {
                 "name": "木",
-                "img": "mu4-wood-bottom"
+                "img": "mu4-guo3-fruit"
             }
         ],
         "pinyin": "guǒ",

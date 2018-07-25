@@ -15,11 +15,14 @@ class AnimationCard: UIView, DropsShadow {
     static var expectedFrame: CGRect { get { return CGRect(x: 0, y: 0, width: 240, height: 360) } }
     
     // This variable is the current character to learn
-    var characterToDisplay: String!
+    var characterToDisplay: CharacterData!
     
     @IBOutlet var animationCard: UIView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var animationView: SVGAImageView!
+    
+    // Bundle path prefix
+    @IBInspectable var animationPathPrefix = "res/animations/"
     
     private func initialize() {
         Bundle.main.loadNibNamed("AnimationCard", owner: self, options: nil)
@@ -44,10 +47,16 @@ class AnimationCard: UIView, DropsShadow {
     }
     
     override func draw(_ rect: CGRect) {
-        super.draw(rect)
         drawShadow()
         container.layer.cornerRadius = cornerRadius
         container.clipsToBounds = true
+        if let animationName = characterToDisplay.animationName {
+            let animationPath = animationPathPrefix + animationName
+            if Bundle.main.path(forResource: animationPath, ofType: "svga") != nil {
+                animationView.imageName = animationPath
+            }
+        }
+        super.draw(rect)
     }
     
     func playAnimation() {
