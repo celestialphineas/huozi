@@ -14,6 +14,9 @@ class AnimationCard: UIView, DropsShadow {
 
     static var expectedFrame: CGRect { get { return CGRect(x: 0, y: 0, width: 240, height: 360) } }
     
+    // This variable is the current character to learn
+    var characterToDisplay: String!
+    
     @IBOutlet var animationCard: UIView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var animationView: SVGAImageView!

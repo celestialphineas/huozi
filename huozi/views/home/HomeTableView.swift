@@ -25,7 +25,7 @@ class HomeTableViewController: UITableViewController {
     let characterSegueIdentifier = "homeToStory"
 
     let dataHandler = StoryDataOf("book-1")
-
+    
     // Segue configuring
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == characterSegueIdentifier,

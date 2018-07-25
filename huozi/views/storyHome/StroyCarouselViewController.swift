@@ -13,6 +13,11 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
     @IBOutlet var carouselView: iCarousel!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    // A list of characters to learn
+    var characterData: [String]!
+    
+    // Previous selected item among the cards
+    // We need this to control the data
     private weak var previousItem: AnimationCard!
     
     override func viewDidLoad() {
@@ -65,7 +70,7 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return 10
+        return characterData != nil ? characterData.count : 0
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {

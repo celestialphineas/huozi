@@ -193,7 +193,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="PNE-O1-CeO" kind="embed" id="XM8-LR-n2r"/>
+                                    <segue destination="PNE-O1-CeO" kind="embed" identifier="storyHomeContainerSegue" id="XM8-LR-n2r"/>
                                 </connections>
                             </containerView>
                         </subviews>
