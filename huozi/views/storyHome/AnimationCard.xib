@@ -26,15 +26,19 @@
                 <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAF-xV-CRl">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="360"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sr2-ZN-SV0" customClass="SVGAImageView">
+                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Sr2-ZN-SV0" customClass="SVGAImageView">
                             <rect key="frame" x="8" y="12" width="224" height="336"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Sr2-ZN-SV0" secondAttribute="height" multiplier="2:3" id="joo-hZ-2hD"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="imageName" value="res/animations/default"/>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="autoPlay" value="NO"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="characterAnimation"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>

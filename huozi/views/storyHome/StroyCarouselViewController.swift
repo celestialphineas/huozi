@@ -13,6 +13,9 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
     @IBOutlet var carouselView: iCarousel!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    // This is the identifier of the segue to the next scene
+    let piecingSegueIdentifier = "storyHomeToPiecing"
+    
     // A list of characters to learn
     var characterData: [String]!
     
@@ -32,8 +35,25 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
         carouselView.isPagingEnabled = true
     }
     
-    // This function allows the cards to animate when entering!
-    override func viewDidAppear(_ animated: Bool) {
+    // Handling segue
+    private var fromUpperScene = true
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == piecingSegueIdentifier,
+            let destination = segue.destination as? PiecingCharacterViewController {
+            if let currentView = carouselView.currentItemView as? AnimationCard {
+                fromUpperScene = false
+                destination.characterToDisplay = currentView.characterToDisplay
+            }
+        } else {
+            fromUpperScene = true
+        }
+    }
+    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
+        performSegue(withIdentifier: piecingSegueIdentifier, sender: self)
+    }
+    
+    // This is the entering animation for carousel items
+    func enteringAnimation() {
         for view in self.carouselView.subviews {
             if view as? UIPageControl == nil {
                 for view in view.subviews {
@@ -44,6 +64,14 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
                     }
                 }
             }
+        }
+    }
+    
+    // This function allows the cards to animate when entering!
+    override func viewDidAppear(_ animated: Bool) {
+        // Decide whether showing the entering animation or not
+        if fromUpperScene {
+            enteringAnimation()
         }
         
         // Setting the first animation card to play

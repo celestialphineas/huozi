@@ -21,7 +21,8 @@ class StoryHomeViewController: DesignableViewController {
         super.viewWillAppear(animated)
         titleLabel.text = storyData.title
         titleLabel.hero.id = "title-\(heroIndex)"
-        backgroundImage.image = UIImage(named: storyData.imageName)
+        GlobalViewModel.currentBackground = UIImage(named: storyData.imageName)
+        backgroundImage.image = GlobalViewModel.currentBackground
         backgroundImage.hero.id = "img-\(heroIndex)"
     }
     

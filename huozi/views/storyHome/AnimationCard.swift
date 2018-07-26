@@ -21,9 +21,6 @@ class AnimationCard: UIView, DropsShadow {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var animationView: SVGAImageView!
     
-    // Bundle path prefix
-    @IBInspectable var animationPathPrefix = "res/animations/"
-    
     private func initialize() {
         Bundle.main.loadNibNamed("AnimationCard", owner: self, options: nil)
         addSubview(animationCard)
@@ -32,8 +29,6 @@ class AnimationCard: UIView, DropsShadow {
         
         // Setting corner radius of the card
         self.cornerRadius(20)
-        
-        animationView.contentMode = .scaleAspectFit
     }
     
     override init(frame: CGRect) {
@@ -51,7 +46,8 @@ class AnimationCard: UIView, DropsShadow {
         container.layer.cornerRadius = cornerRadius
         container.clipsToBounds = true
         if let animationName = characterToDisplay.animationName {
-            let animationPath = animationPathPrefix + animationName
+            let prefix = GlobalViewModel.animationPathPrefix
+            let animationPath = prefix + animationName
             if Bundle.main.path(forResource: animationPath, ofType: "svga") != nil {
                 animationView.imageName = animationPath
             }
