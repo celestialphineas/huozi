@@ -1,7 +1,11 @@
 {
     "门": {
         "animation": "HamburgerArrow",
-        "components": ["门"],
+        "components": [{
+                "name": "门",
+                "img": "men2-door"
+            }
+        ],
         "candidates": [{
                 "name": "门",
                 "img": "men2-door"
@@ -21,7 +25,11 @@
     },
     "木": {
         "animation": "PinJump",
-        "components": ["木"],
+        "components": [{
+                "name": "木",
+                "img": "mu4-wood"
+            }
+        ],
         "candidates": [{
                 "name": "木",
                 "img": "mu4-wood"
@@ -41,7 +49,11 @@
     },
     "走": {
         "animation": "TwitterHeart",
-        "components": ["走"],
+        "components": [{
+                "name": "走",
+                "img": "zou3-walk"
+            }
+        ],
         "candidates": [
             {
                 "name": "走",
@@ -62,7 +74,11 @@
     },
     "火": {
         "animation": "Nothing",
-        "components": ["火"],
+        "components": [{
+                "name": "火",
+                "img": "huo3-fire"
+            }    
+        ],
         "candidates": [{
                 "name": "火",
                 "img": "huo3-fire"
@@ -102,7 +118,14 @@
     },
     "果": {
         "animation": "HamburgerArrow",
-        "components": ["田", "木"],
+        "components": [{
+                "name": "田",
+                "img": "tian2-guo3-fruit-top"
+            }, {
+                "name": "木",
+                "img": "mu4-guo3-wood-bottom"
+            }
+        ],
         "candidates": [{
                 "name": "田",
                 "img": "tian2-guo3-fruit"
