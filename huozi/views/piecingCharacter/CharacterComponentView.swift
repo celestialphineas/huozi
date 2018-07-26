@@ -9,15 +9,20 @@
 import UIKit
 
 @IBDesignable
-class CharacterComponentView: UIView, DropsShadow {
+class CharacterComponentView: UIButton, DropsShadow {
     
     @IBInspectable var cornerRadius: CGFloat = 10
     
     var containerView:      UIView!
     var componentImage:     UIImageView!
     var componentToDisplay: CharacterData.Component!
+    var center0: CGPoint!
+    
+    let imageTint = UIColor.black
+    let onTouchScaleFactor: CGFloat = 2
     
     private func initialize() {
+        
         // Initialize a component image view
         componentImage = UIImageView(frame: self.bounds)
         componentImage.image = UIImage(named: "placeholder")
@@ -34,6 +39,14 @@ class CharacterComponentView: UIView, DropsShadow {
         // Insert the views
         addSubview(containerView)
         containerView.addSubview(componentImage)
+        
+        // Make a change to the component image
+        if let imageName = componentToDisplay?.imageName,
+           let image = UIImage(named: imageName) {
+            componentImage.image = image
+            componentImage.tintColor = imageTint
+        }
+        drawShadow()
     }
     
     override init(frame: CGRect) {
@@ -48,15 +61,33 @@ class CharacterComponentView: UIView, DropsShadow {
     
     init(_ component: CharacterData.Component, frame: CGRect) {
         super.init(frame: frame)
-        initialize()
         componentToDisplay = component
+        initialize()
     }
-
-    override func draw(_ rect: CGRect) {
-        // Make a change to the component image
-        if let imageName = componentToDisplay?.imageName {
-            componentImage.image = UIImage(named: imageName)
+    
+    // Touch behaviors of the components
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        center0 = center
+        UIView.animate(withDuration: 0.25) {
+            self.transform
+                = CGAffineTransform(scaleX: self.onTouchScaleFactor, y: self.onTouchScaleFactor)
         }
-        drawShadow()
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        if let touch = touches.first {
+            center.x += touch.location(in: self).x - frame.width/2/onTouchScaleFactor
+            center.y += touch.location(in: self).y - frame.height/2/onTouchScaleFactor
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        UIView.animate(withDuration: 0.25) {
+            self.center = self.center0
+            self.transform = CGAffineTransform.identity
+        }
     }
 }

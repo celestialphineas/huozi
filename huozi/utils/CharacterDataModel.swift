@@ -13,9 +13,7 @@ class CharacterData {
     var pinyin:         String = "无"
     var definition:     String = "没有释义"
     var animationName:  String!
-    // The correct answer in the form of a list
-    var components:     [String]!
-    // Component candidates
+    // Component
     class Component {
         var name:       String!
         var imageName:  String!
@@ -24,6 +22,9 @@ class CharacterData {
             if let m = set["img"]   { self.imageName  = m }
         }
     }
+    // The correct answer in the form of a list
+    var components:     [Component] = []
+    // Candidates
     var candidates:     [Component] = []
     
     // The collection of character data
@@ -66,7 +67,12 @@ class CharacterData {
             if let m = dataset["pinyin"]        as? String              { self.pinyin           = m }
             if let m = dataset["definition"]    as? String              { self.definition       = m }
             if let m = dataset["animation"]     as? String              { self.animationName    = m }
-            if let m = dataset["components"]    as? [String]            { self.components       = m }
+            
+            if let m = dataset["components"]    as? [[String: String]] {
+                for item in m {
+                    self.components.append(Component(item))
+                }
+            }
             if let m = dataset["candidates"]    as? [[String: String]] {
                 for item in m {
                     self.candidates.append(Component(item))
