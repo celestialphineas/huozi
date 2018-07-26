@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,7 +9,6 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,17 +18,17 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="DesignableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIq-U2-JHz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ON-sc-Xe7">
-                                <rect key="frame" x="0.0" y="20" width="375" height="687"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="500"/>
                                 <connections>
                                     <segue destination="vny-Sa-cEs" kind="embed" id="a0W-1v-6kQ"/>
                                 </connections>
                             </containerView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8n6-we-doQ" customClass="GradientView" customModule="huozi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="mSV-bo-ajO"/>
@@ -70,15 +69,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y96-Ou-7mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vny-Sa-cEs" customClass="HomeTableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="64" sectionFooterHeight="40" id="o1T-z8-i6f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableCell" rowHeight="200" id="ArX-Qz-TG4" customClass="HomeTableCell" customModule="huozi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ArX-Qz-TG4" id="LBB-7d-BU2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rT5-aJ-gac" customClass="StoryCard" customModule="huozi" customModuleProvider="target">
@@ -122,21 +121,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wes-Fp-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="xy1-4m-eQr" customClass="StoryHomeViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="agb-0K-1HW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-aN-tTB">
-                                <rect key="frame" x="0.0" y="-40" width="375" height="747"/>
+                                <rect key="frame" x="0.0" y="-40" width="320" height="560"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jY1-6v-DTe" customClass="GradientView" customModule="huozi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-40" width="375" height="104"/>
+                                <rect key="frame" x="0.0" y="-40" width="320" height="104"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ9-9B-tj6">
-                                        <rect key="frame" x="164" y="70" width="48" height="22"/>
+                                        <rect key="frame" x="136.5" y="70" width="48" height="22"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -186,7 +185,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-15-nTd">
-                                <rect key="frame" x="0.0" y="118.5" width="375" height="450"/>
+                                <rect key="frame" x="0.0" y="58" width="320" height="384"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OQL-15-nTd" secondAttribute="height" multiplier="5:6" id="kpI-N1-fZu"/>
                                 </constraints>
@@ -234,11 +233,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="if2-Oa-n59" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PNE-O1-CeO" customClass="StoryCarouselViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="Pbe-Hh-iVn" customClass="iCarousel">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Su-eG-jFG">
-                                <rect key="frame" x="128" y="433" width="119" height="37"/>
+                                <rect key="frame" x="100.5" y="367" width="119" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.99404761904761907" green="0.98809523809523814" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
@@ -273,18 +272,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbT-49-FJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="zhU-Kq-qm4" customClass="PiecingCharacterViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ia1-L8-4vN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W4o-zn-GCo">
-                                <rect key="frame" x="0.0" y="-40" width="375" height="747"/>
+                                <rect key="frame" x="0.0" y="-40" width="320" height="560"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VmV-Jz-nYX" customClass="GradientView" customModule="huozi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-40" width="375" height="104"/>
+                                <rect key="frame" x="0.0" y="-40" width="320" height="104"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FUA-6x-mu4">
                                         <rect key="frame" x="24" y="72" width="32" height="20"/>
@@ -325,7 +324,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="FcC-Nl-rEe" customClass="SVGAImageView">
-                                <rect key="frame" x="140.5" y="32" width="94" height="140"/>
+                                <rect key="frame" x="120" y="32" width="80" height="119"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FcC-Nl-rEe" secondAttribute="height" multiplier="2:3" id="XQq-40-uwk"/>
@@ -337,15 +336,24 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="characterAnimation"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-Dd-IUt">
-                                <rect key="frame" x="75" y="316" width="225" height="225"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grid" translatesAutoresizingMaskIntoConstraints="NO" id="DwQ-hV-rsI">
+                                <rect key="frame" x="75" y="265" width="170" height="170"/>
+                                <color key="tintColor" red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-Dd-IUt" customClass="CharacterBoxView" customModule="huozi" customModuleProvider="target">
+                                <rect key="frame" x="75" y="265" width="170" height="170"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wdg-Dd-IUt" secondAttribute="height" multiplier="1:1" id="3JG-vC-CNU"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SWq-8X-Uua">
-                                <rect key="frame" x="47" y="196" width="280" height="60"/>
+                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SWq-8X-Uua">
+                                <rect key="frame" x="20" y="175" width="280" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="NyZ-7t-vOf"/>
                                     <constraint firstAttribute="width" constant="280" id="RAN-PR-F7m"/>
@@ -360,14 +368,18 @@
                             <constraint firstItem="INa-bZ-hnh" firstAttribute="trailing" secondItem="wdg-Dd-IUt" secondAttribute="trailing" constant="75" id="EmR-0y-PkY"/>
                             <constraint firstItem="INa-bZ-hnh" firstAttribute="trailing" secondItem="VmV-Jz-nYX" secondAttribute="trailing" id="G1I-Of-ypS"/>
                             <constraint firstItem="FcC-Nl-rEe" firstAttribute="width" secondItem="INa-bZ-hnh" secondAttribute="width" multiplier="1:4" id="Jmq-qw-T0c"/>
+                            <constraint firstItem="DwQ-hV-rsI" firstAttribute="trailing" secondItem="wdg-Dd-IUt" secondAttribute="trailing" id="OMa-YD-rTr"/>
                             <constraint firstItem="INa-bZ-hnh" firstAttribute="top" secondItem="VmV-Jz-nYX" secondAttribute="top" constant="60" id="TdN-nG-Or5"/>
                             <constraint firstItem="wdg-Dd-IUt" firstAttribute="leading" secondItem="INa-bZ-hnh" secondAttribute="leading" constant="75" id="VU8-Dq-G0Q"/>
                             <constraint firstItem="W4o-zn-GCo" firstAttribute="bottom" secondItem="INa-bZ-hnh" secondAttribute="bottom" constant="40" id="WFD-KZ-TKW"/>
                             <constraint firstItem="W4o-zn-GCo" firstAttribute="leading" secondItem="INa-bZ-hnh" secondAttribute="leading" id="YPu-hV-bEK"/>
                             <constraint firstItem="VmV-Jz-nYX" firstAttribute="leading" secondItem="INa-bZ-hnh" secondAttribute="leading" id="Zzu-TE-oVl"/>
                             <constraint firstItem="FcC-Nl-rEe" firstAttribute="top" secondItem="INa-bZ-hnh" secondAttribute="top" constant="12" id="cVI-Tv-khw"/>
-                            <constraint firstItem="wdg-Dd-IUt" firstAttribute="centerY" secondItem="INa-bZ-hnh" secondAttribute="centerY" constant="85" id="dY5-ze-cpJ"/>
+                            <constraint firstItem="wdg-Dd-IUt" firstAttribute="centerY" secondItem="INa-bZ-hnh" secondAttribute="centerY" constant="100" id="dY5-ze-cpJ"/>
                             <constraint firstItem="INa-bZ-hnh" firstAttribute="trailing" secondItem="W4o-zn-GCo" secondAttribute="trailing" id="gLs-xG-tAz"/>
+                            <constraint firstItem="DwQ-hV-rsI" firstAttribute="leading" secondItem="wdg-Dd-IUt" secondAttribute="leading" id="hHK-MF-kYt"/>
+                            <constraint firstItem="DwQ-hV-rsI" firstAttribute="bottom" secondItem="wdg-Dd-IUt" secondAttribute="bottom" id="i4c-Bd-SmE"/>
+                            <constraint firstItem="DwQ-hV-rsI" firstAttribute="top" secondItem="wdg-Dd-IUt" secondAttribute="top" id="kAF-DM-c7c"/>
                             <constraint firstItem="SWq-8X-Uua" firstAttribute="top" secondItem="FcC-Nl-rEe" secondAttribute="bottom" constant="24" id="xFQ-uM-ZKh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="INa-bZ-hnh"/>
@@ -382,6 +394,7 @@
                         <outlet property="animationView" destination="FcC-Nl-rEe" id="KNy-jw-Xer"/>
                         <outlet property="backgroundImage" destination="W4o-zn-GCo" id="2R4-Q7-id8"/>
                         <outlet property="candidateStackView" destination="SWq-8X-Uua" id="gby-WK-Ns5"/>
+                        <outlet property="characterBox" destination="wdg-Dd-IUt" id="0XP-X4-Y7I"/>
                     </connections>
                 </viewController>
             </objects>
@@ -390,5 +403,6 @@
     </scenes>
     <resources>
         <image name="arrow-left" width="842" height="596"/>
+        <image name="grid" width="1000" height="1000"/>
     </resources>
 </document>

@@ -14,8 +14,11 @@ class PiecingCharacterViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var animationView: SVGAImageView!
     @IBOutlet weak var candidateStackView: UIStackView!
+    @IBOutlet weak var characterBox: CharacterBoxView!
+    
     
     override func viewDidLoad() {
+        // Background image
         backgroundImage.image = GlobalViewModel.currentBackground
         if let animationName = characterToDisplay.animationName {
             let prefix = GlobalViewModel.animationPathPrefix
@@ -29,9 +32,16 @@ class PiecingCharacterViewController: UIViewController {
         let height = candidateStackView.frame.height
         if let candidates = characterToDisplay?.candidates {
             for candidate in candidates {
-                candidateStackView.addArrangedSubview(
-                    CharacterComponentView(candidate, frame: CGRect(x: 0, y: 0, width: height, height: height)))
+                if candidateStackView != nil {
+                    let view = CharacterComponentView(candidate, frame: CGRect(x: 0, y: 0, width: height, height: height))
+                    candidateStackView.addArrangedSubview(view)
+                }
             }
+        }
+        
+        // Pass the character composition data to the character box
+        if characterBox != nil {
+            characterBox.characterComposition = characterToDisplay.components
         }
     }
     

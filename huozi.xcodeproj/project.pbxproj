@@ -29,6 +29,7 @@
 		13C8D8C22101A4CF00E49384 /* StoryCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13C8D8C12101A4CF00E49384 /* StoryCard.xib */; };
 		13C8D8C42101A53200E49384 /* StoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8D8C32101A53200E49384 /* StoryCard.swift */; };
 		13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8D8C62101AA0B00E49384 /* DropShadow.swift */; };
+		13CDE7CD210A09C6004FCA8E /* CharacterBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDE7CC210A09C6004FCA8E /* CharacterBoxView.swift */; };
 		FF2D118F13BABEC33B477F55 /* libPods-huozi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C81A4C61214843770CE93EE5 /* libPods-huozi.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		13C8D8C12101A4CF00E49384 /* StoryCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCard.xib; sourceTree = "<group>"; };
 		13C8D8C32101A53200E49384 /* StoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCard.swift; sourceTree = "<group>"; };
 		13C8D8C62101AA0B00E49384 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
+		13CDE7CC210A09C6004FCA8E /* CharacterBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBoxView.swift; sourceTree = "<group>"; };
 		5275C9E8138BBD70BA0F80E2 /* Pods-huozi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-huozi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-huozi/Pods-huozi.debug.xcconfig"; sourceTree = "<group>"; };
 		C81A4C61214843770CE93EE5 /* libPods-huozi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-huozi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A8E0C04133335C83407910 /* Pods-huozi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-huozi.release.xcconfig"; path = "Pods/Target Support Files/Pods-huozi/Pods-huozi.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				13BA5C39210959FD0015616C /* PiecingCharacterViewController.swift */,
 				13752C712109B8D4000D4D48 /* CharacterComponentView.swift */,
+				13CDE7CC210A09C6004FCA8E /* CharacterBoxView.swift */,
 			);
 			path = piecingCharacter;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				13A31A75210436C8000CCDAD /* IconButton.swift in Sources */,
 				13C8D8C42101A53200E49384 /* StoryCard.swift in Sources */,
+				13CDE7CD210A09C6004FCA8E /* CharacterBoxView.swift in Sources */,
 				1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */,
 				13A31A7721043E06000CCDAD /* DesignableViewController.swift in Sources */,
 				13BA5C3A210959FD0015616C /* PiecingCharacterViewController.swift in Sources */,

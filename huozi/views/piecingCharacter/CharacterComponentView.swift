@@ -19,16 +19,18 @@ class CharacterComponentView: UIButton, DropsShadow {
     var center0: CGPoint!
     
     let imageTint = UIColor.black
-    let onTouchScaleFactor: CGFloat = 2
+    let onTouchScaleFactor: CGFloat = 1.6
     
     private func initialize() {
+        let x = bounds.minX, y = bounds.minY, w = bounds.height, h = bounds.height
+        let aspectBound = CGRect(x: x, y: y, width: w, height: h)
         
         // Initialize a component image view
-        componentImage = UIImageView(frame: self.bounds)
+        componentImage = UIImageView(frame: aspectBound)
         componentImage.image = UIImage(named: "placeholder")
         
         // Set up the containerView of the object
-        containerView = UIView(frame: self.bounds)
+        containerView = UIView(frame: aspectBound)
         containerView.clipsToBounds = true
         containerView.backgroundColor = UIColor.white
         containerView.layer.cornerRadius = cornerRadius
@@ -73,8 +75,9 @@ class CharacterComponentView: UIButton, DropsShadow {
             self.transform
                 = CGAffineTransform(scaleX: self.onTouchScaleFactor, y: self.onTouchScaleFactor)
         }
+        superview?.bringSubview(toFront: self)
     }
-    
+
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
         if let touch = touches.first {
@@ -82,7 +85,7 @@ class CharacterComponentView: UIButton, DropsShadow {
             center.y += touch.location(in: self).y - frame.height/2/onTouchScaleFactor
         }
     }
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         UIView.animate(withDuration: 0.25) {
