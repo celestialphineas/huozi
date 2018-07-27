@@ -123,7 +123,7 @@ class CharacterComponentView: UIButton, DropsShadow {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         if pieceDone { return }
-        if bingo {
+        if bingo && touchingBox {
             doPieced()
         } else {
             UIView.animate(withDuration: 0.25) {
