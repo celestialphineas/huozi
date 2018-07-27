@@ -33,7 +33,7 @@ class PiecingCharacterViewController: UIViewController {
         if let candidates = characterToDisplay?.candidates {
             for candidate in candidates {
                 if candidateStackView != nil {
-                    let view = CharacterComponentView(candidate, frame: CGRect(x: 0, y: 0, width: height, height: height))
+                    let view = CharacterComponentView(candidate, characterBox, frame: CGRect(x: 0, y: 0, width: height, height: height))
                     candidateStackView.addArrangedSubview(view)
                 }
             }
