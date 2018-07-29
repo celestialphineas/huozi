@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PiecingCharacterViewController: UIViewController {
+class PiecingCharacterViewController: DesignableViewController {
     
     var characterToDisplay: CharacterData!
     @IBOutlet weak var backgroundImage: UIImageView!

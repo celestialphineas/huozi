@@ -48,7 +48,7 @@
         "definition": "表示树木或木器的名称。"
     },
     "走": {
-        "animation": "TwitterHeart",
+        "animation": "走",
         "components": [{
                 "name": "走",
                 "img": "zou3-walk"
@@ -117,7 +117,7 @@
         "definition": "看到。"
     },
     "果": {
-        "animation": "HamburgerArrow",
+        "animation": "果",
         "components": [{
                 "name": "田",
                 "img": "tian2-guo3-fruit-top"

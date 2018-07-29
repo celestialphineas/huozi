@@ -30,6 +30,9 @@
 		13C8D8C42101A53200E49384 /* StoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8D8C32101A53200E49384 /* StoryCard.swift */; };
 		13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8D8C62101AA0B00E49384 /* DropShadow.swift */; };
 		13CDE7CD210A09C6004FCA8E /* CharacterBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDE7CC210A09C6004FCA8E /* CharacterBoxView.swift */; };
+		13CDE7D0210D504B004FCA8E /* TellingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDE7CF210D504B004FCA8E /* TellingStoryViewController.swift */; };
+		13CDE7D2210D6D61004FCA8E /* ScrollingLyricsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13CDE7D1210D6D61004FCA8E /* ScrollingLyricsView.xib */; };
+		13CDE7D4210D6E05004FCA8E /* ScrollingLyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDE7D3210D6E05004FCA8E /* ScrollingLyricsView.swift */; };
 		FF2D118F13BABEC33B477F55 /* libPods-huozi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C81A4C61214843770CE93EE5 /* libPods-huozi.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,9 @@
 		13C8D8C32101A53200E49384 /* StoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCard.swift; sourceTree = "<group>"; };
 		13C8D8C62101AA0B00E49384 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		13CDE7CC210A09C6004FCA8E /* CharacterBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBoxView.swift; sourceTree = "<group>"; };
+		13CDE7CF210D504B004FCA8E /* TellingStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellingStoryViewController.swift; sourceTree = "<group>"; };
+		13CDE7D1210D6D61004FCA8E /* ScrollingLyricsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollingLyricsView.xib; sourceTree = "<group>"; };
+		13CDE7D3210D6E05004FCA8E /* ScrollingLyricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingLyricsView.swift; sourceTree = "<group>"; };
 		5275C9E8138BBD70BA0F80E2 /* Pods-huozi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-huozi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-huozi/Pods-huozi.debug.xcconfig"; sourceTree = "<group>"; };
 		C81A4C61214843770CE93EE5 /* libPods-huozi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-huozi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A8E0C04133335C83407910 /* Pods-huozi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-huozi.release.xcconfig"; path = "Pods/Target Support Files/Pods-huozi/Pods-huozi.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 				13C8D8BE21018F7F00E49384 /* home */,
 				1383AEA22102CF7000B4DBF0 /* storyHome */,
 				13BA5C382109558E0015616C /* piecingCharacter */,
+				13CDE7CE210D4F1E004FCA8E /* tellingStory */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -181,6 +188,16 @@
 				13752C6F21097619000D4D48 /* GlobalViewModel.swift */,
 			);
 			path = commons;
+			sourceTree = "<group>";
+		};
+		13CDE7CE210D4F1E004FCA8E /* tellingStory */ = {
+			isa = PBXGroup;
+			children = (
+				13CDE7CF210D504B004FCA8E /* TellingStoryViewController.swift */,
+				13CDE7D1210D6D61004FCA8E /* ScrollingLyricsView.xib */,
+				13CDE7D3210D6E05004FCA8E /* ScrollingLyricsView.swift */,
+			);
+			path = tellingStory;
 			sourceTree = "<group>";
 		};
 		D2B45A9E8ABA461A7B2E7F59 /* Frameworks */ = {
@@ -262,6 +279,7 @@
 				13C8D8C22101A4CF00E49384 /* StoryCard.xib in Resources */,
 				1333EA032105AC3A00E26A47 /* AnimationCard.xib in Resources */,
 				1310666F20FDE3E800B27090 /* LaunchScreen.storyboard in Resources */,
+				13CDE7D2210D6D61004FCA8E /* ScrollingLyricsView.xib in Resources */,
 				138F05AF2106D58200EB81CA /* res in Resources */,
 				1310666C20FDE3E800B27090 /* Assets.xcassets in Resources */,
 				1310666A20FDE3E700B27090 /* Main.storyboard in Resources */,
@@ -303,6 +321,7 @@
 				13A31A7721043E06000CCDAD /* DesignableViewController.swift in Sources */,
 				13BA5C3A210959FD0015616C /* PiecingCharacterViewController.swift in Sources */,
 				1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */,
+				13CDE7D0210D504B004FCA8E /* TellingStoryViewController.swift in Sources */,
 				13752C722109B8D4000D4D48 /* CharacterComponentView.swift in Sources */,
 				13752C7021097619000D4D48 /* GlobalViewModel.swift in Sources */,
 				1383AEA42102CFF300B4DBF0 /* StoryHomeViewController.swift in Sources */,
@@ -311,6 +330,7 @@
 				1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */,
 				13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */,
 				1383AEA121020DD100B4DBF0 /* StoryDataModel.swift in Sources */,
+				13CDE7D4210D6E05004FCA8E /* ScrollingLyricsView.swift in Sources */,
 				1310666520FDE3E700B27090 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

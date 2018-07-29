@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,11 +18,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="DesignableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIq-U2-JHz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ON-sc-Xe7">
-                                <rect key="frame" x="0.0" y="20" width="320" height="500"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="588"/>
                                 <connections>
                                     <segue destination="vny-Sa-cEs" kind="embed" id="a0W-1v-6kQ"/>
                                 </connections>
@@ -69,7 +69,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y96-Ou-7mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vny-Sa-cEs" customClass="HomeTableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="64" sectionFooterHeight="40" id="o1T-z8-i6f">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="588"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -121,11 +121,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wes-Fp-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="xy1-4m-eQr" customClass="StoryHomeViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="agb-0K-1HW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-aN-tTB">
-                                <rect key="frame" x="0.0" y="-40" width="320" height="560"/>
+                                <rect key="frame" x="0.0" y="-40" width="320" height="648"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
@@ -185,7 +185,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-15-nTd">
-                                <rect key="frame" x="0.0" y="58" width="320" height="384"/>
+                                <rect key="frame" x="0.0" y="102" width="320" height="384"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OQL-15-nTd" secondAttribute="height" multiplier="5:6" id="kpI-N1-fZu"/>
                                 </constraints>
@@ -197,15 +197,36 @@
                                     <segue destination="PNE-O1-CeO" kind="embed" identifier="storyHomeContainerSegue" id="XM8-LR-n2r"/>
                                 </connections>
                             </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Th-mh-Jex">
+                                <rect key="frame" x="24" y="496" width="48" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYd-Ss-Yr2" customClass="IconButton" customModule="huozi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dYd-Ss-Yr2" secondAttribute="height" multiplier="1:1" id="53B-DS-x8g"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="48" id="cWX-l7-ISp"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button" image="earphone">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="scm-GC-H8H" kind="show" identifier="storyHomeToTelling" id="gPR-GU-K8h"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tt2-51-UUV" firstAttribute="bottom" secondItem="6Th-mh-Jex" secondAttribute="bottom" constant="24" id="Itt-YV-vlO"/>
                             <constraint firstItem="OQL-15-nTd" firstAttribute="leading" secondItem="tt2-51-UUV" secondAttribute="leading" id="J2X-yd-alv"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="top" secondItem="jY1-6v-DTe" secondAttribute="top" constant="60" id="JUH-aP-kNg"/>
                             <constraint firstItem="fIx-aN-tTB" firstAttribute="leading" secondItem="tt2-51-UUV" secondAttribute="leading" id="TdU-gl-GhA"/>
                             <constraint firstItem="jY1-6v-DTe" firstAttribute="leading" secondItem="tt2-51-UUV" secondAttribute="leading" id="URU-DE-vcm"/>
                             <constraint firstItem="fIx-aN-tTB" firstAttribute="top" secondItem="tt2-51-UUV" secondAttribute="top" constant="-60" id="X0X-c8-yie"/>
                             <constraint firstItem="IZ9-9B-tj6" firstAttribute="top" secondItem="tt2-51-UUV" secondAttribute="top" constant="10" id="beb-dZ-TrX"/>
+                            <constraint firstItem="6Th-mh-Jex" firstAttribute="leading" secondItem="tt2-51-UUV" secondAttribute="leading" constant="24" id="fb9-PQ-XsV"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="trailing" secondItem="jY1-6v-DTe" secondAttribute="trailing" id="jgc-eL-HmN"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="trailing" secondItem="OQL-15-nTd" secondAttribute="trailing" id="ldx-ot-Mkx"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="trailing" secondItem="fIx-aN-tTB" secondAttribute="trailing" id="ogg-za-FCD"/>
@@ -225,7 +246,112 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1534" y="29"/>
+            <point key="canvasLocation" x="1533.75" y="28.52112676056338"/>
+        </scene>
+        <!--Telling Story View Controller-->
+        <scene sceneID="wIE-1f-gLK">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GK4-Pv-6Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="scm-GC-H8H" customClass="TellingStoryViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOM-1a-zB8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Srx-Ce-boq">
+                                <rect key="frame" x="0.0" y="-40" width="320" height="648"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZsZ-ct-frI" customClass="GradientView" customModule="huozi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-40" width="320" height="104"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4Y-Z1-qcj">
+                                        <rect key="frame" x="136.5" y="70" width="48" height="22"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bk3-kl-00l">
+                                        <rect key="frame" x="24" y="72" width="32" height="20"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei1-gK-Zcb" customClass="IconButton" customModule="huozi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="32" id="Dm0-SU-r5Y"/>
+                                                    <constraint firstAttribute="width" secondItem="Ei1-gK-Zcb" secondAttribute="height" multiplier="8:5" id="j19-Sj-vBc"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button" image="arrow-left">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dismiss" destination="GK4-Pv-6Wa" eventType="touchUpInside" id="Y9r-BT-A6F"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bk3-kl-00l" secondAttribute="bottom" constant="12" id="CGU-rN-qU0"/>
+                                    <constraint firstAttribute="height" constant="104" id="QuH-hb-JnL"/>
+                                    <constraint firstAttribute="bottom" secondItem="H4Y-Z1-qcj" secondAttribute="bottom" constant="12" id="etF-Dz-HZT"/>
+                                    <constraint firstItem="H4Y-Z1-qcj" firstAttribute="centerX" secondItem="ZsZ-ct-frI" secondAttribute="centerX" id="rdL-24-Kcb"/>
+                                    <constraint firstItem="bk3-kl-00l" firstAttribute="leading" secondItem="ZsZ-ct-frI" secondAttribute="leading" constant="24" id="wOm-gk-58C"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="gradient"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HE-Nf-etG" customClass="ScrollingLyricsView" customModule="huozi" customModuleProvider="target">
+                                <rect key="frame" x="24" y="64" width="272" height="384"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZsZ-ct-frI" firstAttribute="trailing" secondItem="HQL-2O-4yx" secondAttribute="trailing" id="8nl-wd-AkN"/>
+                            <constraint firstItem="HQL-2O-4yx" firstAttribute="bottom" secondItem="Srx-Ce-boq" secondAttribute="bottom" constant="-40" id="CRL-6e-hHo"/>
+                            <constraint firstItem="HQL-2O-4yx" firstAttribute="bottom" secondItem="9HE-Nf-etG" secondAttribute="bottom" constant="120" id="Hcq-3b-fy4"/>
+                            <constraint firstItem="ZsZ-ct-frI" firstAttribute="leading" secondItem="HQL-2O-4yx" secondAttribute="leading" id="MQQ-yN-JnG"/>
+                            <constraint firstItem="HQL-2O-4yx" firstAttribute="top" secondItem="Srx-Ce-boq" secondAttribute="top" constant="60" id="Tgr-Xw-g0T"/>
+                            <constraint firstItem="9HE-Nf-etG" firstAttribute="top" secondItem="ZsZ-ct-frI" secondAttribute="bottom" id="XVl-Ve-J9x"/>
+                            <constraint firstItem="H4Y-Z1-qcj" firstAttribute="top" secondItem="HQL-2O-4yx" secondAttribute="top" constant="10" id="YEp-eB-VAJ"/>
+                            <constraint firstItem="HQL-2O-4yx" firstAttribute="trailing" secondItem="Srx-Ce-boq" secondAttribute="trailing" id="k2z-Iq-BRK"/>
+                            <constraint firstItem="9HE-Nf-etG" firstAttribute="leading" secondItem="HQL-2O-4yx" secondAttribute="leading" constant="24" id="lu0-Xs-SFu"/>
+                            <constraint firstItem="HQL-2O-4yx" firstAttribute="top" secondItem="ZsZ-ct-frI" secondAttribute="top" constant="60" id="ojT-vr-AuX"/>
+                            <constraint firstItem="HQL-2O-4yx" firstAttribute="trailing" secondItem="9HE-Nf-etG" secondAttribute="trailing" constant="24" id="unh-xs-3aM"/>
+                            <constraint firstItem="HQL-2O-4yx" firstAttribute="leading" secondItem="Srx-Ce-boq" secondAttribute="leading" id="xik-oN-L0g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HQL-2O-4yx"/>
+                    </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="LightStatusBar" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="backgroundImage" destination="Srx-Ce-boq" id="FAA-6z-4mO"/>
+                        <outlet property="scrollingLyricsView" destination="9HE-Nf-etG" id="PSw-nP-lUK"/>
+                        <outlet property="titleLabel" destination="H4Y-Z1-qcj" id="EKo-xw-QEY"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1533.75" y="848.23943661971828"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="PFv-bt-sIB">
@@ -272,11 +398,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbT-49-FJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="zhU-Kq-qm4" customClass="PiecingCharacterViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ia1-L8-4vN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W4o-zn-GCo">
-                                <rect key="frame" x="0.0" y="-40" width="320" height="560"/>
+                                <rect key="frame" x="0.0" y="-40" width="320" height="648"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
@@ -337,7 +463,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grid" translatesAutoresizingMaskIntoConstraints="NO" id="DwQ-hV-rsI">
-                                <rect key="frame" x="75" y="265" width="170" height="170"/>
+                                <rect key="frame" x="75" y="309" width="170" height="170"/>
                                 <color key="tintColor" red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -346,7 +472,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-Dd-IUt" customClass="CharacterBoxView" customModule="huozi" customModuleProvider="target">
-                                <rect key="frame" x="75" y="265" width="170" height="170"/>
+                                <rect key="frame" x="75" y="309" width="170" height="170"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wdg-Dd-IUt" secondAttribute="height" multiplier="1:1" id="3JG-vC-CNU"/>
@@ -389,6 +515,7 @@
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="LightStatusBar" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="animationView" destination="FcC-Nl-rEe" id="KNy-jw-Xer"/>
@@ -403,6 +530,7 @@
     </scenes>
     <resources>
         <image name="arrow-left" width="842" height="596"/>
+        <image name="earphone" width="1000" height="1000"/>
         <image name="grid" width="1000" height="1000"/>
     </resources>
 </document>

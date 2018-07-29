@@ -13,6 +13,7 @@ class StoryHomeViewController: DesignableViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
     let containerSegueIdentifier = "storyHomeContainerSegue"
+    let toTellingSegueIdentifier = "storyHomeToTelling"
     
     var storyData: StoryData!
     var heroIndex: Int = 0
@@ -27,10 +28,18 @@ class StoryHomeViewController: DesignableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == containerSegueIdentifier {
-            if let storyCarouselViewController = segue.destination as? StoryCarouselViewController {
-               storyCarouselViewController.characterData = storyData.characters
-            }
+        
+        switch segue.identifier {
+            case containerSegueIdentifier:
+                if let storyCarouselViewController = segue.destination as? StoryCarouselViewController {
+                    storyCarouselViewController.characterData = storyData.characters
+                }
+            case toTellingSegueIdentifier:
+                if let tellingStoryViewController = segue.destination as? TellingStoryViewController {
+                    tellingStoryViewController.storyData = storyData
+                }
+            default:
+                return
         }
     }
     
