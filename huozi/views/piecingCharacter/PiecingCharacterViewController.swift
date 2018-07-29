@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PiecingCharacterViewController: DesignableViewController {
+class PiecingCharacterViewController: DesignableViewController, PiecingProgressDelegate {
     
     var characterToDisplay: CharacterData!
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -16,6 +16,18 @@ class PiecingCharacterViewController: DesignableViewController {
     @IBOutlet weak var candidateStackView: UIStackView!
     @IBOutlet weak var characterBox: CharacterBoxView!
     
+    // Perform segue when piecing finished
+    let detailsSegueIdentifier = "piecingToDetails"
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == detailsSegueIdentifier {
+            if let destination = segue.destination as? CharacterDetailsViewController {
+                destination.characterToDisplay = characterToDisplay
+            }
+        }
+    }
+    func donePiecing() {
+        performSegue(withIdentifier: detailsSegueIdentifier, sender: self)
+    }
     
     override func viewDidLoad() {
         // Background image
@@ -43,6 +55,9 @@ class PiecingCharacterViewController: DesignableViewController {
         if characterBox != nil {
             characterBox.characterComposition = characterToDisplay.components
         }
+        
+        // Passing delegate
+        characterBox.piecingProgressDelegates.append(self)
     }
     
     @IBAction func dismiss() {

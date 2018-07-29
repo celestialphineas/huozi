@@ -8,11 +8,15 @@
 
 import UIKit
 
+protocol PiecingProgressDelegate {
+    func donePiecing()
+}
+
 @IBDesignable
 class CharacterBoxView: UIView {
     
     @IBInspectable var imageTint: UIColor = UIColor(red: 1.0, green: 0.25, blue: 0.5, alpha: 1.0)
-    
+
     private var characterCompositionVal: [CharacterData.Component]!
     var characterComposition: [CharacterData.Component]! {
         get { return characterCompositionVal }
@@ -23,6 +27,18 @@ class CharacterBoxView: UIView {
     }
     var latestQuery: CharacterData.Component! = nil
     var componentImageViews: [String: UIImageView] = [:]
+    
+    var piecingProgressDelegates: [PiecingProgressDelegate] = []
+    var piecingProgress: Float {
+        get {
+            var progress: Float = 0
+            for (_, component) in componentImageViews {
+                progress += Float(component.alpha)
+            }
+            progress /= Float(componentImageViews.count)
+            return progress
+        }
+    }
     
     private func initialize() {
         // It is promised that characterComposition is set
@@ -63,6 +79,17 @@ class CharacterBoxView: UIView {
     func showAnimation(alpha: CGFloat, in duration: TimeInterval) -> ((String) -> Void) {
         return { (someComponent: String) in
             if let componentImageView = self.componentImageViews[someComponent] {
+                UIView.animate(withDuration: duration, animations: {
+                        componentImageView.alpha = alpha
+                }, completion: { (finished: Bool) in
+                    // Call delegates when something has changed
+                    for delegate in self.piecingProgressDelegates {
+                        if self.piecingProgress > 0.99 {
+                            delegate.donePiecing()
+                        }
+                    }
+                })
+                
                 UIView.animate(withDuration: duration) {
                     componentImageView.alpha = alpha
                 }

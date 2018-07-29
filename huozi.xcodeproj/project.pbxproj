@@ -11,6 +11,7 @@
 		1310666A20FDE3E700B27090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1310666820FDE3E700B27090 /* Main.storyboard */; };
 		1310666C20FDE3E800B27090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1310666B20FDE3E800B27090 /* Assets.xcassets */; };
 		1310666F20FDE3E800B27090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1310666D20FDE3E800B27090 /* LaunchScreen.storyboard */; };
+		131217C4210DF50D00695B4D /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131217C3210DF50D00695B4D /* CharacterDetailsViewController.swift */; };
 		1333E9FA21059F0C00E26A47 /* StroyCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333E9F921059F0C00E26A47 /* StroyCarouselViewController.swift */; };
 		1333E9FC21059FF100E26A47 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1333E9FB21059FF100E26A47 /* QuartzCore.framework */; };
 		1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333EA002105AC2500E26A47 /* AnimationCard.swift */; };
@@ -41,6 +42,7 @@
 		1310666420FDE3E700B27090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1310666B20FDE3E800B27090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1310667020FDE3E800B27090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		131217C3210DF50D00695B4D /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		1333E9F921059F0C00E26A47 /* StroyCarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StroyCarouselViewController.swift; sourceTree = "<group>"; };
 		1333E9FB21059FF100E26A47 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1333E9FF2105A25B00E26A47 /* huozi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "huozi-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 			path = huozi;
 			sourceTree = "<group>";
 		};
+		131217C2210DF4EC00695B4D /* characterDetails */ = {
+			isa = PBXGroup;
+			children = (
+				131217C3210DF50D00695B4D /* CharacterDetailsViewController.swift */,
+			);
+			path = characterDetails;
+			sourceTree = "<group>";
+		};
 		1383AEA22102CF7000B4DBF0 /* storyHome */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +144,7 @@
 				13C8D8BE21018F7F00E49384 /* home */,
 				1383AEA22102CF7000B4DBF0 /* storyHome */,
 				13BA5C382109558E0015616C /* piecingCharacter */,
+				131217C2210DF4EC00695B4D /* characterDetails */,
 				13CDE7CE210D4F1E004FCA8E /* tellingStory */,
 			);
 			path = views;
@@ -322,6 +333,7 @@
 				13BA5C3A210959FD0015616C /* PiecingCharacterViewController.swift in Sources */,
 				1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */,
 				13CDE7D0210D504B004FCA8E /* TellingStoryViewController.swift in Sources */,
+				131217C4210DF50D00695B4D /* CharacterDetailsViewController.swift in Sources */,
 				13752C722109B8D4000D4D48 /* CharacterComponentView.swift in Sources */,
 				13752C7021097619000D4D48 /* GlobalViewModel.swift in Sources */,
 				1383AEA42102CFF300B4DBF0 /* StoryHomeViewController.swift in Sources */,

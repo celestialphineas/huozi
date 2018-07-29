@@ -1,6 +1,6 @@
 {
     "门": {
-        "animation": "HamburgerArrow",
+        "animation": "门1",
         "components": [{
                 "name": "门",
                 "img": "men2-door"
@@ -24,7 +24,7 @@
         "definition": "房屋、车船或用围墙、篱笆围起来的地方的出入口。"
     },
     "木": {
-        "animation": "PinJump",
+        "animation": "门2",
         "components": [{
                 "name": "木",
                 "img": "mu4-wood"
