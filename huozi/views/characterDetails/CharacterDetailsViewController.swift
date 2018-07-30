@@ -15,6 +15,7 @@ class CharacterDetailsViewController: DesignableViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var animationView: SVGAImageView!
     @IBOutlet weak var characterBox: CharacterBoxView!
+    @IBOutlet weak var characterDetailCard: CharacterDetailCard!
     
     override func viewDidLoad() {
         // Background image
@@ -34,9 +35,13 @@ class CharacterDetailsViewController: DesignableViewController {
         for (_, component) in characterBox.componentImageViews {
             component.alpha = 1.0
         }
+        
+        // Card data
+        characterDetailCard.characterAndPinyin.text = "\(characterToDisplay.name)  \(characterToDisplay.pinyin)"
+        characterDetailCard.characterDefinition.text = characterToDisplay.definition
     }
     
-    @IBAction func dismissTwo() {
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    @IBAction func unwind() {
+        performSegue(withIdentifier: "unwindCharacterDetails", sender: self)
     }
 }

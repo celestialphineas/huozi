@@ -46,4 +46,6 @@ class StoryHomeViewController: DesignableViewController {
     @IBAction func dismiss() {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func unwindAction(segue: UIStoryboardSegue) {}
 }

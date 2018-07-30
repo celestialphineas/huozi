@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import AVFoundation
 
 @IBDesignable
-class ScrollingLyricsView: UIView {
+class ScrollingLyricsView: UIView, AVSpeechSynthesizerDelegate {
     @IBOutlet var scrollingLyricsView: UIView!
     @IBOutlet weak var tableView: LyricsTableView!
     @IBInspectable var textColor: UIColor = UIColor(white: 1.0, alpha: 0.8)
     @IBInspectable var highlightColor: UIColor = UIColor(red: 1.0, green: 0.25, blue: 0.5, alpha: 1.0)
     @IBInspectable var selectedColor: UIColor = UIColor(white: 1.0, alpha: 1.0)
     @IBInspectable var lineHeight: CGFloat = 40.0
+    
+    // This variable marks the current line number that the TTS is reading
+    var currentSpeechLine = 0
+    var utterance = AVSpeechUtterance(string: "")
+    let synth = AVSpeechSynthesizer()
+    
+    weak var playPauseView: PlayPauseView!
     
     private var lyricsVal: [String]! = nil
     var lyrics: [String]! {
@@ -38,6 +46,9 @@ class ScrollingLyricsView: UIView {
         tableView.highlightColor = highlightColor
         tableView.selectedColor = selectedColor
         tableView.lineHeight = lineHeight
+        
+        // Initializing the synth
+        synth.delegate = self
     }
     
     override init(frame: CGRect) {
@@ -58,6 +69,63 @@ class ScrollingLyricsView: UIView {
     @IBAction func testScroll() {
         x += 1
         autoScroll(line: x)
+    }
+    
+    // Implementation of the delegation
+    private var nowPlayingVal = false
+    var nowPlaying: Bool {
+        get { return nowPlayingVal }
+        set {
+            nowPlayingVal = newValue
+            if playPauseView != nil {
+                if nowPlayingVal { playPauseView.toggleToPlay() }
+                else { playPauseView.toggleToPause() }
+            }
+        }
+    }
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        if lyrics == nil { return }
+        if nowPlaying {
+            if currentSpeechLine < lyrics.count - 1 {
+                currentSpeechLine += 1
+                play()
+            } else {
+                rewind()
+            }
+        }
+    }
+    
+    // Public interface
+    // Play
+    @IBAction func play() {
+        if lyrics == nil { return }
+        nowPlaying = true
+        autoScroll(line: currentSpeechLine)
+        if !synth.isPaused {
+            utterance = AVSpeechUtterance(string: lyrics[currentSpeechLine])
+            utterance.voice = AVSpeechSynthesisVoice(language: "zh-CN")
+            synth.speak(utterance)
+        } else {
+            synth.continueSpeaking()
+        }
+    }
+    // Pause
+    @IBAction func pause() {
+        nowPlaying = false
+        if synth.isSpeaking { synth.pauseSpeaking(at: .immediate) }
+    }
+    // Rewind
+    @IBAction func rewind() {
+        currentSpeechLine = 0
+        utterance = AVSpeechUtterance(string: "")
+        autoScroll(line: currentSpeechLine)
+    }
+    // Stop
+    @IBAction func stop() {
+        currentSpeechLine = 0
+        utterance = AVSpeechUtterance(string: "")
+        autoScroll(line: currentSpeechLine)
+        synth.stopSpeaking(at: .immediate)
     }
 }
 
