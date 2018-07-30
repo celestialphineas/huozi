@@ -13,6 +13,7 @@ class StoryHomeViewController: DesignableViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
     let containerSegueIdentifier = "storyHomeContainerSegue"
+    let presentSegueIdentifier = "storyHomeToPresent"
     let toTellingSegueIdentifier = "storyHomeToTelling"
     
     var storyData: StoryData!
@@ -37,6 +38,10 @@ class StoryHomeViewController: DesignableViewController {
             case toTellingSegueIdentifier:
                 if let tellingStoryViewController = segue.destination as? TellingStoryViewController {
                     tellingStoryViewController.storyData = storyData
+                }
+            case presentSegueIdentifier:
+                if let achievementViewController = segue.destination as? AchievementViewController {
+                    achievementViewController.storyData = storyData
                 }
             default:
                 return

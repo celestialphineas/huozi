@@ -51,13 +51,14 @@ public extension DropsShadow where Self: UIView {
         // Make sure that the view allows drawing out of the mask
         self.layer.masksToBounds    = false
         // Shadow parameters
+        self.layer.isOpaque = true
         self.layer.cornerRadius     = cornerRadius
         self.layer.shadowOpacity    = shadowOpacity
         self.layer.shadowRadius     = shadowRadius
         self.layer.shadowOffset     = CGSize(width: shadowOffsetX, height: shadowOffsetY)
         // Improve performance with rasterized Bezier path
         self.layer.shadowPath       = UIBezierPath(roundedRect: self.bounds, cornerRadius: cornerRadius).cgPath
-        self.layer.shouldRasterize  = true
+//        self.layer.shouldRasterize  = true
         self.layer.rasterizationScale = UIScreen.main.scale
     }
 }

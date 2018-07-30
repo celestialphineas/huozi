@@ -14,7 +14,6 @@ class PlayPauseView: UIView, DropsShadow {
     @IBOutlet var playPauseView: UIView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var animationView: SVGAImageView!
-    var numberOfFrames = 8
     
     private func initialize() {
         Bundle.main.loadNibNamed("PlayPauseView", owner: self, options: nil)
@@ -41,13 +40,12 @@ class PlayPauseView: UIView, DropsShadow {
         drawShadow()
         container.layer.cornerRadius = cornerRadius
         container.clipsToBounds = true
-        
         animationView.step(toPercentage: 1, andPlay: false)
-        numberOfFrames = Int(animationView.videoItem.frames)
     }
     
     private var playing = false
     func toggleToPlay() {
+        let numberOfFrames = Int(animationView.videoItem.frames)
         if !playing {
             animationView.startAnimation(with: NSRange(location: 0, length: numberOfFrames), reverse: true)
         }
@@ -55,6 +53,7 @@ class PlayPauseView: UIView, DropsShadow {
     }
     
     func toggleToPause() {
+        let numberOfFrames = Int(animationView.videoItem.frames)
         if playing {
             animationView.startAnimation(with: NSRange(location: 0, length: numberOfFrames), reverse: false)
         }

@@ -10,22 +10,26 @@ import Foundation
 
 // Abstract of each story data, initialized with a dict of [String:Any]
 class StoryData {
-    var index:          Int!
-    var category:       String!
-    var title:          String!
-    var imageName:      String!
-    var plain:          String!
-    var bySentence:     [String]!
-    var characters:     [String]!
+    var index:              Int!
+    var category:           String!
+    var title:              String!
+    var imageName:          String!
+    var medalImageName:     String!
+    var medalDescription:   String!
+    var plain:              String!
+    var bySentence:         [String]!
+    var characters:         [String]!
     
     init(_ data: [String:Any]) {
-        index           = data["index"]         as? Int
-        category        = data["category"]      as? String
-        title           = data["title"]         as? String
-        imageName       = data["cardimg"]       as? String
-        plain           = data["plain"]         as? String
-        bySentence      = data["bysentence"]    as? [String]
-        characters      = data["characters"]    as? [String]
+        index               = data["index"]         as? Int
+        category            = data["category"]      as? String
+        title               = data["title"]         as? String
+        imageName           = data["cardimg"]       as? String
+        medalImageName      = data["medalimg"]      as? String
+        medalDescription    = data["medaldesc"]     as? String
+        plain               = data["plain"]         as? String
+        bySentence          = data["bysentence"]    as? [String]
+        characters          = data["characters"]    as? [String]
     }
 }
 

@@ -16,6 +16,7 @@
 		131217CA210E9C1700695B4D /* CharacterDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131217C9210E9C1700695B4D /* CharacterDetailCard.swift */; };
 		131217CC210F044F00695B4D /* PlayPauseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131217CB210F044F00695B4D /* PlayPauseView.xib */; };
 		131217CE210F048100695B4D /* PlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131217CD210F048100695B4D /* PlayPauseView.swift */; };
+		131217D3210F4AFD00695B4D /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131217D2210F4AFD00695B4D /* AchievementViewController.swift */; };
 		1333E9FA21059F0C00E26A47 /* StroyCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333E9F921059F0C00E26A47 /* StroyCarouselViewController.swift */; };
 		1333E9FC21059FF100E26A47 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1333E9FB21059FF100E26A47 /* QuartzCore.framework */; };
 		1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333EA002105AC2500E26A47 /* AnimationCard.swift */; };
@@ -51,6 +52,7 @@
 		131217C9210E9C1700695B4D /* CharacterDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailCard.swift; sourceTree = "<group>"; };
 		131217CB210F044F00695B4D /* PlayPauseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayPauseView.xib; sourceTree = "<group>"; };
 		131217CD210F048100695B4D /* PlayPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseView.swift; sourceTree = "<group>"; };
+		131217D2210F4AFD00695B4D /* AchievementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
 		1333E9F921059F0C00E26A47 /* StroyCarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StroyCarouselViewController.swift; sourceTree = "<group>"; };
 		1333E9FB21059FF100E26A47 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1333E9FF2105A25B00E26A47 /* huozi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "huozi-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		131217CF210F450900695B4D /* achievementAccomplished */ = {
 			isa = PBXGroup;
 			children = (
+				131217D2210F4AFD00695B4D /* AchievementViewController.swift */,
 			);
 			path = achievementAccomplished;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				1383AEA42102CFF300B4DBF0 /* StoryHomeViewController.swift in Sources */,
 				1333E9FA21059F0C00E26A47 /* StroyCarouselViewController.swift in Sources */,
 				13BA5C3721086EF00015616C /* CharacterDataModel.swift in Sources */,
+				131217D3210F4AFD00695B4D /* AchievementViewController.swift in Sources */,
 				131217CA210E9C1700695B4D /* CharacterDetailCard.swift in Sources */,
 				1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */,
 				131217CE210F048100695B4D /* PlayPauseView.swift in Sources */,

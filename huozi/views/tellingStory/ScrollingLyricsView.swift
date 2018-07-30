@@ -122,10 +122,10 @@ class ScrollingLyricsView: UIView, AVSpeechSynthesizerDelegate {
     }
     // Stop
     @IBAction func stop() {
+        nowPlaying = false
         currentSpeechLine = 0
+        if synth.isSpeaking { synth.stopSpeaking(at: .immediate) }
         utterance = AVSpeechUtterance(string: "")
-        autoScroll(line: currentSpeechLine)
-        synth.stopSpeaking(at: .immediate)
     }
 }
 
