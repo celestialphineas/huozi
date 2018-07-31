@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,20 +16,28 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vOO-5m-LDP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="启动活字……" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vy-SB-ayG">
-                                <rect key="frame" x="115" y="328" width="145" height="32"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="0Jw-Do-bVW">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-icon" translatesAutoresizingMaskIntoConstraints="NO" id="q72-Cf-bY1">
+                                <rect key="frame" x="75" y="134" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="hgw-AF-Brr"/>
+                                    <constraint firstAttribute="width" secondItem="q72-Cf-bY1" secondAttribute="height" multiplier="1:1" id="vxQ-CD-LNJ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="4vy-SB-ayG" firstAttribute="centerY" secondItem="TTR-53-fAP" secondAttribute="centerY" id="8UD-hA-th0"/>
-                            <constraint firstItem="4vy-SB-ayG" firstAttribute="centerX" secondItem="TTR-53-fAP" secondAttribute="centerX" id="KRH-YG-12w"/>
+                            <constraint firstItem="0Jw-Do-bVW" firstAttribute="top" secondItem="TTR-53-fAP" secondAttribute="top" id="5QX-op-2T1"/>
+                            <constraint firstItem="TTR-53-fAP" firstAttribute="trailing" secondItem="0Jw-Do-bVW" secondAttribute="trailing" id="8Vk-z7-PDa"/>
+                            <constraint firstItem="q72-Cf-bY1" firstAttribute="centerX" secondItem="TTR-53-fAP" secondAttribute="centerX" constant="-5" id="C36-OS-2SI"/>
+                            <constraint firstItem="q72-Cf-bY1" firstAttribute="centerY" secondItem="TTR-53-fAP" secondAttribute="centerY" constant="-80" id="T9e-mN-Swr"/>
+                            <constraint firstItem="TTR-53-fAP" firstAttribute="bottom" secondItem="0Jw-Do-bVW" secondAttribute="bottom" id="hYt-L1-Ljd"/>
+                            <constraint firstItem="0Jw-Do-bVW" firstAttribute="leading" secondItem="TTR-53-fAP" secondAttribute="leading" id="wBc-JN-XC5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TTR-53-fAP"/>
                     </view>
@@ -38,4 +47,8 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash" width="750" height="1334"/>
+        <image name="splash-icon" width="284" height="284"/>
+    </resources>
 </document>

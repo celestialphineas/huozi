@@ -41,6 +41,10 @@ class CharacterDetailsViewController: DesignableViewController {
         characterDetailCard.characterDefinition.text = characterToDisplay.definition
     }
     
+    @IBAction func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func unwind() {
         performSegue(withIdentifier: "unwindCharacterDetails", sender: self)
     }

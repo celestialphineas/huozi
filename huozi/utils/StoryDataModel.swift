@@ -14,6 +14,7 @@ class StoryData {
     var category:           String!
     var title:              String!
     var imageName:          String!
+    var cardImageName:      String!
     var medalImageName:     String!
     var medalDescription:   String!
     var plain:              String!
@@ -24,7 +25,8 @@ class StoryData {
         index               = data["index"]         as? Int
         category            = data["category"]      as? String
         title               = data["title"]         as? String
-        imageName           = data["cardimg"]       as? String
+        imageName           = data["bgimg"]         as? String
+        cardImageName       = data["cardimg"]       as? String
         medalImageName      = data["medalimg"]      as? String
         medalDescription    = data["medaldesc"]     as? String
         plain               = data["plain"]         as? String

@@ -43,7 +43,7 @@ class AchievementViewController: UIViewController {
         UIView.animate(
             withDuration: 2,
             delay: 0,
-            usingSpringWithDamping: 0.1,
+            usingSpringWithDamping: 0.3,
             initialSpringVelocity: 0,
             options: [],
             animations: {

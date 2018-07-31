@@ -42,6 +42,8 @@ class HomeTableViewController: UITableViewController {
         // TODO:
         // This is to be removed
         for cell in tableView.visibleCells as! [HomeTableCell] {
+            // This line should be reserved
+            cell.storyCard.isOpaque = false
             cell.storyCard.checked = TemporaryUserStateModel.shownMedal
         }
     }
@@ -55,8 +57,8 @@ class HomeTableViewController: UITableViewController {
             }
         }
         
-        if let imageName = dataHandler.data?[indexPath.item].imageName {
-            if let img = UIImage(named: imageName) {
+        if let cardImageName = dataHandler.data?[indexPath.item].cardImageName {
+            if let img = UIImage(named: cardImageName) {
                 if let backgroundImageView = cell.storyCard?.backgroundImageView {
                     backgroundImageView.image = img
                     backgroundImageView.hero.id = "img-\(indexPath.item)"
@@ -67,6 +69,10 @@ class HomeTableViewController: UITableViewController {
         // TODO:
         // This is to be removed
         cell.storyCard.checked = TemporaryUserStateModel.shownMedal
+        if indexPath.item > 0 {
+            cell.storyCard.locked = true
+            cell.isUserInteractionEnabled = false
+        }
         
         return cell
     }

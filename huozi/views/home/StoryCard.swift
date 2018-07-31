@@ -16,7 +16,19 @@ class StoryCard: UIView, DropsShadow {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabelOnMask: UILabel!
     @IBOutlet weak var checkedImage: UIImageView!
+    @IBOutlet weak var lockedView: UIVisualEffectView!
+    
+    private var lockedVal = false
+    var locked: Bool {
+        get { return lockedVal }
+        set {
+            lockedVal = newValue
+            if lockedVal { lockedView.isHidden = false }
+            else { lockedView.isHidden = true }
+        }
+    }
     
     private var checkedVal = false
     var checked: Bool {
@@ -52,5 +64,6 @@ class StoryCard: UIView, DropsShadow {
         drawShadow()
         container.layer.cornerRadius = cornerRadius
         container.clipsToBounds = true
+        titleLabelOnMask.text = titleLabel.text
     }
 }

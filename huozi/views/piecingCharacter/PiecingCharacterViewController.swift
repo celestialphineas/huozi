@@ -19,6 +19,7 @@ class PiecingCharacterViewController: DesignableViewController, PiecingProgressD
     // Perform segue when piecing finished
     let detailsSegueIdentifier = "piecingToDetails"
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        animationView.stopAnimation()
         if segue.identifier == detailsSegueIdentifier {
             if let destination = segue.destination as? CharacterDetailsViewController {
                 destination.characterToDisplay = characterToDisplay

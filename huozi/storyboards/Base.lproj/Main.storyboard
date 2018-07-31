@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q4H-Ur-Y4p">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,6 +30,35 @@
                             </containerView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8n6-we-doQ" customClass="GradientView" customModule="huozi" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-rO-d1a">
+                                        <rect key="frame" x="24" y="24" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hV-nt-8Z5" customClass="IconButton" customModule="huozi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="32" id="N54-Zz-2QK"/>
+                                                    <constraint firstAttribute="width" secondItem="3hV-nt-8Z5" secondAttribute="height" multiplier="1:1" id="d3G-cu-C7H"/>
+                                                </constraints>
+                                                <state key="normal" image="menu"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nW6-gg-yzF">
+                                        <rect key="frame" x="319" y="24" width="32" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDy-Tl-2eG" customClass="IconButton" customModule="huozi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nDy-Tl-2eG" secondAttribute="height" multiplier="1:1" id="Onx-kV-dWo"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="32" id="b1B-FJ-oNi"/>
+                                                </constraints>
+                                                <state key="normal" image="add"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="mSV-bo-ajO"/>
@@ -49,17 +78,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3hV-nt-8Z5" firstAttribute="leading" secondItem="l7j-RY-br0" secondAttribute="leading" constant="24" id="84a-cR-ybb"/>
                             <constraint firstItem="3ON-sc-Xe7" firstAttribute="leading" secondItem="l7j-RY-br0" secondAttribute="leading" id="Hd0-9S-6qA"/>
                             <constraint firstItem="8n6-we-doQ" firstAttribute="top" secondItem="l7j-RY-br0" secondAttribute="top" id="Ju6-DX-9h0"/>
                             <constraint firstItem="l7j-RY-br0" firstAttribute="bottom" secondItem="3ON-sc-Xe7" secondAttribute="bottom" constant="-40" id="KRZ-o9-82c"/>
                             <constraint firstItem="3ON-sc-Xe7" firstAttribute="top" secondItem="l7j-RY-br0" secondAttribute="top" id="LKo-Ys-gWx"/>
+                            <constraint firstItem="l7j-RY-br0" firstAttribute="trailing" secondItem="nW6-gg-yzF" secondAttribute="trailing" constant="24" id="OuS-AP-ETr"/>
                             <constraint firstItem="l7j-RY-br0" firstAttribute="trailing" secondItem="8n6-we-doQ" secondAttribute="trailing" id="Pc3-RH-j7Y"/>
                             <constraint firstItem="8n6-we-doQ" firstAttribute="leading" secondItem="l7j-RY-br0" secondAttribute="leading" id="S8n-LL-hYW"/>
                             <constraint firstItem="l7j-RY-br0" firstAttribute="trailing" secondItem="3ON-sc-Xe7" secondAttribute="trailing" id="c5V-WY-egj"/>
+                            <constraint firstItem="3hV-nt-8Z5" firstAttribute="top" secondItem="l7j-RY-br0" secondAttribute="top" constant="24" id="jnO-5B-Uax"/>
+                            <constraint firstItem="nW6-gg-yzF" firstAttribute="top" secondItem="l7j-RY-br0" secondAttribute="top" constant="24" id="tZa-EA-bkb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l7j-RY-br0"/>
                     </view>
                     <toolbarItems/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="zoom"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="18.399999999999999" y="29.55665024630542"/>
@@ -81,7 +118,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rT5-aJ-gac" customClass="StoryCard" customModule="huozi" customModuleProvider="target">
+                                        <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rT5-aJ-gac" customClass="StoryCard" customModule="huozi" customModuleProvider="target">
                                             <rect key="frame" x="25" y="10" width="325" height="180"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <gestureRecognizers/>
@@ -360,7 +397,7 @@
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Th-mh-Jex">
-                                <rect key="frame" x="24" y="595" width="48" height="48"/>
+                                <rect key="frame" x="303" y="595" width="48" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYd-Ss-Yr2" customClass="IconButton" customModule="huozi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
@@ -388,7 +425,7 @@
                             <constraint firstItem="jY1-6v-DTe" firstAttribute="leading" secondItem="tt2-51-UUV" secondAttribute="leading" id="URU-DE-vcm"/>
                             <constraint firstItem="fIx-aN-tTB" firstAttribute="top" secondItem="tt2-51-UUV" secondAttribute="top" constant="-60" id="X0X-c8-yie"/>
                             <constraint firstItem="IZ9-9B-tj6" firstAttribute="top" secondItem="tt2-51-UUV" secondAttribute="top" constant="10" id="beb-dZ-TrX"/>
-                            <constraint firstItem="6Th-mh-Jex" firstAttribute="leading" secondItem="tt2-51-UUV" secondAttribute="leading" constant="24" id="fb9-PQ-XsV"/>
+                            <constraint firstItem="tt2-51-UUV" firstAttribute="trailing" secondItem="6Th-mh-Jex" secondAttribute="trailing" constant="24" id="cm4-L3-Y6A"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="trailing" secondItem="jY1-6v-DTe" secondAttribute="trailing" id="jgc-eL-HmN"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="trailing" secondItem="OQL-15-nTd" secondAttribute="trailing" id="ldx-ot-Mkx"/>
                             <constraint firstItem="tt2-51-UUV" firstAttribute="trailing" secondItem="fIx-aN-tTB" secondAttribute="trailing" id="ogg-za-FCD"/>
@@ -674,6 +711,9 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="characterBox"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="imageTint">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SWq-8X-Uua">
@@ -721,7 +761,7 @@
                         <outlet property="backgroundImage" destination="W4o-zn-GCo" id="2R4-Q7-id8"/>
                         <outlet property="candidateStackView" destination="SWq-8X-Uua" id="gby-WK-Ns5"/>
                         <outlet property="characterBox" destination="wdg-Dd-IUt" id="0XP-X4-Y7I"/>
-                        <segue destination="dSx-C6-ySa" kind="show" identifier="piecingToDetails" id="baU-Tc-Ys9"/>
+                        <segue destination="dSx-C6-ySa" kind="presentation" identifier="piecingToDetails" modalTransitionStyle="crossDissolve" id="baU-Tc-Ys9"/>
                     </connections>
                 </viewController>
             </objects>
@@ -816,6 +856,9 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="characterBox"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="imageTint">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6A-O8-6z3" customClass="CharacterDetailCard" customModule="huozi" customModuleProvider="target">
@@ -857,6 +900,7 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="LightStatusBar" value="YES"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="fade"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="animationView" destination="GZo-XT-1Dj" id="ErP-BN-GcK"/>
@@ -869,12 +913,55 @@
             </objects>
             <point key="canvasLocation" x="3904.8000000000002" y="23.838080959520241"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="vVx-yN-zF5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chy-AP-jiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="q4H-Ur-Y4p" customClass="SplashViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XLT-ca-A9z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Jlo-cx-XhL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-icon" translatesAutoresizingMaskIntoConstraints="NO" id="EF3-Ht-5MH">
+                                <rect key="frame" x="102.5" y="183.5" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EF3-Ht-5MH" secondAttribute="height" multiplier="1:1" id="Drj-Vj-WOI"/>
+                                    <constraint firstAttribute="width" constant="160" id="SDL-cz-17g"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jlo-cx-XhL" firstAttribute="leading" secondItem="C0c-Zo-tda" secondAttribute="leading" id="9sF-8B-n2U"/>
+                            <constraint firstItem="EF3-Ht-5MH" firstAttribute="centerY" secondItem="C0c-Zo-tda" secondAttribute="centerY" constant="-80" id="HsY-Ul-DxX"/>
+                            <constraint firstItem="Jlo-cx-XhL" firstAttribute="top" secondItem="C0c-Zo-tda" secondAttribute="top" id="VJJ-gm-unK"/>
+                            <constraint firstItem="C0c-Zo-tda" firstAttribute="trailing" secondItem="Jlo-cx-XhL" secondAttribute="trailing" id="bAj-iV-jmB"/>
+                            <constraint firstItem="C0c-Zo-tda" firstAttribute="bottom" secondItem="Jlo-cx-XhL" secondAttribute="bottom" id="kZ8-Tn-yE3"/>
+                            <constraint firstItem="EF3-Ht-5MH" firstAttribute="centerX" secondItem="C0c-Zo-tda" secondAttribute="centerX" constant="-5" id="uqN-3c-rdm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C0c-Zo-tda"/>
+                    </view>
+                    <connections>
+                        <outlet property="splashIcon" destination="EF3-Ht-5MH" id="G63-Pk-7bw"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="splashToHome" id="TP5-Mp-Qzb"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-705" y="29"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="add" width="1000" height="1000"/>
         <image name="arrow-left" width="842" height="596"/>
         <image name="cross" width="1000" height="1000"/>
         <image name="earphone" width="1000" height="1000"/>
         <image name="grid" width="1000" height="1000"/>
+        <image name="menu" width="1000" height="1000"/>
+        <image name="splash" width="750" height="1334"/>
+        <image name="splash-icon" width="284" height="284"/>
         <image name="three-pigs-medal" width="284" height="284"/>
     </resources>
 </document>

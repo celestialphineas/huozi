@@ -22,6 +22,7 @@
 		1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333EA002105AC2500E26A47 /* AnimationCard.swift */; };
 		1333EA032105AC3A00E26A47 /* AnimationCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1333EA022105AC3A00E26A47 /* AnimationCard.xib */; };
 		133970A2210FE8FA00F541FB /* TemporaryUserStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A1210FE8FA00F541FB /* TemporaryUserStateModel.swift */; };
+		133970A92110367F00F541FB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A82110367F00F541FB /* SplashViewController.swift */; };
 		13752C7021097619000D4D48 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C6F21097619000D4D48 /* GlobalViewModel.swift */; };
 		13752C722109B8D4000D4D48 /* CharacterComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C712109B8D4000D4D48 /* CharacterComponentView.swift */; };
 		1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */; };
@@ -60,6 +61,7 @@
 		1333EA002105AC2500E26A47 /* AnimationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCard.swift; sourceTree = "<group>"; };
 		1333EA022105AC3A00E26A47 /* AnimationCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationCard.xib; sourceTree = "<group>"; };
 		133970A1210FE8FA00F541FB /* TemporaryUserStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryUserStateModel.swift; sourceTree = "<group>"; };
+		133970A82110367F00F541FB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		13752C6F21097619000D4D48 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
 		13752C712109B8D4000D4D48 /* CharacterComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComponentView.swift; sourceTree = "<group>"; };
 		1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,14 @@
 			path = achievementAccomplished;
 			sourceTree = "<group>";
 		};
+		133970A72110366600F541FB /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				133970A82110367F00F541FB /* SplashViewController.swift */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
 		1383AEA22102CF7000B4DBF0 /* storyHome */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 			children = (
 				13C8D8C52101A9F900E49384 /* commons */,
 				13C8D8BE21018F7F00E49384 /* home */,
+				133970A72110366600F541FB /* splash */,
 				1383AEA22102CF7000B4DBF0 /* storyHome */,
 				131217CF210F450900695B4D /* achievementAccomplished */,
 				13BA5C382109558E0015616C /* piecingCharacter */,
@@ -368,6 +379,7 @@
 				1383AEA42102CFF300B4DBF0 /* StoryHomeViewController.swift in Sources */,
 				1333E9FA21059F0C00E26A47 /* StroyCarouselViewController.swift in Sources */,
 				13BA5C3721086EF00015616C /* CharacterDataModel.swift in Sources */,
+				133970A92110367F00F541FB /* SplashViewController.swift in Sources */,
 				131217D3210F4AFD00695B4D /* AchievementViewController.swift in Sources */,
 				131217CA210E9C1700695B4D /* CharacterDetailCard.swift in Sources */,
 				1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */,

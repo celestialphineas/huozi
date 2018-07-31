@@ -39,6 +39,12 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
     // Handling segue
     private var fromUpperScene = true
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // For better performance, stop animation before performing segue
+        if let animationCard = carouselView.currentItemView as? AnimationCard,
+        let animationView = animationCard.animationView {
+            animationView.stopAnimation()
+        }
+        
         fromUpperScene = ![piecingSegueIdentifier, tellingStorySegueIdentifier].contains(segue.identifier)
         
         if segue.identifier == piecingSegueIdentifier,
@@ -69,6 +75,12 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
     
     // This function allows the cards to animate when entering!
     override func viewDidAppear(_ animated: Bool) {
+        // For better performance, continue animation
+        if let animationCard = carouselView.currentItemView as? AnimationCard,
+            let animationView = animationCard.animationView {
+            animationView.startAnimation()
+        }
+        
         // Decide whether showing the entering animation or not
         if fromUpperScene {
             enteringAnimation()
