@@ -40,14 +40,13 @@ class PlayPauseView: UIView, DropsShadow {
         drawShadow()
         container.layer.cornerRadius = cornerRadius
         container.clipsToBounds = true
-        animationView.step(toPercentage: 1, andPlay: false)
     }
     
     private var playing = false
     func toggleToPlay() {
         let numberOfFrames = Int(animationView.videoItem.frames)
         if !playing {
-            animationView.startAnimation(with: NSRange(location: 0, length: numberOfFrames), reverse: true)
+            animationView.startAnimation(with: NSRange(location: 0, length: numberOfFrames), reverse: false)
         }
         playing = true
     }
@@ -55,7 +54,7 @@ class PlayPauseView: UIView, DropsShadow {
     func toggleToPause() {
         let numberOfFrames = Int(animationView.videoItem.frames)
         if playing {
-            animationView.startAnimation(with: NSRange(location: 0, length: numberOfFrames), reverse: false)
+            animationView.startAnimation(with: NSRange(location: 0, length: numberOfFrames), reverse: true)
         }
         playing = false
     }

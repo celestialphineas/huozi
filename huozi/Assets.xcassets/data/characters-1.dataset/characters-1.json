@@ -1,6 +1,6 @@
 {
     "门": {
-        "animation": "门1",
+        "animation": "men2-door",
         "components": [{
                 "name": "门",
                 "img": "men2-door"
@@ -24,7 +24,7 @@
         "definition": "房屋、车船或用围墙、篱笆围起来的地方的出入口。"
     },
     "木": {
-        "animation": "门2",
+        "animation": "mu4-wood",
         "components": [{
                 "name": "木",
                 "img": "mu4-wood"
@@ -48,7 +48,7 @@
         "definition": "表示树木或木器的名称。"
     },
     "走": {
-        "animation": "走",
+        "animation": "zou3-walk",
         "components": [{
                 "name": "走",
                 "img": "zou3-walk"
@@ -73,7 +73,7 @@
         "definition": "人或鸟兽的脚交互向前移动。"
     },
     "火": {
-        "animation": "Nothing",
+        "animation": "huo3-fire",
         "components": [{
                 "name": "火",
                 "img": "huo3-fire"
@@ -90,14 +90,14 @@
                 "img": "ren2-man"
             }, {
                 "name": "未",
-                "img": "wei4-hasnt"
+                "img": "wei4-notyet"
             }
         ],
         "pinyin": "huǒ",
         "definition": "物质燃烧时所发出的光和焰。"
     },
     "见": {
-        "animation": "TwitterHeart",
+        "animation": "jian4-see",
         "components": [{
             "name": "见",
             "img": "jian4-see"
@@ -120,27 +120,27 @@
         "definition": "看到。"
     },
     "果": {
-        "animation": "果",
+        "animation": "guo3-fruit",
         "components": [{
                 "name": "田",
-                "img": "tian2-guo3-fruit-top"
+                "img": "tian2-guo3-fruit"
             }, {
                 "name": "木",
-                "img": "mu4-guo3-wood-bottom"
+                "img": "mu4-guo3-fruit"
             }
         ],
         "candidates": [{
                 "name": "田",
-                "img": "tian2-guo3-fruit"
+                "img": "tian2-field"
             }, {
                 "name": "日",
-                "img": "ri4-guo3-fruit"
+                "img": "ri4-sun"
             }, {
                 "name": "十",
-                "img": "shi2-guo3-fruit"
+                "img": "shi2-ten"
             }, {
                 "name": "木",
-                "img": "mu4-guo3-fruit"
+                "img": "mu4-wood"
             }
         ],
         "pinyin": "guǒ",
