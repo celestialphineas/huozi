@@ -9,6 +9,7 @@
 import Foundation
 
 class CharacterData {
+    var index:          Int    = 0
     var name:           String = "未定义"
     var pinyin:         String = "无"
     var definition:     String = "没有释义"

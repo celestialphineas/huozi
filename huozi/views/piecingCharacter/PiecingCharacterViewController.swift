@@ -27,6 +27,10 @@ class PiecingCharacterViewController: DesignableViewController, PiecingProgressD
     }
     func donePiecing() {
         performSegue(withIdentifier: detailsSegueIdentifier, sender: self)
+        
+        // TODO:
+        // This is to be removed
+        TemporaryUserStateModel.characterDone[characterToDisplay.index] = true
     }
     
     override func viewDidLoad() {

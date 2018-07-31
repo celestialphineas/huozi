@@ -15,9 +15,10 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
     
     // This is the identifier of the segue to the next scene
     let piecingSegueIdentifier = "storyHomeToPiecing"
+    let tellingStorySegueIdentifier = "storyHomeToTelling"
     
     // A list of characters to learn
-    var characterData: [String]!
+    var characters: [String]!
     
     // Previous selected item among the cards
     // We need this to control the data
@@ -38,14 +39,13 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
     // Handling segue
     private var fromUpperScene = true
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        fromUpperScene = ![piecingSegueIdentifier, tellingStorySegueIdentifier].contains(segue.identifier)
+        
         if segue.identifier == piecingSegueIdentifier,
-            let destination = segue.destination as? PiecingCharacterViewController {
+        let destination = segue.destination as? PiecingCharacterViewController {
             if let currentView = carouselView.currentItemView as? AnimationCard {
-                fromUpperScene = false
                 destination.characterToDisplay = currentView.characterToDisplay
             }
-        } else {
-            fromUpperScene = true
         }
     }
     func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
@@ -98,13 +98,21 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return characterData != nil ? characterData.count : 0
+        return characters != nil ? characters.count : 0
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let animationCard = AnimationCard(frame: AnimationCard.expectedFrame)
         animationCard.isOpaque = false
-        animationCard.characterToDisplay = CharacterData(characterData[index])
+        let characterData = CharacterData(characters[index])
+        characterData.index = index
+        animationCard.characterToDisplay = characterData
+        
+        // TODO:
+        // This is to be modified or removed
+//        if TemporaryUserStateModel.characterDone[index] {
+//            animationCard.checked = true
+//        }
         
         return animationCard
     }

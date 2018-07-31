@@ -21,6 +21,7 @@
 		1333E9FC21059FF100E26A47 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1333E9FB21059FF100E26A47 /* QuartzCore.framework */; };
 		1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333EA002105AC2500E26A47 /* AnimationCard.swift */; };
 		1333EA032105AC3A00E26A47 /* AnimationCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1333EA022105AC3A00E26A47 /* AnimationCard.xib */; };
+		133970A2210FE8FA00F541FB /* TemporaryUserStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A1210FE8FA00F541FB /* TemporaryUserStateModel.swift */; };
 		13752C7021097619000D4D48 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C6F21097619000D4D48 /* GlobalViewModel.swift */; };
 		13752C722109B8D4000D4D48 /* CharacterComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C712109B8D4000D4D48 /* CharacterComponentView.swift */; };
 		1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */; };
@@ -58,6 +59,7 @@
 		1333E9FF2105A25B00E26A47 /* huozi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "huozi-Bridging-Header.h"; sourceTree = "<group>"; };
 		1333EA002105AC2500E26A47 /* AnimationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCard.swift; sourceTree = "<group>"; };
 		1333EA022105AC3A00E26A47 /* AnimationCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationCard.xib; sourceTree = "<group>"; };
+		133970A1210FE8FA00F541FB /* TemporaryUserStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryUserStateModel.swift; sourceTree = "<group>"; };
 		13752C6F21097619000D4D48 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
 		13752C712109B8D4000D4D48 /* CharacterComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComponentView.swift; sourceTree = "<group>"; };
 		1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				1310666420FDE3E700B27090 /* AppDelegate.swift */,
 				1383AEA021020DD100B4DBF0 /* StoryDataModel.swift */,
 				13BA5C3621086EF00015616C /* CharacterDataModel.swift */,
+				133970A1210FE8FA00F541FB /* TemporaryUserStateModel.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				13CDE7CD210A09C6004FCA8E /* CharacterBoxView.swift in Sources */,
 				1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */,
 				13A31A7721043E06000CCDAD /* DesignableViewController.swift in Sources */,
+				133970A2210FE8FA00F541FB /* TemporaryUserStateModel.swift in Sources */,
 				13BA5C3A210959FD0015616C /* PiecingCharacterViewController.swift in Sources */,
 				1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */,
 				13CDE7D0210D504B004FCA8E /* TellingStoryViewController.swift in Sources */,

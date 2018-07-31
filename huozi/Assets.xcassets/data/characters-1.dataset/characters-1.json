@@ -77,7 +77,7 @@
         "components": [{
                 "name": "火",
                 "img": "huo3-fire"
-            }    
+            }
         ],
         "candidates": [{
                 "name": "火",
@@ -98,7 +98,10 @@
     },
     "见": {
         "animation": "TwitterHeart",
-        "components": ["见"],
+        "components": [{
+            "name": "见",
+            "img": "jian4-see"
+        }],
         "candidates": [{
                 "name": "见",
                 "img": "jian4-see"

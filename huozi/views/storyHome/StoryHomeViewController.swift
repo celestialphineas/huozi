@@ -12,6 +12,7 @@ class StoryHomeViewController: DesignableViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var tellingStoryButton: IconButton!
     let containerSegueIdentifier = "storyHomeContainerSegue"
     let presentSegueIdentifier = "storyHomeToPresent"
     let toTellingSegueIdentifier = "storyHomeToTelling"
@@ -26,6 +27,26 @@ class StoryHomeViewController: DesignableViewController {
         GlobalViewModel.currentBackground = UIImage(named: storyData.imageName)
         backgroundImage.image = GlobalViewModel.currentBackground
         backgroundImage.hero.id = "img-\(heroIndex)"
+        
+        // TODO:
+        // This part should be removed later
+        var flag = true
+        for localFlag in TemporaryUserStateModel.characterDone {
+            if !localFlag { flag = false }
+        }
+        if flag {
+            tellingStoryButton.isEnabled = true
+            tellingStoryButton.alpha = 1
+        } else {
+            tellingStoryButton.isEnabled = false
+            tellingStoryButton.alpha = 0
+        }
+        
+        if TemporaryUserStateModel.shownModal { flag = false }
+        if flag {
+            performSegue(withIdentifier: presentSegueIdentifier, sender: self)
+            TemporaryUserStateModel.shownModal = true
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,7 +54,7 @@ class StoryHomeViewController: DesignableViewController {
         switch segue.identifier {
             case containerSegueIdentifier:
                 if let storyCarouselViewController = segue.destination as? StoryCarouselViewController {
-                    storyCarouselViewController.characterData = storyData.characters
+                    storyCarouselViewController.characters = storyData.characters
                 }
             case toTellingSegueIdentifier:
                 if let tellingStoryViewController = segue.destination as? TellingStoryViewController {
