@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @IBDesignable
 class CharacterDetailCard: UIView, DropsShadow {
@@ -42,4 +43,13 @@ class CharacterDetailCard: UIView, DropsShadow {
         container.clipsToBounds = true
     }
     
+    @IBAction func speek() {
+        if let characterToSpeak = characterAndPinyin.text?.first,
+            let definitionToSpeak = characterDefinition.text {
+            let toSpeak = "\(characterToSpeak)。\(definitionToSpeak)"
+            let utter = AVSpeechUtterance(string: toSpeak)
+            let synth = AVSpeechSynthesizer()
+            synth.speak(utter)
+        }
+    }
 }
