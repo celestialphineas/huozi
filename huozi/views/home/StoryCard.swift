@@ -16,12 +16,25 @@ class StoryCard: UIView, DropsShadow {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var checkedImage: UIImageView!
+    
+    private var checkedVal = false
+    var checked: Bool {
+        get { return checkedVal }
+        set {
+            checkedVal = newValue
+            if checked { checkedImage.alpha = 1 }
+            else { checkedImage.alpha = 0 }
+        }
+    }
     
     private func initialize() {
         Bundle.main.loadNibNamed("StoryCard", owner: self, options: nil)
         addSubview(storyCard)
         storyCard.frame = self.bounds
         storyCard.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
+        checkedImage.tintColor = UIColor(red: 253.0/255.0, green: 1.0, blue: 147.0/255.0, alpha: 1.0)
     }
     
     override init(frame: CGRect) {

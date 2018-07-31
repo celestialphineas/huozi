@@ -79,6 +79,16 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
             animationCard.playAnimation()
             previousItem = animationCard
         }
+        
+        // TODO:
+        // This is to be modified or removed
+        for index in 0...characters.count {
+            if let animationCard = carouselView.itemView(at: index) as? AnimationCard {
+                if TemporaryUserStateModel.characterDone[index] {
+                    animationCard.checked = true
+                }
+            }
+        }
     }
     
     // Update index of the item
@@ -107,12 +117,6 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
         let characterData = CharacterData(characters[index])
         characterData.index = index
         animationCard.characterToDisplay = characterData
-        
-        // TODO:
-        // This is to be modified or removed
-//        if TemporaryUserStateModel.characterDone[index] {
-//            animationCard.checked = true
-//        }
         
         return animationCard
     }

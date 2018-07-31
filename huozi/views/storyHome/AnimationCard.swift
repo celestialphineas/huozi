@@ -20,6 +20,17 @@ class AnimationCard: UIView, DropsShadow {
     @IBOutlet var animationCard: UIView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var animationView: SVGAImageView!
+    @IBOutlet weak var checkedImage: UIImageView!
+    
+    private var checkedVal = false
+    var checked: Bool {
+        get { return checkedVal }
+        set {
+            checkedVal = newValue
+            if checked { checkedImage.alpha = 1 }
+            else { checkedImage.alpha = 0 }
+        }
+    }
     
     private func initialize() {
         Bundle.main.loadNibNamed("AnimationCard", owner: self, options: nil)
@@ -29,6 +40,9 @@ class AnimationCard: UIView, DropsShadow {
         
         // Setting corner radius of the card
         self.cornerRadius(20)
+        
+        // checkedImage
+        checkedImage.tintColor = UIColor(red: 38.0/255.0, green: 195.0/255.0, blue: 44.0/255.0, alpha: 1)
     }
     
     override init(frame: CGRect) {

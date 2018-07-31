@@ -42,10 +42,10 @@ class StoryHomeViewController: DesignableViewController {
             tellingStoryButton.alpha = 0
         }
         
-        if TemporaryUserStateModel.shownModal { flag = false }
+        if TemporaryUserStateModel.shownMedal { flag = false }
         if flag {
             performSegue(withIdentifier: presentSegueIdentifier, sender: self)
-            TemporaryUserStateModel.shownModal = true
+            TemporaryUserStateModel.shownMedal = true
         }
     }
     

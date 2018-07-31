@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="animationCard" destination="iN0-l3-epB" id="bMu-KB-Y53"/>
                 <outlet property="animationView" destination="Sr2-ZN-SV0" id="v5n-0u-Bxb"/>
+                <outlet property="checkedImage" destination="oa6-pl-ZkQ" id="epm-8G-Hrd"/>
                 <outlet property="container" destination="vAF-xV-CRl" id="qs8-27-bdZ"/>
             </connections>
         </placeholder>
@@ -41,9 +42,24 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XeT-JS-HUd">
+                            <rect key="frame" x="200" y="16" width="24" height="24"/>
+                            <subviews>
+                                <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="oa6-pl-ZkQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                    <color key="tintColor" red="0.14901960784313725" green="0.76470588235294112" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="oa6-pl-ZkQ" secondAttribute="height" multiplier="1:1" id="QsC-Ry-FOJ"/>
+                                        <constraint firstAttribute="width" constant="24" id="cie-05-mlu"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="XeT-JS-HUd" secondAttribute="trailing" constant="16" id="1r4-bd-xaI"/>
+                        <constraint firstItem="XeT-JS-HUd" firstAttribute="top" secondItem="vAF-xV-CRl" secondAttribute="top" constant="16" id="P9L-nt-DGW"/>
                         <constraint firstItem="Sr2-ZN-SV0" firstAttribute="leading" secondItem="vAF-xV-CRl" secondAttribute="leading" constant="8" id="gli-KD-gxk"/>
                         <constraint firstAttribute="trailing" secondItem="Sr2-ZN-SV0" secondAttribute="trailing" constant="8" id="vgn-hI-Jeu"/>
                     </constraints>
@@ -65,4 +81,7 @@
             <point key="canvasLocation" x="-48" y="42"/>
         </view>
     </objects>
+    <resources>
+        <image name="checked" width="1000" height="1000"/>
+    </resources>
 </document>

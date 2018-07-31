@@ -12,7 +12,7 @@ import Foundation
 // This user state model should be replaced later
 class TemporaryUserStateModel {
     static var characterDone: [Bool] = Array(repeating: false, count: 6)
-    static var shownModal: Bool = false
+    static var shownMedal: Bool = false
     
     init() { }
 }

@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoryCard" customModule="huozi" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundImageView" destination="9nf-9K-gci" id="ClH-4E-ZQR"/>
+                <outlet property="checkedImage" destination="idh-rd-COd" id="SO6-Kz-cj8"/>
                 <outlet property="container" destination="59y-pA-ybJ" id="78c-rm-9my"/>
                 <outlet property="storyCard" destination="iN0-l3-epB" id="efI-dI-OEu"/>
                 <outlet property="titleLabel" destination="oUh-2e-t8x" id="tMi-tM-4CG"/>
@@ -58,6 +59,14 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </label>
+                        <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medal" translatesAutoresizingMaskIntoConstraints="NO" id="idh-rd-COd">
+                            <rect key="frame" x="343" y="8" width="24" height="24"/>
+                            <color key="tintColor" red="0.9935059655771602" green="1" blue="0.57793400537671613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="M7x-7W-WNB"/>
+                                <constraint firstAttribute="width" constant="24" id="gg6-TY-rsM"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -66,10 +75,12 @@
                         <constraint firstAttribute="trailing" secondItem="9nf-9K-gci" secondAttribute="trailing" id="9H1-Q1-Oep"/>
                         <constraint firstAttribute="bottom" secondItem="oUh-2e-t8x" secondAttribute="bottom" constant="15" id="9o3-Tj-oSL"/>
                         <constraint firstItem="oUh-2e-t8x" firstAttribute="leading" secondItem="59y-pA-ybJ" secondAttribute="leading" constant="20" id="HRn-nO-2xo"/>
+                        <constraint firstAttribute="trailing" secondItem="idh-rd-COd" secondAttribute="trailing" constant="8" id="L36-aV-elV"/>
                         <constraint firstItem="9nf-9K-gci" firstAttribute="leading" secondItem="59y-pA-ybJ" secondAttribute="leading" id="Mb3-7j-YH3"/>
                         <constraint firstAttribute="trailing" secondItem="Sqk-hP-Kvi" secondAttribute="trailing" id="SFf-aP-0ea"/>
                         <constraint firstAttribute="bottom" secondItem="9nf-9K-gci" secondAttribute="bottom" id="T0f-nU-xE5"/>
                         <constraint firstAttribute="height" constant="180" id="Tuo-nf-JMa"/>
+                        <constraint firstItem="idh-rd-COd" firstAttribute="top" secondItem="59y-pA-ybJ" secondAttribute="top" constant="8" id="jQ8-qF-nzb"/>
                         <constraint firstAttribute="trailing" secondItem="oUh-2e-t8x" secondAttribute="trailing" constant="20" id="uqE-dh-hu4"/>
                         <constraint firstItem="9nf-9K-gci" firstAttribute="top" secondItem="59y-pA-ybJ" secondAttribute="top" id="w0d-V3-xm1"/>
                     </constraints>
@@ -87,6 +98,7 @@
         </view>
     </objects>
     <resources>
+        <image name="medal" width="284" height="284"/>
         <image name="placeholder" width="1000" height="1000"/>
     </resources>
 </document>

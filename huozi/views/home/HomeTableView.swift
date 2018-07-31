@@ -38,6 +38,13 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: characterSegueIdentifier, sender: self)
     }
+    override func viewDidAppear(_ animated: Bool) {
+        // TODO:
+        // This is to be removed
+        for cell in tableView.visibleCells as! [HomeTableCell] {
+            cell.storyCard.checked = TemporaryUserStateModel.shownMedal
+        }
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableCell", for: indexPath) as! HomeTableCell
@@ -56,6 +63,11 @@ class HomeTableViewController: UITableViewController {
                 }
             }
         }
+        
+        // TODO:
+        // This is to be removed
+        cell.storyCard.checked = TemporaryUserStateModel.shownMedal
+        
         return cell
     }
 
