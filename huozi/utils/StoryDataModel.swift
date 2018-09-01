@@ -8,6 +8,21 @@
 
 import Foundation
 
+// Abstract of a book
+class BookData {
+    var name:               String!
+    var index:              Int!
+    var entry:              String!
+    var storyCount:         Int!
+    
+    init(_ data: [String:Any]) {
+        name                = data["name"]          as? String
+        index               = data["index"]         as? Int
+        entry               = data["entry"]         as? String
+        storyCount          = data["storycount"]    as? Int
+    }
+}
+
 // Abstract of each story data, initialized with a dict of [String:Any]
 class StoryData {
     var index:              Int!
@@ -44,6 +59,37 @@ protocol StoryDataHandler {
     var count: Int! { get }
 }
 
+class Books {
+    private var objs: [BookData]!
+    
+    var data: [BookData]! {
+        get { return objs }
+    }
+    var count: Int! {
+        get { return objs?.count }
+    }
+    
+    // The default asset name is 'manifest'
+    init() {
+        if let asset = NSDataAsset(name: "manifest") {
+            // Serialize the asset data
+            let serialized = try? JSONSerialization.jsonObject(with: asset.data, options: JSONSerialization.ReadingOptions.allowFragments)
+            if serialized != nil {
+                let json = serialized as! NSObject
+                objs = []
+                if let jsonFull = json as? [String: Any],
+                let jsonAsDict = jsonFull["books"] as? [[String: Any]] {
+                    for obj in jsonAsDict {
+                        objs.append(BookData(obj))
+                    }
+                }
+            }
+        } else {
+            print("Cannot find asset manifest")
+        }
+    }
+}
+
 // This class returns a StoryDataHandler object of
 class StoryDataOf: StoryDataHandler {
     private var objs: [StoryData]!
@@ -73,3 +119,4 @@ class StoryDataOf: StoryDataHandler {
         }
     }
 }
+

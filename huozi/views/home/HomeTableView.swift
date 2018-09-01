@@ -23,8 +23,11 @@ class HomeTableViewController: UITableViewController {
     let headerHeight: CGFloat = 64
     let footerHeight: CGFloat = 40
     let characterSegueIdentifier = "homeToStory"
-
-    let dataHandler = StoryDataOf("book-1")
+    var dataHandler = StoryDataOf("book-1a")
+    
+    func updateDataHandler() {
+        dataHandler = StoryDataOf(UserState.currentBookName)
+    }
     
     // Segue configuring
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

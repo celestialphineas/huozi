@@ -24,6 +24,8 @@
 		133970A2210FE8FA00F541FB /* TemporaryUserStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A1210FE8FA00F541FB /* TemporaryUserStateModel.swift */; };
 		133970A92110367F00F541FB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A82110367F00F541FB /* SplashViewController.swift */; };
 		1343402B213A83CF008E1DA5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343402A213A83CF008E1DA5 /* HomeViewController.swift */; };
+		1343402E213A8F01008E1DA5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1343402D213A8F01008E1DA5 /* CloudKit.framework */; };
+		13434030213AACFB008E1DA5 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343402F213AACFB008E1DA5 /* SideMenuViewController.swift */; };
 		13752C7021097619000D4D48 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C6F21097619000D4D48 /* GlobalViewModel.swift */; };
 		13752C722109B8D4000D4D48 /* CharacterComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C712109B8D4000D4D48 /* CharacterComponentView.swift */; };
 		1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */; };
@@ -64,6 +66,9 @@
 		133970A1210FE8FA00F541FB /* TemporaryUserStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryUserStateModel.swift; sourceTree = "<group>"; };
 		133970A82110367F00F541FB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1343402A213A83CF008E1DA5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1343402C213A8EFC008E1DA5 /* huozi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = huozi.entitlements; sourceTree = "<group>"; };
+		1343402D213A8F01008E1DA5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		1343402F213AACFB008E1DA5 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		13752C6F21097619000D4D48 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
 		13752C712109B8D4000D4D48 /* CharacterComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComponentView.swift; sourceTree = "<group>"; };
 		1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
@@ -94,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1343402E213A8F01008E1DA5 /* CloudKit.framework in Frameworks */,
 				1333E9FC21059FF100E26A47 /* QuartzCore.framework in Frameworks */,
 				FF2D118F13BABEC33B477F55 /* libPods-huozi.a in Frameworks */,
 			);
@@ -124,6 +130,7 @@
 		1310666320FDE3E700B27090 /* huozi */ = {
 			isa = PBXGroup;
 			children = (
+				1343402C213A8EFC008E1DA5 /* huozi.entitlements */,
 				13C8D8C02101913200E49384 /* storyboards */,
 				13C8D8BF2101911300E49384 /* utils */,
 				139BDE3620FEE661007C3675 /* views */,
@@ -203,6 +210,7 @@
 				13C8D8C32101A53200E49384 /* StoryCard.swift */,
 				1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */,
 				1343402A213A83CF008E1DA5 /* HomeViewController.swift */,
+				1343402F213AACFB008E1DA5 /* SideMenuViewController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -254,6 +262,7 @@
 		D2B45A9E8ABA461A7B2E7F59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1343402D213A8F01008E1DA5 /* CloudKit.framework */,
 				1333E9FB21059FF100E26A47 /* QuartzCore.framework */,
 				C81A4C61214843770CE93EE5 /* libPods-huozi.a */,
 			);
@@ -302,6 +311,14 @@
 				TargetAttributes = {
 					1310666020FDE3E700B27090 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -383,6 +400,7 @@
 				1383AEA42102CFF300B4DBF0 /* StoryHomeViewController.swift in Sources */,
 				1333E9FA21059F0C00E26A47 /* StroyCarouselViewController.swift in Sources */,
 				13BA5C3721086EF00015616C /* CharacterDataModel.swift in Sources */,
+				13434030213AACFB008E1DA5 /* SideMenuViewController.swift in Sources */,
 				133970A92110367F00F541FB /* SplashViewController.swift in Sources */,
 				131217D3210F4AFD00695B4D /* AchievementViewController.swift in Sources */,
 				131217CA210E9C1700695B4D /* CharacterDetailCard.swift in Sources */,
@@ -538,15 +556,16 @@
 			baseConfigurationReference = 5275C9E8138BBD70BA0F80E2 /* Pods-huozi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = huozi/huozi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 35QGMT6VY9;
+				DEVELOPMENT_TEAM = QF63X87GTF;
 				INFOPLIST_FILE = huozi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.celestialphineas.huozi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.celestialphineas.huozi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "huozi/huozi-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -559,15 +578,16 @@
 			baseConfigurationReference = F9A8E0C04133335C83407910 /* Pods-huozi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = huozi/huozi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 35QGMT6VY9;
+				DEVELOPMENT_TEAM = QF63X87GTF;
 				INFOPLIST_FILE = huozi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.celestialphineas.huozi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.celestialphineas.huozi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "huozi/huozi-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

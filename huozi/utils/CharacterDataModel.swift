@@ -40,7 +40,7 @@ class CharacterData {
                 let json = serialized as? [String: Any]
                 let packageList = json!["charpackages"] as? [[String: Any]]
                 for characterPackage in packageList! {
-                    if let filename = characterPackage["file"] as? String {
+                    if let filename = characterPackage["entry"] as? String {
                         addPackage(filename)
                     }
                 }

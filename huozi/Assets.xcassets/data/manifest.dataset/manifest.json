@@ -3,14 +3,20 @@
         {
             "name": "一年级（上）",
             "index": 1,
-            "file": "book-1",
-            "storycount": 1
+            "entry": "book-1a",
+            "storycount": 2
+        },
+        {
+            "name": "一年级（下）",
+            "index": 2,
+            "entry": "book-1b",
+            "storycount": 0
         }
     ],
     "charpackages": [
         {
             "index": 1,
-            "file": "characters-1"
+            "entry": "characters-1"
         }
     ]
 }

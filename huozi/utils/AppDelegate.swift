@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        configureSideMenu()
         return true
     }
 
@@ -49,5 +50,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SideMenuController.preferences.basic.menuWidth = 240
         SideMenuController.preferences.basic.statusBarBehavior = .slide
     }
+}
+
+class UserState {
+    static var currentBookName: String = "book-1a"
 }
 
