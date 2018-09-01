@@ -11,7 +11,8 @@ post_install do |installer|
 end
 
 target 'huozi' do
-    pod 'Hero',         '1.2.0'
-    pod 'iCarousel',    '1.8.3'
-    pod 'SVGAPlayer',   '2.1.4'
+    pod 'Hero',             '1.2.0'
+    pod 'iCarousel',        '1.8.3'
+    pod 'SVGAPlayer',       '2.1.4'
+    pod 'SideMenuSwift',    '0.5.0'
 end

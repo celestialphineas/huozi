@@ -2,6 +2,7 @@ PODS:
   - Hero (1.2.0)
   - iCarousel (1.8.3)
   - Protobuf (3.6.0)
+  - SideMenuSwift (0.5.0)
   - SSZipArchive (1.8.1)
   - SVGAPlayer (2.1.4):
     - SVGAPlayer/Core (= 2.1.4)
@@ -15,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Hero (= 1.2.0)
   - iCarousel (= 1.8.3)
+  - SideMenuSwift (= 0.5.0)
   - SVGAPlayer (= 2.1.4)
 
 SPEC REPOS:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - Hero
     - iCarousel
     - Protobuf
+    - SideMenuSwift
     - SSZipArchive
     - SVGAPlayer
 
@@ -29,9 +32,10 @@ SPEC CHECKSUMS:
   Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
+  SideMenuSwift: 1e26969b560b40a0478a6e46f6b0edf0ef3c102d
   SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
   SVGAPlayer: 1533f8e009fa6cdf3dc4867efa994739ab3cf250
 
-PODFILE CHECKSUM: 00475aae65c6fb80973ac89e7142ca7424ac3750
+PODFILE CHECKSUM: b132905c02377bbd7f56423d0fed98835d1637d5
 
 COCOAPODS: 1.5.3

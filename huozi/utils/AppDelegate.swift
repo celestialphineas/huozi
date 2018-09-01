@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenuSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -42,6 +43,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidFinishLaunching(_ application: UIApplication) {
         
+    }
+    
+    private func configureSideMenu() {
+        SideMenuController.preferences.basic.menuWidth = 240
+        SideMenuController.preferences.basic.statusBarBehavior = .slide
     }
 }
 
