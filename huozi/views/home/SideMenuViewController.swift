@@ -9,19 +9,20 @@
 import UIKit
 
 class SideMenuViewController: UIViewController {
+    @IBOutlet weak var sideMenuContainer: UIView!
+    let sideMenuTableSegue = "sideMenuTableSegue"
+    var sideMenuTableController: SideMenuTableController! = nil
     
-}
-
-class SideMenuContainerController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == sideMenuTableSegue {
+            sideMenuTableController = segue.destination as! SideMenuTableController
+        }
     }
 }
 
 class SideMenuTableController: UITableViewController {
     var books = Books()
+    weak var homeTableViewController: HomeTableViewController?
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -34,8 +35,14 @@ class SideMenuTableController: UITableViewController {
         cell.label.text = books.data[indexPath.item].name
         return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UserState.currentBookName = books.data[indexPath.item].entry
+        homeTableViewController?.updateDataHandler()
+        sideMenuController?.hideMenu()
+    }
 }
 
 class SideMenuTableCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
+    
 }

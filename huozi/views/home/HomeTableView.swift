@@ -27,6 +27,8 @@ class HomeTableViewController: UITableViewController {
     
     func updateDataHandler() {
         dataHandler = StoryDataOf(UserState.currentBookName)
+        tableView.reloadData()
+        tableView.reloadSections(IndexSet(integer: 0), with: .left)
     }
     
     // Segue configuring
@@ -47,7 +49,7 @@ class HomeTableViewController: UITableViewController {
         for cell in tableView.visibleCells as! [HomeTableCell] {
             // This line should be reserved
             cell.storyCard.isOpaque = false
-            cell.storyCard.checked = TemporaryUserStateModel.shownMedal
+            cell.storyCard.checked = UserProgressModel.shownMedal
         }
     }
 
@@ -71,7 +73,7 @@ class HomeTableViewController: UITableViewController {
         
         // TODO:
         // This is to be removed
-        cell.storyCard.checked = TemporaryUserStateModel.shownMedal
+        cell.storyCard.checked = UserProgressModel.shownMedal
         if indexPath.item > 0 {
             cell.storyCard.locked = true
             cell.isUserInteractionEnabled = false

@@ -25,6 +25,7 @@ class StoryCard: UIView, DropsShadow {
         get { return lockedVal }
         set {
             lockedVal = newValue
+            titleLabelOnMask.text = titleLabel.text
             if lockedVal { lockedView.isHidden = false }
             else { lockedView.isHidden = true }
         }

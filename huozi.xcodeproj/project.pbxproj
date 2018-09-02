@@ -21,11 +21,11 @@
 		1333E9FC21059FF100E26A47 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1333E9FB21059FF100E26A47 /* QuartzCore.framework */; };
 		1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333EA002105AC2500E26A47 /* AnimationCard.swift */; };
 		1333EA032105AC3A00E26A47 /* AnimationCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1333EA022105AC3A00E26A47 /* AnimationCard.xib */; };
-		133970A2210FE8FA00F541FB /* TemporaryUserStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A1210FE8FA00F541FB /* TemporaryUserStateModel.swift */; };
+		133970A2210FE8FA00F541FB /* UserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A1210FE8FA00F541FB /* UserConfiguration.swift */; };
 		133970A92110367F00F541FB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A82110367F00F541FB /* SplashViewController.swift */; };
 		1343402B213A83CF008E1DA5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343402A213A83CF008E1DA5 /* HomeViewController.swift */; };
-		1343402E213A8F01008E1DA5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1343402D213A8F01008E1DA5 /* CloudKit.framework */; };
 		13434030213AACFB008E1DA5 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343402F213AACFB008E1DA5 /* SideMenuViewController.swift */; };
+		13434032213BED47008E1DA5 /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13434031213BED47008E1DA5 /* UserState.swift */; };
 		13752C7021097619000D4D48 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C6F21097619000D4D48 /* GlobalViewModel.swift */; };
 		13752C722109B8D4000D4D48 /* CharacterComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C712109B8D4000D4D48 /* CharacterComponentView.swift */; };
 		1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */; };
@@ -63,12 +63,12 @@
 		1333E9FF2105A25B00E26A47 /* huozi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "huozi-Bridging-Header.h"; sourceTree = "<group>"; };
 		1333EA002105AC2500E26A47 /* AnimationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCard.swift; sourceTree = "<group>"; };
 		1333EA022105AC3A00E26A47 /* AnimationCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationCard.xib; sourceTree = "<group>"; };
-		133970A1210FE8FA00F541FB /* TemporaryUserStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryUserStateModel.swift; sourceTree = "<group>"; };
+		133970A1210FE8FA00F541FB /* UserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfiguration.swift; sourceTree = "<group>"; };
 		133970A82110367F00F541FB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1343402A213A83CF008E1DA5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1343402C213A8EFC008E1DA5 /* huozi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = huozi.entitlements; sourceTree = "<group>"; };
-		1343402D213A8F01008E1DA5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		1343402F213AACFB008E1DA5 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		13434031213BED47008E1DA5 /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
 		13752C6F21097619000D4D48 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
 		13752C712109B8D4000D4D48 /* CharacterComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComponentView.swift; sourceTree = "<group>"; };
 		1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
@@ -99,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1343402E213A8F01008E1DA5 /* CloudKit.framework in Frameworks */,
 				1333E9FC21059FF100E26A47 /* QuartzCore.framework in Frameworks */,
 				FF2D118F13BABEC33B477F55 /* libPods-huozi.a in Frameworks */,
 			);
@@ -221,7 +220,8 @@
 				1310666420FDE3E700B27090 /* AppDelegate.swift */,
 				1383AEA021020DD100B4DBF0 /* StoryDataModel.swift */,
 				13BA5C3621086EF00015616C /* CharacterDataModel.swift */,
-				133970A1210FE8FA00F541FB /* TemporaryUserStateModel.swift */,
+				13434031213BED47008E1DA5 /* UserState.swift */,
+				133970A1210FE8FA00F541FB /* UserConfiguration.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -262,7 +262,6 @@
 		D2B45A9E8ABA461A7B2E7F59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1343402D213A8F01008E1DA5 /* CloudKit.framework */,
 				1333E9FB21059FF100E26A47 /* QuartzCore.framework */,
 				C81A4C61214843770CE93EE5 /* libPods-huozi.a */,
 			);
@@ -390,9 +389,10 @@
 				13CDE7CD210A09C6004FCA8E /* CharacterBoxView.swift in Sources */,
 				1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */,
 				13A31A7721043E06000CCDAD /* DesignableViewController.swift in Sources */,
-				133970A2210FE8FA00F541FB /* TemporaryUserStateModel.swift in Sources */,
+				133970A2210FE8FA00F541FB /* UserConfiguration.swift in Sources */,
 				13BA5C3A210959FD0015616C /* PiecingCharacterViewController.swift in Sources */,
 				1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */,
+				13434032213BED47008E1DA5 /* UserState.swift in Sources */,
 				13CDE7D0210D504B004FCA8E /* TellingStoryViewController.swift in Sources */,
 				131217C4210DF50D00695B4D /* CharacterDetailsViewController.swift in Sources */,
 				13752C722109B8D4000D4D48 /* CharacterComponentView.swift in Sources */,

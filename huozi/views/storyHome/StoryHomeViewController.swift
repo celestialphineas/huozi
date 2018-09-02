@@ -31,7 +31,7 @@ class StoryHomeViewController: DesignableViewController {
         // TODO:
         // This part should be removed later
         var flag = true
-        for localFlag in TemporaryUserStateModel.characterDone {
+        for localFlag in UserProgressModel.characterDone {
             if !localFlag { flag = false }
         }
         if flag {
@@ -42,10 +42,10 @@ class StoryHomeViewController: DesignableViewController {
             tellingStoryButton.alpha = 0
         }
         
-        if TemporaryUserStateModel.shownMedal { flag = false }
+        if UserProgressModel.shownMedal { flag = false }
         if flag {
             performSegue(withIdentifier: presentSegueIdentifier, sender: self)
-            TemporaryUserStateModel.shownMedal = true
+            UserProgressModel.shownMedal = true
         }
     }
     

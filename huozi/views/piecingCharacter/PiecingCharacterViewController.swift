@@ -31,7 +31,7 @@ class PiecingCharacterViewController: DesignableViewController, PiecingProgressD
         
         // TODO:
         // This is to be removed
-        TemporaryUserStateModel.characterDone[characterToDisplay.index] = true
+        UserProgressModel.characterDone[characterToDisplay.index] = true
     }
     
     override func viewDidLoad() {

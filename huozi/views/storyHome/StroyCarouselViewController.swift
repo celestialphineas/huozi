@@ -96,7 +96,7 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
         // This is to be modified or removed
         for index in 0...characters.count {
             if let animationCard = carouselView.itemView(at: index) as? AnimationCard {
-                if TemporaryUserStateModel.characterDone[index] {
+                if UserProgressModel.characterDone[index] {
                     animationCard.checked = true
                 }
             }

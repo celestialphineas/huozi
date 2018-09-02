@@ -8,9 +8,7 @@
 
 import Foundation
 
-// TODO:
-// This user state model should be replaced later
-class TemporaryUserStateModel {
+class UserProgressModel {
     static var characterDone: [Bool] = Array(repeating: false, count: 6)
     static var shownMedal: Bool = false
     

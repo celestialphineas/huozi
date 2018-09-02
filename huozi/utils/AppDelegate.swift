@@ -52,7 +52,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-class UserState {
-    static var currentBookName: String = "book-1a"
-}
-
