@@ -34,7 +34,7 @@ class CharacterData {
         characterCollection = [:]
         // Get manifest
         if let manifestAsset = NSDataAsset(name: "manifest") {
-            let serialized = try? JSONSerialization.jsonObject(with: manifestAsset.data, options: JSONSerialization.ReadingOptions.allowFragments)
+            let serialized = try? JSONSerialization.jsonObject(with: manifestAsset.data, options: .allowFragments)
             if serialized != nil {
                 // Convert the serialized to Swift compatible data structure
                 let json = serialized as? [String: Any]
@@ -52,7 +52,7 @@ class CharacterData {
     private static func addPackage(_ name: String) {
         // Load the file from assets
         let asset = NSDataAsset(name: name)
-        let serialized = try? JSONSerialization.jsonObject(with: asset!.data, options: JSONSerialization.ReadingOptions.allowFragments)
+        let serialized = try? JSONSerialization.jsonObject(with: asset!.data, options: .allowFragments)
         if serialized is [String: [String: Any]] {
             // Push the character data into characterCollection
             characterCollection.merge(serialized as! [String: [String: Any]]) { (_, new) in new }

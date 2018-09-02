@@ -36,7 +36,7 @@ class SideMenuTableController: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UserState.currentBookName = books.data[indexPath.item].entry
+        UserState.currentBook = books.data[indexPath.item]
         homeTableViewController?.updateDataHandler()
         sideMenuController?.hideMenu()
     }

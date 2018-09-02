@@ -21,7 +21,7 @@
 		1333E9FC21059FF100E26A47 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1333E9FB21059FF100E26A47 /* QuartzCore.framework */; };
 		1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333EA002105AC2500E26A47 /* AnimationCard.swift */; };
 		1333EA032105AC3A00E26A47 /* AnimationCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1333EA022105AC3A00E26A47 /* AnimationCard.xib */; };
-		133970A2210FE8FA00F541FB /* UserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A1210FE8FA00F541FB /* UserConfiguration.swift */; };
+		133970A2210FE8FA00F541FB /* UserConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A1210FE8FA00F541FB /* UserConfigurations.swift */; };
 		133970A92110367F00F541FB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133970A82110367F00F541FB /* SplashViewController.swift */; };
 		1343402B213A83CF008E1DA5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343402A213A83CF008E1DA5 /* HomeViewController.swift */; };
 		13434030213AACFB008E1DA5 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343402F213AACFB008E1DA5 /* SideMenuViewController.swift */; };
@@ -63,7 +63,7 @@
 		1333E9FF2105A25B00E26A47 /* huozi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "huozi-Bridging-Header.h"; sourceTree = "<group>"; };
 		1333EA002105AC2500E26A47 /* AnimationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCard.swift; sourceTree = "<group>"; };
 		1333EA022105AC3A00E26A47 /* AnimationCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationCard.xib; sourceTree = "<group>"; };
-		133970A1210FE8FA00F541FB /* UserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfiguration.swift; sourceTree = "<group>"; };
+		133970A1210FE8FA00F541FB /* UserConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurations.swift; sourceTree = "<group>"; };
 		133970A82110367F00F541FB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1343402A213A83CF008E1DA5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1343402C213A8EFC008E1DA5 /* huozi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = huozi.entitlements; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 				1383AEA021020DD100B4DBF0 /* StoryDataModel.swift */,
 				13BA5C3621086EF00015616C /* CharacterDataModel.swift */,
 				13434031213BED47008E1DA5 /* UserState.swift */,
-				133970A1210FE8FA00F541FB /* UserConfiguration.swift */,
+				133970A1210FE8FA00F541FB /* UserConfigurations.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -389,7 +389,7 @@
 				13CDE7CD210A09C6004FCA8E /* CharacterBoxView.swift in Sources */,
 				1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */,
 				13A31A7721043E06000CCDAD /* DesignableViewController.swift in Sources */,
-				133970A2210FE8FA00F541FB /* UserConfiguration.swift in Sources */,
+				133970A2210FE8FA00F541FB /* UserConfigurations.swift in Sources */,
 				13BA5C3A210959FD0015616C /* PiecingCharacterViewController.swift in Sources */,
 				1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */,
 				13434032213BED47008E1DA5 /* UserState.swift in Sources */,

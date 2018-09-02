@@ -23,10 +23,10 @@ class HomeTableViewController: UITableViewController {
     let headerHeight: CGFloat = 64
     let footerHeight: CGFloat = 40
     let characterSegueIdentifier = "homeToStory"
-    var dataHandler = StoryDataOf("book-1a")
+    var dataHandler = StoryDataOf(UserState.currentBook.entry)
     
     func updateDataHandler() {
-        dataHandler = StoryDataOf(UserState.currentBookName)
+        dataHandler = StoryDataOf(UserState.currentBook.entry)
         tableView.reloadData()
         tableView.reloadSections(IndexSet(integer: 0), with: .left)
     }
@@ -44,12 +44,13 @@ class HomeTableViewController: UITableViewController {
         performSegue(withIdentifier: characterSegueIdentifier, sender: self)
     }
     override func viewDidAppear(_ animated: Bool) {
-        // TODO:
-        // This is to be removed
         for cell in tableView.visibleCells as! [HomeTableCell] {
-            // This line should be reserved
             cell.storyCard.isOpaque = false
-            cell.storyCard.checked = UserProgressModel.shownMedal
+            // Update story card medal status
+            if let item = tableView.indexPath(for: cell)?.item,
+               let storyIndex = dataHandler.data[item].index {
+                cell.storyCard.checked = UserProgressModel.storyMedal(book: UserState.currentBook.index, story: storyIndex)
+            }
         }
     }
 

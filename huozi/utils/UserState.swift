@@ -7,5 +7,5 @@
 //
 
 class UserState {
-    static var currentBookName: String = "book-1a"
+    static var currentBook: BookData = Books().data[0]
 }
