@@ -8,4 +8,5 @@
 
 class UserState {
     static var currentBook: BookData = Books().data[0]
+    static var currentStory: StoryData!
 }

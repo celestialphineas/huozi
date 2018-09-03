@@ -29,9 +29,8 @@ class PiecingCharacterViewController: DesignableViewController, PiecingProgressD
     func donePiecing() {
         performSegue(withIdentifier: detailsSegueIdentifier, sender: self)
         
-        // TODO:
-        // This is to be removed
-        UserProgressModel.characterDone[characterToDisplay.index] = true
+        // Update progress
+        UserProgressModel.addCharacterProgress(book: UserState.currentBook.index, story: UserState.currentStory.index, character: characterToDisplay.name)
     }
     
     override func viewDidLoad() {

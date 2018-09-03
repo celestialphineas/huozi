@@ -28,24 +28,21 @@ class StoryHomeViewController: DesignableViewController {
         backgroundImage.image = GlobalViewModel.currentBackground
         backgroundImage.hero.id = "img-\(heroIndex)"
         
-        // TODO:
-        // This part should be removed later
-        var flag = true
-        for localFlag in UserProgressModel.characterDone {
-            if !localFlag { flag = false }
-        }
-        if flag {
+        // Story done?
+        let book = UserState.currentBook.index!
+        let story = UserState.currentStory.index!
+        if UserProgressModel.allCharactersDone(book: book, story: story) {
             tellingStoryButton.isEnabled = true
             tellingStoryButton.alpha = 1
         } else {
             tellingStoryButton.isEnabled = false
             tellingStoryButton.alpha = 0
         }
-        
-        if UserProgressModel.shownMedal { flag = false }
-        if flag {
-            performSegue(withIdentifier: presentSegueIdentifier, sender: self)
-            UserProgressModel.shownMedal = true
+        // Should get medal?
+        if UserProgressModel.allCharactersDone(book: book, story: story)
+            && !UserProgressModel.hasStoryMedal(book: book, story: story) {
+                performSegue(withIdentifier: presentSegueIdentifier, sender: self)
+                UserProgressModel.addMedal(book: book, story: story)
         }
     }
     

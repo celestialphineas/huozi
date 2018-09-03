@@ -22,8 +22,8 @@ class HomeTableCell: UITableViewCell {
 class HomeTableViewController: UITableViewController {
     let headerHeight: CGFloat = 64
     let footerHeight: CGFloat = 40
-    let characterSegueIdentifier = "homeToStory"
     var dataHandler = StoryDataOf(UserState.currentBook.entry)
+    let characterSegueIdentifier = "homeToStory"
     
     func updateDataHandler() {
         dataHandler = StoryDataOf(UserState.currentBook.entry)
@@ -38,6 +38,7 @@ class HomeTableViewController: UITableViewController {
             let itemIndex   = tableView.indexPathForSelectedRow?.row {
             destination.storyData = dataHandler.data?[itemIndex]
             destination.heroIndex = itemIndex
+            UserState.currentStory = dataHandler.data?[itemIndex]
         }
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -49,7 +50,7 @@ class HomeTableViewController: UITableViewController {
             // Update story card medal status
             if let item = tableView.indexPath(for: cell)?.item,
                let storyIndex = dataHandler.data[item].index {
-                cell.storyCard.checked = UserProgressModel.storyMedal(book: UserState.currentBook.index, story: storyIndex)
+                cell.storyCard.checked = UserProgressModel.hasStoryMedal(book: UserState.currentBook.index, story: storyIndex)
             }
         }
     }
@@ -72,9 +73,11 @@ class HomeTableViewController: UITableViewController {
             }
         }
         
+        // Story card medal check state
+        cell.storyCard.checked = UserProgressModel.hasStoryMedal(book: UserState.currentBook.index, story: dataHandler.data[indexPath.item].index)
+        
         // TODO:
-        // This is to be removed
-        cell.storyCard.checked = UserProgressModel.shownMedal
+        // Story card lock state
         if indexPath.item > 0 {
             cell.storyCard.locked = true
             cell.isUserInteractionEnabled = false
