@@ -118,6 +118,14 @@ class UserProgressModel {
             return
         }
     }
+    // TODO: Update user progress (unlock) when one story is done
+    static func isUnlocked(book: Int, story: Int) -> Bool {
+        if let bookProgress = instance.progress.val[book] {
+            if bookProgress.keys.contains(story) { return true }
+            return false
+        }
+        return false
+    }
     
     
     static func updateStorage() {
