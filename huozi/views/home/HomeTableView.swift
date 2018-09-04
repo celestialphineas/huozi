@@ -80,6 +80,9 @@ class HomeTableViewController: UITableViewController {
         if !UserProgressModel.isUnlocked(storyData: dataHandler.data[indexPath.item]) {
             cell.storyCard.locked = true
             cell.isUserInteractionEnabled = false
+        } else {
+            cell.storyCard.locked = false
+            cell.isUserInteractionEnabled = true
         }
         
         return cell

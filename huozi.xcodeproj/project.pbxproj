@@ -26,6 +26,7 @@
 		1343402B213A83CF008E1DA5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343402A213A83CF008E1DA5 /* HomeViewController.swift */; };
 		13434030213AACFB008E1DA5 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343402F213AACFB008E1DA5 /* SideMenuViewController.swift */; };
 		13434032213BED47008E1DA5 /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13434031213BED47008E1DA5 /* UserState.swift */; };
+		13434035213E30C8008E1DA5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13434034213E30C8008E1DA5 /* SettingsView.swift */; };
 		13752C7021097619000D4D48 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C6F21097619000D4D48 /* GlobalViewModel.swift */; };
 		13752C722109B8D4000D4D48 /* CharacterComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C712109B8D4000D4D48 /* CharacterComponentView.swift */; };
 		1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */; };
@@ -69,6 +70,7 @@
 		1343402C213A8EFC008E1DA5 /* huozi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = huozi.entitlements; sourceTree = "<group>"; };
 		1343402F213AACFB008E1DA5 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		13434031213BED47008E1DA5 /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
+		13434034213E30C8008E1DA5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		13752C6F21097619000D4D48 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
 		13752C712109B8D4000D4D48 /* CharacterComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComponentView.swift; sourceTree = "<group>"; };
 		1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,14 @@
 			path = splash;
 			sourceTree = "<group>";
 		};
+		13434033213E3090008E1DA5 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				13434034213E30C8008E1DA5 /* SettingsView.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
 		1383AEA22102CF7000B4DBF0 /* storyHome */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,8 +196,9 @@
 				1383AEA22102CF7000B4DBF0 /* storyHome */,
 				131217CF210F450900695B4D /* achievementAccomplished */,
 				13BA5C382109558E0015616C /* piecingCharacter */,
-				131217C2210DF4EC00695B4D /* characterDetails */,
 				13CDE7CE210D4F1E004FCA8E /* tellingStory */,
+				131217C2210DF4EC00695B4D /* characterDetails */,
+				13434033213E3090008E1DA5 /* settings */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -404,6 +415,7 @@
 				133970A92110367F00F541FB /* SplashViewController.swift in Sources */,
 				131217D3210F4AFD00695B4D /* AchievementViewController.swift in Sources */,
 				131217CA210E9C1700695B4D /* CharacterDetailCard.swift in Sources */,
+				13434035213E30C8008E1DA5 /* SettingsView.swift in Sources */,
 				1383AE9F21020B5F00B4DBF0 /* GradientView.swift in Sources */,
 				131217CE210F048100695B4D /* PlayPauseView.swift in Sources */,
 				13C8D8C72101AA0B00E49384 /* DropShadow.swift in Sources */,
