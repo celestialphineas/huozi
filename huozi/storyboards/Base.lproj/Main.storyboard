@@ -18,6 +18,10 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yT7-px-Kiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="sideMenuController" id="aNL-uS-rLx" customClass="SideMenuController" customModule="SideMenuSwift" sceneMemberID="viewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="zoom"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="SideMenu.Content" customClass="SideMenuSegue" customModule="SideMenuSwift" id="Gze-LJ-MBj"/>
                         <segue destination="baT-L2-Jfs" kind="custom" identifier="SideMenu.Menu" customClass="SideMenuSegue" customModule="SideMenuSwift" id="3ql-Yu-zsZ"/>
@@ -201,6 +205,9 @@
                                                 <state key="normal" title="Button" image="arrow-left">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="backButton"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="dismiss" destination="pJl-tP-3JQ" eventType="touchUpInside" id="XSf-IA-rNd"/>
                                                     <action selector="dismiss" destination="Ol4-pc-9im" eventType="touchUpInside" id="c4D-uh-a0U"/>
@@ -226,6 +233,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="settingGradient"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -244,7 +252,6 @@
                     <navigationItem key="navigationItem" id="n9L-gh-Kvb"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="LightStatusBar" value="NO"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
             </objects>
@@ -267,7 +274,7 @@
                         <sections>
                             <tableViewSection headerTitle="关于" id="HJT-th-JTV">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Shb-MP-eAV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Shb-MP-eAV" customClass="SettingsTableCell" customModule="huozi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Shb-MP-eAV" id="9hi-Ts-tXh">
@@ -311,7 +318,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aMx-04-VcL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aMx-04-VcL" customClass="SettingsTableCell" customModule="huozi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="172" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aMx-04-VcL" id="yq0-45-hsF">
@@ -362,7 +369,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="重置" id="pSY-6I-7W3">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="IuF-YH-6Gc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="IuF-YH-6Gc" customClass="SettingsTableCell" customModule="huozi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="300" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IuF-YH-6Gc" id="T2Q-8j-gfc">
@@ -408,9 +415,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="重置" id="5Zy-Sg-cPP">
-                                <cells/>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="BVN-7S-VBT" id="Q9j-97-wQ3"/>
@@ -424,17 +428,72 @@
             </objects>
             <point key="canvasLocation" x="949.60000000000002" y="1622.3388305847077"/>
         </scene>
-        <!--View Controller-->
+        <!--About View Controller-->
         <scene sceneID="x0O-FF-dxG">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psW-bb-wXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="EnV-JB-5Sj" sceneMemberID="viewController">
+                <viewController id="EnV-JB-5Sj" customClass="AboutViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JfG-uL-YA9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1j-m9-mAV" customClass="GradientView" customModule="huozi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-40" width="375" height="104"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wzK-5Y-vAm">
+                                        <rect key="frame" x="24" y="72" width="32" height="20"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueP-F1-X30" customClass="IconButton" customModule="huozi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="32" id="JAg-cm-zah"/>
+                                                    <constraint firstAttribute="width" secondItem="ueP-F1-X30" secondAttribute="height" multiplier="8:5" id="wxq-Mk-tou"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button" image="arrow-left">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="backButton"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dismiss" destination="EnV-JB-5Sj" eventType="touchUpInside" id="lDF-IO-YdD"/>
+                                                    <action selector="dismiss" destination="psW-bb-wXZ" eventType="touchUpInside" id="qcO-Xc-37U"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wzK-5Y-vAm" firstAttribute="leading" secondItem="D1j-m9-mAV" secondAttribute="leading" constant="24" id="OtK-Of-oe1"/>
+                                    <constraint firstAttribute="bottom" secondItem="wzK-5Y-vAm" secondAttribute="bottom" constant="12" id="wPM-hM-JzU"/>
+                                    <constraint firstAttribute="height" constant="104" id="yKP-5a-H7G"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="settingGradient"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D1j-m9-mAV" firstAttribute="leading" secondItem="XmB-aI-rVt" secondAttribute="leading" id="aCK-sv-EIF"/>
+                            <constraint firstItem="XmB-aI-rVt" firstAttribute="trailing" secondItem="D1j-m9-mAV" secondAttribute="trailing" id="f0K-Zu-9ca"/>
+                            <constraint firstItem="XmB-aI-rVt" firstAttribute="top" secondItem="D1j-m9-mAV" secondAttribute="top" constant="60" id="ysb-c3-JJb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XmB-aI-rVt"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1705" y="1622"/>
@@ -522,10 +581,6 @@
                         <viewLayoutGuide key="safeArea" id="l7j-RY-br0"/>
                     </view>
                     <toolbarItems/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="zoom"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="homeTableViewContainer" destination="3ON-sc-Xe7" id="yXI-af-LXq"/>
                     </connections>

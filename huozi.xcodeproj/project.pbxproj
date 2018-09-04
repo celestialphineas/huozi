@@ -27,6 +27,7 @@
 		13434030213AACFB008E1DA5 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343402F213AACFB008E1DA5 /* SideMenuViewController.swift */; };
 		13434032213BED47008E1DA5 /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13434031213BED47008E1DA5 /* UserState.swift */; };
 		13434035213E30C8008E1DA5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13434034213E30C8008E1DA5 /* SettingsView.swift */; };
+		13556929213E825F00AA66C7 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13556928213E825F00AA66C7 /* AboutView.swift */; };
 		13752C7021097619000D4D48 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C6F21097619000D4D48 /* GlobalViewModel.swift */; };
 		13752C722109B8D4000D4D48 /* CharacterComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13752C712109B8D4000D4D48 /* CharacterComponentView.swift */; };
 		1383AE9D2101E0CF00B4DBF0 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */; };
@@ -71,6 +72,7 @@
 		1343402F213AACFB008E1DA5 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		13434031213BED47008E1DA5 /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
 		13434034213E30C8008E1DA5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		13556928213E825F00AA66C7 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		13752C6F21097619000D4D48 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
 		13752C712109B8D4000D4D48 /* CharacterComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComponentView.swift; sourceTree = "<group>"; };
 		1383AE9C2101E0CF00B4DBF0 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				13434034213E30C8008E1DA5 /* SettingsView.swift */,
+				13556928213E825F00AA66C7 /* AboutView.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				1343402B213A83CF008E1DA5 /* HomeViewController.swift in Sources */,
 				13A31A75210436C8000CCDAD /* IconButton.swift in Sources */,
 				13C8D8C42101A53200E49384 /* StoryCard.swift in Sources */,
+				13556929213E825F00AA66C7 /* AboutView.swift in Sources */,
 				13CDE7CD210A09C6004FCA8E /* CharacterBoxView.swift in Sources */,
 				1333EA012105AC2500E26A47 /* AnimationCard.swift in Sources */,
 				13A31A7721043E06000CCDAD /* DesignableViewController.swift in Sources */,

@@ -10,8 +10,7 @@ import UIKit
 import Foundation
 import Hero
 
-class SettingsViewController: DesignableViewController {
-    
+class SettingsViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         initialize()
@@ -37,6 +36,10 @@ class SettingsTableViewController: UITableViewController {
         if indexPath == tableView.indexPath(for: reviewCell) {
             openAppStore()
         }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor.clear
     }
     
     func openAppStore() {
@@ -49,16 +52,35 @@ class SettingsTableViewController: UITableViewController {
             guard err == nil && data != nil else { self.showNetConnectionAlert(); return }
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
-                let trackID = json["trackId"] as! Int
+                guard json["resultCount"] as! Int >= 1 else { self.showNetConnectionAlert(); return }
+                let result = (json["results"] as! [[String:Any]])[0]
+                let trackID = result["trackId"] as! Int
                 let itunesURL = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=\(trackID)&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software"
-                UIApplication.shared.openURL(URL(string: itunesURL)!)
+                DispatchQueue.main.async {
+                    UIApplication.shared.openURL(URL(string: itunesURL)!)
+                }
             } catch { }
         }
         task.resume()
     }
     func showNetConnectionAlert() {
-        let alert = UIAlertController(title: "出错啦！", message: "无法打开应用商店，请检查网络连接", preferredStyle: .alert)
+        let alert = UIAlertController(title: "出错啦！", message: "无法打开 App Store，请检查网络连接", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default))
         self.present(alert, animated: true, completion: nil)
     }
 }
+
+class SettingsTableCell: UITableViewCell {
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        if selected {
+            UIView.animate(withDuration: 0.2) {
+                self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            }
+        } else {
+            UIView.animate(withDuration: 0.5) {
+                self.transform = CGAffineTransform.identity
+            }
+        }
+    }
+}
+
