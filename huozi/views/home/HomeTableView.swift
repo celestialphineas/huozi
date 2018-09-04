@@ -75,10 +75,9 @@ class HomeTableViewController: UITableViewController {
         
         // Story card medal check state
         cell.storyCard.checked = UserProgressModel.hasStoryMedal(book: UserState.currentBook.index, story: dataHandler.data[indexPath.item].index)
-        
-        // TODO:
+
         // Story card lock state
-        if indexPath.item > 0 {
+        if !UserProgressModel.isUnlocked(storyData: dataHandler.data[indexPath.item]) {
             cell.storyCard.locked = true
             cell.isUserInteractionEnabled = false
         }

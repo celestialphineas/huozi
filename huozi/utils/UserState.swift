@@ -7,6 +7,15 @@
 //
 
 class UserState {
-    static var currentBook: BookData = Books().data[0]
+    static var books = Books()
+    private static var _currentBook = books.data[0]
+    static var storiesInCurrentBook = StoryDataOf(books.data[0].entry)
+    static var currentBook: BookData {
+        get { return _currentBook }
+        set {
+            _currentBook = newValue
+            storiesInCurrentBook = StoryDataOf(books.data[0].entry)
+        }
+    }
     static var currentStory: StoryData!
 }

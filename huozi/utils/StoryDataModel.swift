@@ -26,6 +26,7 @@ class BookData {
 // Abstract of each story data, initialized with a dict of [String:Any]
 class StoryData {
     var index:              Int!
+    var primaryUnlocked:    Bool!
     var category:           String!
     var title:              String!
     var imageName:          String!
@@ -38,6 +39,7 @@ class StoryData {
     
     init(_ data: [String:Any]) {
         index               = data["index"]         as? Int
+        primaryUnlocked     = data["primaryunlocked"] != nil ? data["primaryunlocked"] as! Bool : false
         category            = data["category"]      as? String
         title               = data["title"]         as? String
         imageName           = data["bgimg"]         as? String

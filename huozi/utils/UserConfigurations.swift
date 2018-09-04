@@ -118,12 +118,17 @@ class UserProgressModel {
             return
         }
     }
-    // TODO: Update user progress (unlock) when one story is done
-    static func isUnlocked(book: Int, story: Int) -> Bool {
-        if let bookProgress = instance.progress.val[book] {
-            if bookProgress.keys.contains(story) { return true }
-            return false
-        }
+    
+    static func isUnlocked(storyData: StoryData) -> Bool {
+        if storyData.primaryUnlocked { return true }
+        if hasStoryMedal(book: UserState.currentBook.index, story: storyData.index) { return true }
+        
+        // NOTE: It's dangerous here. TODO: Refactor this later!
+        let previousI = UserState.storiesInCurrentBook.data.map({ story in story.index }).index(of: storyData.index)! - 1
+        if previousI < 0 { return true }
+        let previousIndex = UserState.storiesInCurrentBook.data[previousI].index!
+        if hasStoryMedal(book: UserState.currentBook.index, story: previousIndex) { return true }
+        
         return false
     }
     
