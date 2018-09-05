@@ -723,7 +723,7 @@
                                                 <blurEffect style="extraLight"/>
                                             </visualEffectView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6G-mn-XLZ">
-                                                <rect key="frame" x="125.5" y="32" width="48.5" height="31.5"/>
+                                                <rect key="frame" x="125.5" y="24" width="48.5" height="31.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" red="1" green="0.25098039220000001" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -758,7 +758,7 @@
                                             <constraint firstItem="YvV-hb-fWi" firstAttribute="width" secondItem="3wu-yU-S9Q" secondAttribute="width" id="M81-Qz-tYs"/>
                                             <constraint firstAttribute="trailing" secondItem="Qiw-2z-nZB" secondAttribute="trailing" id="PoC-Rv-u8w"/>
                                             <constraint firstItem="Qiw-2z-nZB" firstAttribute="top" secondItem="lsY-Xk-jSd" secondAttribute="top" id="Tae-oo-HAd"/>
-                                            <constraint firstItem="s6G-mn-XLZ" firstAttribute="top" secondItem="lsY-Xk-jSd" secondAttribute="top" constant="32" id="XRL-kd-hoD"/>
+                                            <constraint firstItem="s6G-mn-XLZ" firstAttribute="top" secondItem="lsY-Xk-jSd" secondAttribute="top" constant="24" id="XRL-kd-hoD"/>
                                             <constraint firstItem="YvV-hb-fWi" firstAttribute="top" secondItem="3wu-yU-S9Q" secondAttribute="top" id="f6m-68-GMW"/>
                                             <constraint firstItem="JqC-cn-ezv" firstAttribute="centerX" secondItem="lsY-Xk-jSd" secondAttribute="centerX" id="iiV-hI-5wn"/>
                                             <constraint firstItem="YvV-hb-fWi" firstAttribute="bottom" secondItem="3wu-yU-S9Q" secondAttribute="bottom" id="l7Z-1Y-Lva"/>
@@ -1543,7 +1543,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reset-trash" translatesAutoresizingMaskIntoConstraints="NO" id="0Tt-XP-fFP">
-                                                                        <rect key="frame" x="52.5" y="76" width="180" height="180"/>
+                                                                        <rect key="frame" x="52.5" y="72" width="180" height="180"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="180" id="LQL-vT-lO6"/>
                                                                             <constraint firstAttribute="width" secondItem="0Tt-XP-fFP" secondAttribute="height" multiplier="1:1" id="gvF-qF-fxN"/>
@@ -1573,7 +1573,7 @@
                                                 <blurEffect style="extraLight"/>
                                             </visualEffectView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w49-VP-ScV">
-                                                <rect key="frame" x="32" y="291.5" width="228.5" height="58"/>
+                                                <rect key="frame" x="32" y="287.5" width="228.5" height="58"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="重置会删去活字的所有记录，包括已经获得的勋章。这项操作不可逆，并将同步到您所有的iOS设备上。">
                                                         <attributes>
@@ -1585,7 +1585,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重置活字" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BG-bS-DyU">
-                                                <rect key="frame" x="98" y="32" width="105.5" height="31.5"/>
+                                                <rect key="frame" x="98" y="24" width="105.5" height="31.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1614,14 +1614,14 @@
                                             <constraint firstItem="6BG-bS-DyU" firstAttribute="centerX" secondItem="yaB-Yy-9yx" secondAttribute="centerX" id="Eyh-DR-oci"/>
                                             <constraint firstItem="w2O-XS-2ur" firstAttribute="centerX" secondItem="yaB-Yy-9yx" secondAttribute="centerX" id="MwQ-0R-wV0"/>
                                             <constraint firstItem="qsA-nV-XtG" firstAttribute="width" secondItem="UOw-kZ-L96" secondAttribute="width" id="Rzc-ln-orV"/>
-                                            <constraint firstItem="6BG-bS-DyU" firstAttribute="top" secondItem="yaB-Yy-9yx" secondAttribute="top" constant="32" id="U9U-2B-efj"/>
+                                            <constraint firstItem="6BG-bS-DyU" firstAttribute="top" secondItem="yaB-Yy-9yx" secondAttribute="top" constant="24" id="U9U-2B-efj"/>
                                             <constraint firstItem="zJ3-Mi-Lgg" firstAttribute="leading" secondItem="yaB-Yy-9yx" secondAttribute="leading" id="X9d-g5-LcJ"/>
                                             <constraint firstItem="w49-VP-ScV" firstAttribute="top" secondItem="0Tt-XP-fFP" secondAttribute="bottom" constant="28" id="Yvm-MP-vLY"/>
                                             <constraint firstItem="w2O-XS-2ur" firstAttribute="top" secondItem="UOw-kZ-L96" secondAttribute="top" id="ZeK-cH-DNs"/>
                                             <constraint firstItem="w2O-XS-2ur" firstAttribute="bottom" secondItem="UOw-kZ-L96" secondAttribute="bottom" id="cxI-n3-Qtf"/>
                                             <constraint firstItem="qsA-nV-XtG" firstAttribute="centerX" secondItem="yaB-Yy-9yx" secondAttribute="centerX" id="dVT-QX-h23"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w49-VP-ScV" secondAttribute="trailing" constant="32" id="eTz-QO-cfz"/>
-                                            <constraint firstItem="0Tt-XP-fFP" firstAttribute="top" secondItem="6BG-bS-DyU" secondAttribute="bottom" constant="20" id="fED-QD-v2h"/>
+                                            <constraint firstItem="0Tt-XP-fFP" firstAttribute="top" secondItem="6BG-bS-DyU" secondAttribute="bottom" constant="24" id="fED-QD-v2h"/>
                                             <constraint firstItem="qsA-nV-XtG" firstAttribute="bottom" secondItem="UOw-kZ-L96" secondAttribute="bottom" id="k3C-h1-q41"/>
                                             <constraint firstItem="w49-VP-ScV" firstAttribute="leading" secondItem="yaB-Yy-9yx" secondAttribute="leading" constant="32" id="mxY-Cb-pIb"/>
                                             <constraint firstItem="qsA-nV-XtG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="w49-VP-ScV" secondAttribute="bottom" constant="10" id="nxS-G1-Vl3"/>
