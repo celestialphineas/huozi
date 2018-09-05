@@ -26,9 +26,9 @@ class AchievementViewController: UIViewController {
     
     override func viewDidLoad() {
         shadowView.cornerRadius(20)
+        shadowView.shadowRadius(100)
+        shadowView.shadowOpacity(0.1)
         shadowView.drawShadow()
-        shadowView.shadowRadius(2)
-        shadowView.shadowOpacity(0.2)
         container.layer.cornerRadius = shadowView.cornerRadius
         
         if storyData != nil {

@@ -143,14 +143,15 @@ class UserProgressModel {
     
     // This will clear up the storage forever
     static func clear() {
-        let keyStore = NSUbiquitousKeyValueStore()
+        let keyStore = NSUbiquitousKeyValueStore.default
         keyStore.removeObject(forKey: processKey)
         keyStore.removeObject(forKey: medalsKey)
+        _instance = nil
     }
     
     private init() {
         // Set up the progress member
-        let keyStore = NSUbiquitousKeyValueStore()
+        let keyStore = NSUbiquitousKeyValueStore.default
         if let progressString = keyStore.string(forKey: UserProgressModel.processKey) {
             progress = UserProgress(progressString)
         } else {
