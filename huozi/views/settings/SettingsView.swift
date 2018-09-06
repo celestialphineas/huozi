@@ -9,32 +9,28 @@
 import UIKit
 import Foundation
 import Hero
+import Instabug
+import Photos
 
 class SettingsViewController: UIViewController {
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        initialize()
-    }
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initialize()
-    }
-    func initialize() {
+    override func viewWillAppear(_ animated: Bool) {
         hero.modalAnimationType = .selectBy(presenting: .push(direction: .left), dismissing: .pull(direction: .right))
     }
     
     @IBAction func dismiss() {
         dismiss(animated: true) {}
     }
-    
 }
 
 class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var reviewCell: UITableViewCell!
+    @IBOutlet weak var feedbackCell: SettingsTableCell!
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath == tableView.indexPath(for: reviewCell) {
             openAppStore()
+        } else if indexPath == tableView.indexPath(for: feedbackCell) {
+            openInstabug()
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -64,9 +60,58 @@ class SettingsTableViewController: UITableViewController {
         task.resume()
     }
     func showNetConnectionAlert() {
-        let alert = UIAlertController(title: "出错啦！", message: "无法打开 App Store，请检查网络连接", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default))
-        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "出错啦！", message: "无法打开 App Store，请检查网络连接", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    func openInstabug() {
+        BugReporting.invoke()
+    }
+    
+    class ImagePicker: UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        weak var superVC: SettingsTableViewController!
+        
+        override func viewWillAppear(_ animated: Bool) {
+            hero.modalAnimationType = .selectBy(presenting: .push(direction: .left), dismissing: .pull(direction: .right))
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+            if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+                let fileManager = FileManager.default
+                let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
+                let localPath = documentDirectory?.appendingPathComponent("temp.jpg")
+                let data = UIImageJPEGRepresentation(image, 0.6)
+                try? data?.write(to: localPath!, options: .atomic)
+                
+                UserInfo.storeAvatar(path: localPath!) { record, error in
+                    if error != nil { print(error!) }
+                    // Update view
+                    DispatchQueue.main.async { self.superVC.avatarView.image = UserInfo.avatarImage }
+                }
+                dismiss(animated: true) {}
+            }
+        }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            dismiss(animated: true) {}
+        }
+    }
+    let imagePicker = ImagePicker()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imagePicker.delegate = imagePicker
+    }
+    @IBOutlet weak var avatarView: UIImageView!
+    override func viewWillAppear(_ animated: Bool) {
+        avatarView.image = UserInfo.avatarImage
+    }
+    @IBAction func pickImage() {
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.superVC = self
+        present(imagePicker, animated: true) {}
     }
 }
 

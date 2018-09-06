@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CloudKit
 
 struct UserProgress {
     // [BookIndex: [StoryIndex: [CharacterIndices]]]
@@ -30,12 +31,29 @@ struct UserProgress {
 
 struct MedalCollection {
     struct Record: Equatable {
+        private static var medalNameTable: [Int:[Int:StoryData]]!
         var book: Int
         var story: Int
         var timeStamp: Int
-        init(book: Int, story: Int)
-            { self.book = book; self.story = story; self.timeStamp = Int(Date().timeIntervalSince1970 * 1000) }
+        var storyObject: StoryData? {
+            get { return MedalCollection.Record.medalNameTable[book]?[story] }
+        }
+        static func initMedalNameTable() {
+            medalNameTable = [:]
+            if let books = Books().data { for book in books {
+                if let stories = StoryDataOf(book.entry).data { for story in stories {
+                    if medalNameTable[book.index] == nil { medalNameTable[book.index] = [:] }
+                    medalNameTable[book.index]![story.index] = story
+                }}
+            }}
+        }
+        
+        init(book: Int, story: Int) {
+            if MedalCollection.Record.medalNameTable == nil { MedalCollection.Record.initMedalNameTable() }
+            self.book = book; self.story = story; self.timeStamp = Int(Date().timeIntervalSince1970)
+        }
         init(_ array: [Int]) {
+            if MedalCollection.Record.medalNameTable == nil { MedalCollection.Record.initMedalNameTable() }
             self.book = array[0]
             self.story = array[1]
             if array.count > 2 {
@@ -86,6 +104,9 @@ class UserProgressModel {
             return _instance
         }
     }
+    static var medalStories: [StoryData] { get {
+        return instance.medals.val.map({ record in record.storyObject }).filter({ str in str != nil }).map({ obj in obj! })
+    }}
     
     static func hasStoryMedal(book: Int, story: Int) -> Bool {
         return instance.medals.val.contains(MedalCollection.Record(book: book, story: story))
@@ -132,7 +153,6 @@ class UserProgressModel {
         return false
     }
     
-    
     static func updateStorage() {
         let keyStore = NSUbiquitousKeyValueStore()
         // Update the process
@@ -165,6 +185,92 @@ class UserProgressModel {
             let defaultMedalsString = "[]"
             medals = MedalCollection(defaultMedalsString)
             keyStore.set(defaultMedalsString, forKey: UserProgressModel.medalsKey)
+        }
+    }
+}
+
+class UserInfo {
+    private static var _instance: UserInfo!
+    private static let recordName = "default"
+    private static let recordType = "Avatar"
+    private static let avartarKey = "avatarImage"
+    static var instance: UserInfo { get {
+        if _instance == nil { _instance = UserInfo() }
+        return _instance
+    }}
+    
+    static var avatarImage: UIImage {
+        get { return instance.avatarImage ?? UIImage(named: "defaultAvatar")! }
+    }
+    private let cloudDB: CKDatabase!
+    private var avatarImage: UIImage!
+    
+    init() {
+        cloudDB = CKContainer.default().privateCloudDatabase
+        getAvatar { image, error in
+            if image != nil { self.avatarImage = image! }
+            else { NSLog("CloudKit user avatar image not found!") }
+        }
+    }
+    
+    // Communicating with iCloud
+    private func createRecord(_ callback: ((CKRecord?, Error?)->Void)!) {
+        let record = CKRecord(recordType: UserInfo.recordType, recordID: CKRecordID(recordName: UserInfo.recordName))
+        cloudDB.save(record) { record, error in
+            if callback != nil { callback(record, error) }
+        }
+    }
+    private func getAvatar(_ callback: ((UIImage?, Error?)->Void)!) {
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: UserInfo.recordType, predicate: predicate)
+        let queryOperation = CKQueryOperation()
+        queryOperation.query = query
+        queryOperation.resultsLimit = 5
+        queryOperation.qualityOfService = .userInteractive
+        queryOperation.recordFetchedBlock = { record in
+            let asset = record.object(forKey: UserInfo.avartarKey) as? CKAsset
+            if asset != nil {
+                do {
+                    let photoData = try Data(contentsOf: asset!.fileURL)
+                    let img = UIImage(data: Data(photoData))
+                    NSLog("Things should work!")
+                    if callback != nil { callback(img, nil) }
+                } catch let error {
+                    if callback != nil { callback(nil, error) }
+                    NSLog("getAvatar case 1: \(error)")
+                }
+                return
+            } else {
+                do {
+                    enum GetAvatarErr: Error { case cloudKitError }
+                    throw GetAvatarErr.cloudKitError
+                } catch let error {
+                    if callback != nil { callback(nil, error) }
+                    NSLog("getAvatar case 2: \(error)")
+                }
+            }
+        }
+        cloudDB.add(queryOperation)
+    }
+    static func storeAvatar(path: URL, _ callback: ((CKRecord?, Error?)->Void)!) {
+        instance.cloudDB.fetch(withRecordID: CKRecordID(recordName: recordName)) { record, error in
+            func doModify(record: CKRecord?, error: Error?) {
+                let asset = CKAsset(fileURL: path)
+                let data = try? Data(contentsOf: path)
+                instance.avatarImage = data != nil ? UIImage(data: data!) : instance.avatarImage
+                record![avartarKey] = asset
+                instance.cloudDB.save(record!) { record, error in
+                    if callback != nil { callback(record, error) }
+                }
+            }
+            if record != nil { doModify(record: record, error: error) }
+            else {
+                // record == nil or error occurs
+                instance.createRecord { record, error in
+                    if record != nil { doModify(record: record, error: error) }
+                    else { if callback != nil { callback(record, error) } }
+                }
+            }
         }
     }
 }

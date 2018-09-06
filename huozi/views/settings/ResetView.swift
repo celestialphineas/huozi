@@ -24,7 +24,7 @@ class ResetViewController: UIViewController {
         if animated {
             shadowView.alpha = 0
             shadowView.transform = CGAffineTransform(scaleX: 1.3, y: 1.2).translatedBy(x: 0, y: -20)
-            UIView.animate(withDuration: 0.4) {
+            UIView.animate(withDuration: 0.25) {
                 self.shadowView.alpha = 1
                 self.shadowView.transform = CGAffineTransform.identity
             }

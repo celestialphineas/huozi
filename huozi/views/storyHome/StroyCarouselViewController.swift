@@ -34,6 +34,11 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
         }
         // Force carousel view to page
         carouselView.isPagingEnabled = true
+        
+        // Set isOpaque to false
+        for i in 0..<carouselView.numberOfItems {
+            carouselView.itemView(at: i)?.isOpaque = false
+        }
     }
     
     // Handling segue
@@ -100,7 +105,6 @@ class StoryCarouselViewController: UIViewController, iCarouselDataSource, iCarou
                 }
             }
         }
-        
     }
     
     // Update index of the item

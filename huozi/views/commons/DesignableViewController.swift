@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 class DesignableViewController: UIViewController {
     
     @IBInspectable var LightStatusBar: Bool = false

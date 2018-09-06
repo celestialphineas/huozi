@@ -17,7 +17,11 @@ class CharacterDetailsViewController: DesignableViewController {
     @IBOutlet weak var characterBox: CharacterBoxView!
     @IBOutlet weak var characterDetailCard: CharacterDetailCard!
     
-    override func viewDidLoad() {
+    override func viewDidAppear(_ animated: Bool) {
+        animationView.startAnimation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         // Background image
         backgroundImage.image = GlobalViewModel.currentBackground
         

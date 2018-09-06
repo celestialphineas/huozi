@@ -32,6 +32,7 @@ class StoryData {
     var imageName:          String!
     var cardImageName:      String!
     var medalImageName:     String!
+    var medalName:          String!
     var medalDescription:   String!
     var plain:              String!
     var bySentence:         [String]!
@@ -39,12 +40,13 @@ class StoryData {
     
     init(_ data: [String:Any]) {
         index               = data["index"]         as? Int
-        primaryUnlocked     = data["primaryunlocked"] != nil ? data["primaryunlocked"] as! Bool : false
+        primaryUnlocked     = data["primaryunlocked"] as? Bool ?? false
         category            = data["category"]      as? String
         title               = data["title"]         as? String
         imageName           = data["bgimg"]         as? String
         cardImageName       = data["cardimg"]       as? String
         medalImageName      = data["medalimg"]      as? String
+        medalName           = data["medalname"]     as? String
         medalDescription    = data["medaldesc"]     as? String
         plain               = data["plain"]         as? String
         bySentence          = data["bysentence"]    as? [String]

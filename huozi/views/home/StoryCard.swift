@@ -9,7 +9,6 @@
 import UIKit
 import Hero
 
-@IBDesignable
 class StoryCard: UIView, DropsShadow {
 
     @IBOutlet var storyCard: UIView!

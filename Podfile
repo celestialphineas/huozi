@@ -15,4 +15,5 @@ target 'huozi' do
     pod 'iCarousel',        '1.8.3'
     pod 'SVGAPlayer',       '2.1.4'
     pod 'SideMenuSwift',    '0.5.0'
+    pod 'Instabug',         '8.0.9'
 end

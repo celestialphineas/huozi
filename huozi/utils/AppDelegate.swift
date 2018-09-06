@@ -8,15 +8,27 @@
 
 import UIKit
 import SideMenuSwift
+import Instabug
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let instabugToken = "fa6757d944ea488d1c91f2babeed4099"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         configureSideMenu()
+        // Initialize Instabug
+        Instabug.start(withToken: instabugToken, invocationEvents: .none)
+        Instabug.sessionProfilerEnabled = false
+        Instabug.autoScreenRecordingEnabled = false
+        Instabug.setPushNotificationsEnabled(false)
+        Instabug.setLocale(.chineseSimplified)
+        BugReporting.invocationOptions = [.emailFieldOptional, .commentFieldRequired]
+        // Sync user data
+        NSUbiquitousKeyValueStore.default.synchronize()
+        
         return true
     }
 

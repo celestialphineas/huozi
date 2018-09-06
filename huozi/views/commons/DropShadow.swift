@@ -51,7 +51,7 @@ public extension DropsShadow where Self: UIView {
         // Make sure that the view allows drawing out of the mask
         self.layer.masksToBounds    = false
         // Shadow parameters
-        self.layer.isOpaque = true
+        self.layer.isOpaque = false
         self.layer.cornerRadius     = cornerRadius
         self.layer.shadowOpacity    = shadowOpacity
         self.layer.shadowRadius     = shadowRadius

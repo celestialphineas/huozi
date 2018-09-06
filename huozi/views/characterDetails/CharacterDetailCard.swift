@@ -9,7 +9,6 @@
 import UIKit
 import AVFoundation
 
-@IBDesignable
 class CharacterDetailCard: UIView, DropsShadow {
     
     @IBOutlet var characterDetailCard: UIView!

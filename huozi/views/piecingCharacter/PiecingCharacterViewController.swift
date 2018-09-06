@@ -27,13 +27,13 @@ class PiecingCharacterViewController: DesignableViewController, PiecingProgressD
         }
     }
     func donePiecing() {
-        performSegue(withIdentifier: detailsSegueIdentifier, sender: self)
-        
         // Update progress
         UserProgressModel.addCharacterProgress(book: UserState.currentBook.index, story: UserState.currentStory.index, character: characterToDisplay.name)
+        
+        performSegue(withIdentifier: detailsSegueIdentifier, sender: self)
     }
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         // Background image
         backgroundImage.image = GlobalViewModel.currentBackground
         if let animationName = characterToDisplay.animationName {
@@ -62,6 +62,10 @@ class PiecingCharacterViewController: DesignableViewController, PiecingProgressD
         
         // Passing delegate
         characterBox.piecingProgressDelegates.append(self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        animationView.startAnimation()
     }
     
     @IBAction func dismiss() {
