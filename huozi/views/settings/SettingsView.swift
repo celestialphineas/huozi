@@ -88,7 +88,7 @@ class SettingsTableViewController: UITableViewController {
                 UserInfo.storeAvatar(path: localPath!) { record, error in
                     if error != nil { print(error!) }
                     // Update view
-                    DispatchQueue.main.async { self.superVC.avatarView.image = UserInfo.avatarImage }
+//                    DispatchQueue.main.async { self.superVC.avatarView.image = UserInfo.avatarImage }
                 }
                 dismiss(animated: true) {}
             }
@@ -106,6 +106,7 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var avatarView: UIImageView!
     override func viewWillAppear(_ animated: Bool) {
         avatarView.image = UserInfo.avatarImage
+        UserInfo.listeningImageView = avatarView
     }
     @IBAction func pickImage() {
         imagePicker.allowsEditing = true

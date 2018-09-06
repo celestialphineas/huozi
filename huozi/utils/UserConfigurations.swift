@@ -200,15 +200,38 @@ class UserInfo {
     }}
     
     static var avatarImage: UIImage {
-        get { return instance.avatarImage ?? UIImage(named: "defaultAvatar")! }
+        get {
+            if instance.avatarImage == nil {
+                instance.getAvatar() { _,_  in instance.updateListening() }
+            }
+            return instance.avatarImage ?? UIImage(named: "defaultAvatar")!
+        }
     }
     private let cloudDB: CKDatabase!
     private var avatarImage: UIImage!
+    static weak var listeningImageView: UIImageView!
+    
+    func updateListening() {
+        DispatchQueue.main.async {
+            if UserInfo.listeningImageView != nil && self.avatarImage != nil {
+                UIView.transition(
+                    with: UserInfo.listeningImageView,
+                    duration: 0.4,
+                    options: .transitionCrossDissolve,
+                    animations: { UserInfo.listeningImageView.image = self.avatarImage! },
+                    completion: nil
+                )
+            }
+        }
+    }
     
     init() {
         cloudDB = CKContainer.default().privateCloudDatabase
         getAvatar { image, error in
-            if image != nil { self.avatarImage = image! }
+            if image != nil {
+                self.avatarImage = image!
+                self.updateListening()
+            }
             else { NSLog("CloudKit user avatar image not found!") }
         }
     }
@@ -221,36 +244,31 @@ class UserInfo {
         }
     }
     private func getAvatar(_ callback: ((UIImage?, Error?)->Void)!) {
-        let predicate = NSPredicate(value: true)
-        let query = CKQuery(recordType: UserInfo.recordType, predicate: predicate)
-        let queryOperation = CKQueryOperation()
-        queryOperation.query = query
-        queryOperation.resultsLimit = 5
-        queryOperation.qualityOfService = .userInteractive
-        queryOperation.recordFetchedBlock = { record in
-            let asset = record.object(forKey: UserInfo.avartarKey) as? CKAsset
-            if asset != nil {
-                do {
-                    let photoData = try Data(contentsOf: asset!.fileURL)
-                    let img = UIImage(data: Data(photoData))
-                    NSLog("Things should work!")
-                    if callback != nil { callback(img, nil) }
-                } catch let error {
-                    if callback != nil { callback(nil, error) }
-                    NSLog("getAvatar case 1: \(error)")
-                }
-                return
-            } else {
-                do {
-                    enum GetAvatarErr: Error { case cloudKitError }
-                    throw GetAvatarErr.cloudKitError
-                } catch let error {
-                    if callback != nil { callback(nil, error) }
-                    NSLog("getAvatar case 2: \(error)")
+        cloudDB.fetch(withRecordID: CKRecordID(recordName: UserInfo.recordName)) { record, error in
+            if record != nil {
+                let asset = record?.object(forKey: UserInfo.avartarKey) as? CKAsset
+                if asset != nil {
+                    do {
+                        let photoData = try Data(contentsOf: asset!.fileURL)
+                        let img = UIImage(data: Data(photoData))
+                        NSLog("Things should work!")
+                        if callback != nil { callback(img, nil) }
+                    } catch let error {
+                        if callback != nil { callback(nil, error) }
+                        NSLog("getAvatar case 1: \(error)")
+                    }
+                    return
+                } else {
+                    do {
+                        enum GetAvatarErr: Error { case cloudKitError }
+                        throw GetAvatarErr.cloudKitError
+                    } catch let error {
+                        if callback != nil { callback(nil, error) }
+                        NSLog("getAvatar case 2: \(error)")
+                    }
                 }
             }
         }
-        cloudDB.add(queryOperation)
     }
     static func storeAvatar(path: URL, _ callback: ((CKRecord?, Error?)->Void)!) {
         instance.cloudDB.fetch(withRecordID: CKRecordID(recordName: recordName)) { record, error in
@@ -258,6 +276,7 @@ class UserInfo {
                 let asset = CKAsset(fileURL: path)
                 let data = try? Data(contentsOf: path)
                 instance.avatarImage = data != nil ? UIImage(data: data!) : instance.avatarImage
+                instance.updateListening()
                 record![avartarKey] = asset
                 instance.cloudDB.save(record!) { record, error in
                     if callback != nil { callback(record, error) }

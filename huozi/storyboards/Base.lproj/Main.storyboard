@@ -436,15 +436,15 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="aWb-VC-eRp">
-                                    <rect key="frame" x="139" y="64" width="96" height="96"/>
+                                    <rect key="frame" x="123" y="64" width="128" height="128"/>
                                     <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="aWb-VC-eRp" secondAttribute="height" multiplier="1:1" id="5RY-5e-Kcg"/>
-                                        <constraint firstAttribute="width" constant="96" id="xj5-Bo-qtL"/>
+                                        <constraint firstAttribute="width" constant="128" id="xj5-Bo-qtL"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="48"/>
+                                            <integer key="value" value="64"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
@@ -452,11 +452,27 @@
                                         <outletCollection property="gestureRecognizers" destination="9eK-Y9-8s3" appends="YES" id="QDz-0P-cN8"/>
                                     </connections>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宝宝" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTB-Wu-QTl">
+                                    <rect key="frame" x="161" y="208" width="53" height="31.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="aLc-5b-YZp">
+                                    <rect key="frame" x="112" y="252" width="150" height="2"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="150" id="llc-CD-zpD"/>
+                                    </constraints>
+                                </progressView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="xTB-Wu-QTl" firstAttribute="top" secondItem="aWb-VC-eRp" secondAttribute="bottom" constant="16" id="2Y4-li-tvb"/>
                                 <constraint firstItem="aWb-VC-eRp" firstAttribute="top" secondItem="1EU-u7-2rd" secondAttribute="top" constant="64" id="5fc-nE-S2O"/>
                                 <constraint firstItem="aWb-VC-eRp" firstAttribute="centerX" secondItem="1EU-u7-2rd" secondAttribute="centerX" id="M6d-f7-YAj"/>
+                                <constraint firstItem="aLc-5b-YZp" firstAttribute="centerX" secondItem="1EU-u7-2rd" secondAttribute="centerX" id="XN7-6I-DBe"/>
+                                <constraint firstItem="aLc-5b-YZp" firstAttribute="top" secondItem="xTB-Wu-QTl" secondAttribute="bottom" constant="12" id="ZvB-dZ-GIH"/>
+                                <constraint firstItem="xTB-Wu-QTl" firstAttribute="centerX" secondItem="1EU-u7-2rd" secondAttribute="centerX" id="xHB-0u-fGg"/>
                             </constraints>
                         </view>
                         <sections>
