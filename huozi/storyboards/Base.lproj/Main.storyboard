@@ -170,8 +170,8 @@
         <!--Medal Collection View Controller-->
         <scene sceneID="R95-gh-KIP">
             <objects>
-                <exit id="aka-6x-xuE" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10G-Fb-n8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aka-6x-xuE" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="XtC-63-fg6" customClass="MedalCollectionViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ok-Vw-hfA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -425,6 +425,11 @@
         <!--Settings Table View Controller-->
         <scene sceneID="J4R-fn-e6t">
             <objects>
+                <tapGestureRecognizer id="9eK-Y9-8s3">
+                    <connections>
+                        <action selector="pickImage" destination="BVN-7S-VBT" id="HrX-TL-i20"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LI1-xC-fka" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="BVN-7S-VBT" customClass="SettingsTableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HwT-87-dyo">
@@ -436,13 +441,13 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宝宝" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTB-Wu-QTl">
-                                    <rect key="frame" x="161" y="212" width="53" height="31.5"/>
+                                    <rect key="frame" x="161" y="220" width="53" height="31.5"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxf-ym-gFN" customClass="IconButton" customModule="huozi" customModuleProvider="target">
-                                    <rect key="frame" x="222" y="218" width="20" height="20"/>
+                                    <rect key="frame" x="222" y="226" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="Pxf-ym-gFN" secondAttribute="height" multiplier="1:1" id="PB7-DQ-qs7"/>
                                         <constraint firstAttribute="width" constant="20" id="mfg-gz-Ksp"/>
@@ -453,7 +458,7 @@
                                     </connections>
                                 </button>
                                 <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C8G-Ra-bDw">
-                                    <rect key="frame" x="107" y="212" width="160" height="30"/>
+                                    <rect key="frame" x="107" y="220" width="160" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="160" id="2L9-UK-chC"/>
                                         <constraint firstAttribute="height" constant="30" id="ZT6-rh-cTE"/>
@@ -466,7 +471,7 @@
                                     </connections>
                                 </textField>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTa-1v-91e" customClass="IconButton" customModule="huozi" customModuleProvider="target">
-                                    <rect key="frame" x="275" y="215" width="24" height="24"/>
+                                    <rect key="frame" x="275" y="223" width="24" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="dTa-1v-91e" secondAttribute="height" multiplier="1:1" id="Le7-ST-zLI"/>
                                         <constraint firstAttribute="width" constant="24" id="f9B-MD-afg"/>
@@ -477,7 +482,7 @@
                                     </connections>
                                 </button>
                                 <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVW-rv-RrS" customClass="AvatarContainerView" customModule="huozi" customModuleProvider="target">
-                                    <rect key="frame" x="123" y="64" width="128" height="128"/>
+                                    <rect key="frame" x="123" y="72" width="128" height="128"/>
                                     <subviews>
                                         <imageView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="aWb-VC-eRp">
                                             <rect key="frame" x="-0.5" y="0.0" width="128" height="128"/>
@@ -508,7 +513,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="Pxf-ym-gFN" firstAttribute="centerY" secondItem="xTB-Wu-QTl" secondAttribute="centerY" id="2uf-I6-8P4"/>
-                                <constraint firstItem="hVW-rv-RrS" firstAttribute="top" secondItem="1EU-u7-2rd" secondAttribute="top" constant="64" id="D7e-F4-XaY"/>
+                                <constraint firstItem="hVW-rv-RrS" firstAttribute="top" secondItem="1EU-u7-2rd" secondAttribute="top" constant="72" id="D7e-F4-XaY"/>
                                 <constraint firstItem="xTB-Wu-QTl" firstAttribute="top" secondItem="hVW-rv-RrS" secondAttribute="bottom" constant="20" id="GWs-ju-HeL"/>
                                 <constraint firstItem="hVW-rv-RrS" firstAttribute="centerX" secondItem="1EU-u7-2rd" secondAttribute="centerX" id="Mo9-e4-ckz"/>
                                 <constraint firstItem="dTa-1v-91e" firstAttribute="centerY" secondItem="C8G-Ra-bDw" secondAttribute="centerY" id="W4T-i4-8uV"/>
@@ -518,6 +523,11 @@
                                 <constraint firstItem="dTa-1v-91e" firstAttribute="leading" secondItem="C8G-Ra-bDw" secondAttribute="trailing" constant="8" id="o37-ra-OLI"/>
                                 <constraint firstItem="xTB-Wu-QTl" firstAttribute="centerX" secondItem="1EU-u7-2rd" secondAttribute="centerX" id="xHB-0u-fGg"/>
                             </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="WoO-5z-WIc">
+                            <rect key="frame" x="0.0" y="864" width="375" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <sections>
                             <tableViewSection headerTitle=" " id="Qc8-He-Gby" userLabel="Feedback">
@@ -704,6 +714,9 @@
                                                 <constraint firstItem="h7i-Ld-wNN" firstAttribute="centerY" secondItem="POn-XS-AEU" secondAttribute="centerY" id="wtH-j9-37i"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="RdH-P1-ned" kind="show" id="Qz9-Y0-aYt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -775,11 +788,6 @@
                         <outlet property="usernameTextfield" destination="C8G-Ra-bDw" id="Ep4-ig-ROO"/>
                     </connections>
                 </tableViewController>
-                <tapGestureRecognizer id="9eK-Y9-8s3">
-                    <connections>
-                        <action selector="pickImage" destination="BVN-7S-VBT" id="HrX-TL-i20"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="921" y="1621"/>
         </scene>
@@ -1037,7 +1045,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1665" y="1761"/>
+            <point key="canvasLocation" x="1705" y="1761"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1799,8 +1807,8 @@
         <!--Character Details View Controller-->
         <scene sceneID="fuq-bf-MnF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kxS-lx-1Ge" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sbd-Cc-sLx" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxS-lx-1Ge" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="dSx-C6-ySa" customClass="CharacterDetailsViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ks-eP-Mxh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2200,7 +2208,1638 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="921" y="2445"/>
+            <point key="canvasLocation" x="921" y="2436"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="fni-RU-S2d">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8Y-Zd-dgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="RdH-P1-ned" customClass="AboutViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L6i-0m-t2M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQU-LL-Oae">
+                                <rect key="frame" x="0.0" y="20" width="375" height="707"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kte-o7-vFg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2180"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPo-jQ-QBO" userLabel="Content">
+                                                <rect key="frame" x="32" y="64" width="311" height="2068"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Hero">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="https://github.com/HeroTransition/Hero">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="The MIT License ">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="(">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="MIT">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=")">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">
+Copyright </string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="(">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="c">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=")">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> 2015 Luke Zhao &lt;me@lkzhao.com&gt;
+Permission is hereby granted</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" free of charge">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" to any person obtaining a copy of this software and associated documentation files ">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="(">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="the &quot;Software&quot;">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="),">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" to deal in the Software without restriction">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" including without limitation the rights to use">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" copy">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" modify">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" merge">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" publish">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" distribute">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" sublicense">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" and/or sell copies of the Software">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" and to permit persons to whom the Software is furnished to do so">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS"</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" WITHOUT WARRANTY OF ANY KIND">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" EXPRESS OR IMPLIED">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" DAMAGES OR OTHER LIABILITY">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" WHETHER IN AN ACTION OF CONTRACT">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" TORT OR OTHERWISE">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" ARISING FROM">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="iCarousel">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">https://github.com/nicklockwood/iCarousel
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                            <color key="NSUnderlineColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Copyright ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="(">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="C">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=")">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> 2011 Charcoal Design
+This software is provided 'as-is'</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+Permission is granted to anyone to use this software for any purpose</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" including commercial applications">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" and to alter it and redistribute it freely">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> subject to the following restrictions:
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">	1.	</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="The origin of this software must not be misrepresented">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=";">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" you must not claim that you wrote the original software. If you use this software in a product">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> an acknowledgment in the product documentation would be appreciated but is not required.
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">	2.	</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Altered source versions must be plainly marked as such">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=",">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> and must not be misrepresented as being the original software.
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">	3.	</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="This notice may not be removed or altered from any source distribution.">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" headIndent="36" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14117647058823529" green="0.16078431372549021" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="SVGAPlayer-iOS">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">https://github.com/yyued/SVGAPlayer-iOS
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                            <color key="NSUnderlineColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <mutableString key="content">Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+Copyright 2016 YY Inc.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</mutableString>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14118" green="0.16078000000000001" blue="0.18038999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14118" green="0.16078000000000001" blue="0.18038999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="NSUnderlineColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSUnderlineColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="SideMenuSwift">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">https://github.com/kukushi/SideMenu
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                            <color key="NSUnderlineColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <mutableString key="content">MIT License
+Copyright (c) 2018 Xing He
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</mutableString>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14118" green="0.16078000000000001" blue="0.18038999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSUnderlineColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Instabug">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">https://github.com/instabug/Instabug-iOS
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="28">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="56">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="84">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="112">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="140">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="168">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="196">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="224">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="252">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="280">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="308">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="left" location="336">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                            <color key="NSUnderlineColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <mutableString key="content">Copyright (C) 2014 Instabug Permission is hereby granted to use this framework as is, modification are not allowed. All rights reserved.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</mutableString>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14118" green="0.16078000000000001" blue="0.18038999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="4" paragraphSpacing="2" paragraphSpacingBefore="2" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSUnderlineColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="OPo-jQ-QBO" firstAttribute="leading" secondItem="kte-o7-vFg" secondAttribute="leading" constant="32" id="3gF-5D-6Ut"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" priority="250" constant="2400" id="5xO-e4-SO1"/>
+                                            <constraint firstItem="OPo-jQ-QBO" firstAttribute="top" secondItem="kte-o7-vFg" secondAttribute="top" constant="64" id="Okd-0d-nTN"/>
+                                            <constraint firstAttribute="bottom" secondItem="OPo-jQ-QBO" secondAttribute="bottom" constant="48" id="Pkd-IP-3Ah"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OPo-jQ-QBO" secondAttribute="trailing" constant="32" id="qkX-X2-3ZB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kte-o7-vFg" secondAttribute="trailing" id="7tZ-Aa-4ng"/>
+                                    <constraint firstAttribute="bottom" secondItem="kte-o7-vFg" secondAttribute="bottom" id="CFi-D3-vnp"/>
+                                    <constraint firstItem="kte-o7-vFg" firstAttribute="top" secondItem="JQU-LL-Oae" secondAttribute="top" id="Hrw-J3-1sj"/>
+                                    <constraint firstItem="kte-o7-vFg" firstAttribute="leading" secondItem="JQU-LL-Oae" secondAttribute="leading" id="Xxv-RP-eJK"/>
+                                    <constraint firstItem="kte-o7-vFg" firstAttribute="width" secondItem="JQU-LL-Oae" secondAttribute="width" id="b3r-1n-Z8b"/>
+                                </constraints>
+                            </scrollView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWE-K4-V1N" customClass="GradientView" customModule="huozi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开放源代码许可" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZO-6Z-IZ1">
+                                        <rect key="frame" x="116" y="8" width="143" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mMr-Lc-kJU">
+                                        <rect key="frame" x="24" y="12" width="32" height="20"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U57-qd-fVv" customClass="IconButton" customModule="huozi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="32" id="thH-qa-xXD"/>
+                                                    <constraint firstAttribute="width" secondItem="U57-qd-fVv" secondAttribute="height" multiplier="8:5" id="vx2-Nu-nPN"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button" image="arrow-left">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="backButton"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dismiss" destination="RdH-P1-ned" eventType="touchUpInside" id="rj5-Fc-P7S"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2u3-Ak-KMt"/>
+                                    <constraint firstItem="mMr-Lc-kJU" firstAttribute="leading" secondItem="FWE-K4-V1N" secondAttribute="leading" constant="24" id="BAa-B8-TfR"/>
+                                    <constraint firstAttribute="bottom" secondItem="VZO-6Z-IZ1" secondAttribute="bottom" constant="12" id="KFw-Mf-Vzk"/>
+                                    <constraint firstAttribute="bottom" secondItem="mMr-Lc-kJU" secondAttribute="bottom" constant="12" id="YwM-Mh-L3F"/>
+                                    <constraint firstItem="VZO-6Z-IZ1" firstAttribute="centerX" secondItem="FWE-K4-V1N" secondAttribute="centerX" id="jim-Vc-Wsm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="settingGradient"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjw-nE-zuw" customClass="GradientView" customModule="huozi" customModuleProvider="target">
+                                <rect key="frame" x="67" y="687" width="240" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ct3-cr-1IW" firstAttribute="trailing" secondItem="Hjw-nE-zuw" secondAttribute="trailing" constant="68" id="3ba-Ky-BYY"/>
+                            <constraint firstItem="JQU-LL-Oae" firstAttribute="leading" secondItem="ct3-cr-1IW" secondAttribute="leading" id="MMr-N0-J4H"/>
+                            <constraint firstItem="FWE-K4-V1N" firstAttribute="top" secondItem="ct3-cr-1IW" secondAttribute="top" id="ZBN-gc-6em"/>
+                            <constraint firstItem="FWE-K4-V1N" firstAttribute="trailing" secondItem="ct3-cr-1IW" secondAttribute="trailing" id="ag2-DB-k5I"/>
+                            <constraint firstItem="ct3-cr-1IW" firstAttribute="trailing" secondItem="JQU-LL-Oae" secondAttribute="trailing" id="bC1-c0-KjI"/>
+                            <constraint firstItem="JQU-LL-Oae" firstAttribute="top" secondItem="ct3-cr-1IW" secondAttribute="top" id="fSR-k7-ETv"/>
+                            <constraint firstItem="ct3-cr-1IW" firstAttribute="bottom" secondItem="Hjw-nE-zuw" secondAttribute="bottom" constant="-40" id="fxf-X0-WDI"/>
+                            <constraint firstItem="Hjw-nE-zuw" firstAttribute="leading" secondItem="ct3-cr-1IW" secondAttribute="leading" constant="67" id="gjd-g3-J4l"/>
+                            <constraint firstItem="Hjw-nE-zuw" firstAttribute="top" secondItem="ct3-cr-1IW" secondAttribute="bottom" id="mEt-Z9-iqs"/>
+                            <constraint firstItem="ct3-cr-1IW" firstAttribute="bottom" secondItem="JQU-LL-Oae" secondAttribute="bottom" constant="-40" id="v5v-uv-fWI"/>
+                            <constraint firstItem="FWE-K4-V1N" firstAttribute="leading" secondItem="ct3-cr-1IW" secondAttribute="leading" id="zTv-64-xmk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ct3-cr-1IW"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="189.59999999999999" y="2435.5322338830588"/>
         </scene>
     </scenes>
     <resources>

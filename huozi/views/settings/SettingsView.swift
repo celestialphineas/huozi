@@ -23,7 +23,7 @@ class SettingsViewController: UIViewController {
 }
 
 class AvatarContainerView: ShadowView {
-    let defaultSet = (shadowRadius: 25 as CGFloat, shadowOpacity: 0.4 as Float, shadowOffsetY: 8 as CGFloat)
+    let defaultSet = (shadowRadius: 25 as CGFloat, shadowOpacity: 0.2 as Float, shadowOffsetY: 8 as CGFloat)
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)

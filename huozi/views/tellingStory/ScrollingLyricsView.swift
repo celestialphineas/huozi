@@ -9,7 +9,6 @@
 import UIKit
 import AVFoundation
 
-@IBDesignable
 class ScrollingLyricsView: UIView, AVSpeechSynthesizerDelegate {
     @IBOutlet var scrollingLyricsView: UIView!
     @IBOutlet weak var tableView: LyricsTableView!
@@ -129,7 +128,6 @@ class ScrollingLyricsView: UIView, AVSpeechSynthesizerDelegate {
     }
 }
 
-@IBDesignable
 class LyricsTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     var lyrics: [String]! = nil
     var textColor, highlightColor, selectedColor: UIColor!

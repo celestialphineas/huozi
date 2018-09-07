@@ -25,7 +25,7 @@ class AboutViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         let versionString = Bundle.main.infoDictionary!["CFBundleShortVersionString"]!
-        versionNumber.text = "版本号：\(versionString)"
+        if versionNumber != nil { versionNumber.text = "版本号：\(versionString)" }
     }
     @IBAction func dismiss() {
         dismiss(animated: true) {}
