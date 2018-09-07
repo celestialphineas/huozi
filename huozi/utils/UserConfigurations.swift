@@ -194,6 +194,7 @@ class UserInfo {
     private static let recordName = "default"
     private static let recordType = "Avatar"
     private static let avartarKey = "avatarImage"
+    private static let usernameKey = "username"
     static var instance: UserInfo { get {
         if _instance == nil { _instance = UserInfo() }
         return _instance
@@ -207,6 +208,18 @@ class UserInfo {
             return instance.avatarImage ?? UIImage(named: "defaultAvatar")!
         }
     }
+    static var userName: String {
+        get {
+            let keyStore = NSUbiquitousKeyValueStore.default
+            return keyStore.string(forKey: usernameKey) ?? "宝宝"
+        }
+        set {
+            let keyStore = NSUbiquitousKeyValueStore.default
+            keyStore.set(newValue, forKey: usernameKey)
+        }
+    }
+    
+    
     private let cloudDB: CKDatabase!
     private var avatarImage: UIImage!
     static weak var listeningImageView: UIImageView!

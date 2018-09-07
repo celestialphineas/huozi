@@ -22,6 +22,33 @@ class SettingsViewController: UIViewController {
     }
 }
 
+class AvatarContainerView: ShadowView {
+    let defaultSet = (shadowRadius: 25 as CGFloat, shadowOpacity: 0.4 as Float, shadowOffsetY: 8 as CGFloat)
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        cornerRadius(bounds.width/2)
+        shadowRadius(defaultSet.shadowRadius)
+        shadowOpacity(defaultSet.shadowOpacity)
+        shadowOffsetY(defaultSet.shadowOffsetY)
+        drawShadow()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        UIView.animate(withDuration: 0.2) {
+            self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        UIView.animate(withDuration: 0.5) { self.setDefault() }
+    }
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        UIView.animate(withDuration: 0.5) { self.setDefault() }
+    }
+    func setDefault() {
+        transform = CGAffineTransform.identity
+    }
+}
+
 class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var reviewCell: UITableViewCell!
     @IBOutlet weak var feedbackCell: SettingsTableCell!
@@ -87,8 +114,6 @@ class SettingsTableViewController: UITableViewController {
                 
                 UserInfo.storeAvatar(path: localPath!) { record, error in
                     if error != nil { print(error!) }
-                    // Update view
-//                    DispatchQueue.main.async { self.superVC.avatarView.image = UserInfo.avatarImage }
                 }
                 dismiss(animated: true) {}
             }
@@ -104,15 +129,47 @@ class SettingsTableViewController: UITableViewController {
         imagePicker.delegate = imagePicker
     }
     @IBOutlet weak var avatarView: UIImageView!
+    @IBOutlet weak var avatarContainer: AvatarContainerView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var editUsernameButton: IconButton!
+    @IBOutlet weak var usernameTextfield: UITextField!
+    @IBOutlet weak var doneEditingUsername: IconButton!
+    
     override func viewWillAppear(_ animated: Bool) {
         avatarView.image = UserInfo.avatarImage
+        usernameLabel.text = UserInfo.userName
         UserInfo.listeningImageView = avatarView
+        
+        avatarView.transform = .identity
     }
     @IBAction func pickImage() {
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
         imagePicker.superVC = self
         present(imagePicker, animated: true) {}
+    }
+    private var _editingUsername = false
+    private var editingUsername: Bool {
+        get { return _editingUsername }
+        set {
+            _editingUsername = newValue
+            usernameTextfield.isHidden = !newValue
+            doneEditingUsername.isHidden = !newValue
+            usernameLabel.isHidden = newValue
+            editUsernameButton.isHidden = newValue
+            if newValue {
+                usernameTextfield.text = usernameLabel.text
+            } else {
+                usernameLabel.text = usernameTextfield.text
+            }
+        }
+    }
+    @IBAction func editUsername() {
+        editingUsername = true
+    }
+    @IBAction func doneEditing() {
+        editingUsername = false
+        UserInfo.userName = usernameTextfield.text!
     }
 }
 
