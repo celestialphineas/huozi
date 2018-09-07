@@ -32,7 +32,7 @@ class AchievementViewController: UIViewController {
         container.layer.cornerRadius = shadowView.cornerRadius
         
         if storyData != nil {
-            titleLabel.text = storyData.medalDescription
+            titleLabel.text = storyData.medalDescription.replacingOccurrences(of: "$1", with: UserInfo.userName)
             achievementImage.image = UIImage(named: storyData.medalImageName)
         }
         beforeImageAnimation()
