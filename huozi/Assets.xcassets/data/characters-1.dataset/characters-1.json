@@ -265,7 +265,7 @@
         "definition": "地球最大的天然卫星（亦称“月亮”、“月球”）。"
     },
     "田": {
-        "animation": "tian2-field",
+        "animation": "default",
         "components": [
             {
                 "name": "田",
@@ -352,7 +352,7 @@
         "definition": "从云层中降落的水滴。"
     },
     "草": {
-        "animation": "cao3-grass",
+        "animation": "default",
         "components": [
             {
                 "name": "早",
@@ -388,17 +388,17 @@
         "animation": "peng2-friend",
         "components": [
             {
-                "name": "月",
+                "name": "月1",
                 "img": "yue4-peng2-left"
             },
             {
-                "name": "月",
+                "name": "月2",
                 "img": "yue4-peng2-right"
             }
         ],
         "candidates": [
             {
-                "name": "月",
+                "name": "月1",
                 "img": "yue4-moon"
             },
             {
@@ -410,7 +410,7 @@
                 "img": "mu4-eye"
             },
             {
-                "name": "月",
+                "name": "月2",
                 "img": "yue4-moon"
             }
         ],
@@ -517,20 +517,20 @@
         "definition": "拿笤帚等除去尘土或垃圾。"
     },
     "林": {
-        "animation": "lin2-woods",
+        "animation": "default",
         "components": [
             {
-                "name": "木",
+                "name": "木1",
                 "img": "mu4-lin2-left"
             },
             {
-                "name": "木",
+                "name": "木2",
                 "img": "mu4-lin2-right"
             }
         ],
         "candidates": [
             {
-                "name": "木",
+                "name": "木1",
                 "img": "mu4-wood"
             },
             {
@@ -542,7 +542,7 @@
                 "img": "da4-big"
             },
             {
-                "name": "木",
+                "name": "木2",
                 "img": "mu4-wood"
             }
         ],
@@ -550,7 +550,7 @@
         "definition": "长在一片土地上的许多树木或竹子。"
     },
     "丰": {
-        "animation": "feng1-rich",
+        "animation": "default",
         "components": [
             {
                 "name": "丰",
@@ -674,7 +674,7 @@
         "definition": "平静，稳定。"
     },
     "休": {
-        "animation": "xiu1-rest",
+        "animation": "default",
         "components": [
             {
                 "name": "亻",
@@ -707,7 +707,7 @@
         "definition": "歇息。"
     },
     "困": {
-        "animation": "kun4-hardness",
+        "animation": "default",
         "components": [
             {
                 "name": "囗",

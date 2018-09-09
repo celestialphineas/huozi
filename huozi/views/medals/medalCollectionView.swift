@@ -86,10 +86,11 @@ class MedalCarouselViewController: UIViewController, iCarouselDataSource, iCarou
     
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
         switch option {
-            case .spacing       : return value * 0.3
+            case .spacing       : return value * 0.8
             case .fadeMin       : return 0
             case .fadeMax       : return 0
-            case .fadeRange     : return 4
+            case .fadeMinAlpha  : return 0.4
+            case .fadeRange     : return 1
             default             : return value
         }
     }
