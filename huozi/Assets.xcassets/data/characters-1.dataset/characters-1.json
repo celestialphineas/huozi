@@ -360,7 +360,7 @@
             },
             {
                 "name": "艹",
-                "img": "caotou-grass"
+                "img": "caotou-cao3-grass"
             }
         ],
         "candidates": [
@@ -418,7 +418,7 @@
         "definition": "彼此友好的人。"
     },
     "洗": {
-        "animation": "peng2-friend",
+        "animation": "xi3-wash",
         "components": [
             {
                 "name": "氵",
@@ -455,7 +455,7 @@
         "components": [
             {
                 "name": "日",
-                "img": "ri4-ming2-sun"
+                "img": "ri4-ming2-bright"
             },
             {
                 "name": "月",
@@ -484,15 +484,15 @@
         "definition": "亮，与“暗”相对。"
     },
     "扫": {
-        "animation": "ming2-bright",
+        "animation": "sao3-sweep",
         "components": [
             {
-                "name": "日",
-                "img": "ri4-ming2-sun"
+                "name": "扌",
+                "img": "tishou-sao3-sweep"
             },
             {
-                "name": "月",
-                "img": "yue4-ming2-bright"
+                "name": "彐",
+                "img": "xuntou-sao3-sweep"
             }
         ],
         "candidates": [
@@ -597,7 +597,7 @@
             },
             {
                 "name": "身",
-                "img": "feng1-rich"
+                "img": "shen1-body"
             },
             {
                 "name": "己",

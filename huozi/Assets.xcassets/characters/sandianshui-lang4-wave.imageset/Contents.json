@@ -2,12 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "sandianshui-lang4-wave.pdf",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
+      "filename" : "sandianshui-lang4-wave.pdf"
     },
     {
       "idiom" : "universal",
