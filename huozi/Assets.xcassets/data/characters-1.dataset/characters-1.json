@@ -1,21 +1,26 @@
 {
     "门": {
         "animation": "men2-door",
-        "components": [{
+        "components": [
+            {
                 "name": "门",
                 "img": "men2-door"
             }
         ],
-        "candidates": [{
+        "candidates": [
+            {
                 "name": "门",
                 "img": "men2-door"
-            }, {
+            },
+            {
                 "name": "同",
                 "img": "tong2-same"
-            }, {
+            },
+            {
                 "name": "口",
                 "img": "kou3-mouth"
-            }, {
+            },
+            {
                 "name": "日",
                 "img": "ri4-sun"
             }
@@ -25,21 +30,26 @@
     },
     "木": {
         "animation": "mu4-wood",
-        "components": [{
+        "components": [
+            {
                 "name": "木",
                 "img": "mu4-wood"
             }
         ],
-        "candidates": [{
+        "candidates": [
+            {
                 "name": "木",
                 "img": "mu4-wood"
-            }, {
+            },
+            {
                 "name": "大",
                 "img": "da4-big"
-            }, {
+            },
+            {
                 "name": "十",
                 "img": "shi2-ten"
-            }, {
+            },
+            {
                 "name": "不",
                 "img": "bu4-not"
             }
@@ -49,7 +59,8 @@
     },
     "走": {
         "animation": "zou3-walk",
-        "components": [{
+        "components": [
+            {
                 "name": "走",
                 "img": "zou3-walk"
             }
@@ -58,13 +69,16 @@
             {
                 "name": "走",
                 "img": "zou3-walk"
-            }, {
-                "name": "足", 
+            },
+            {
+                "name": "足",
                 "img": "zu2-foot"
-            }, {
+            },
+            {
                 "name": "过",
                 "img": "guo4-pass"
-            }, {
+            },
+            {
                 "name": "远",
                 "img": "yuan3-far"
             }
@@ -74,21 +88,26 @@
     },
     "火": {
         "animation": "huo3-fire",
-        "components": [{
+        "components": [
+            {
                 "name": "火",
                 "img": "huo3-fire"
             }
         ],
-        "candidates": [{
+        "candidates": [
+            {
                 "name": "火",
                 "img": "huo3-fire"
-            }, {
+            },
+            {
                 "name": "天",
                 "img": "tian1-sky"
-            }, {
+            },
+            {
                 "name": "人",
                 "img": "ren2-man"
-            }, {
+            },
+            {
                 "name": "未",
                 "img": "wei4-notyet"
             }
@@ -98,20 +117,26 @@
     },
     "见": {
         "animation": "jian4-see",
-        "components": [{
-            "name": "见",
-            "img": "jian4-see"
-        }],
-        "candidates": [{
+        "components": [
+            {
                 "name": "见",
                 "img": "jian4-see"
-            }, {
+            }
+        ],
+        "candidates": [
+            {
+                "name": "见",
+                "img": "jian4-see"
+            },
+            {
                 "name": "尤",
                 "img": "you2-special"
-            }, {
+            },
+            {
                 "name": "日",
                 "img": "ri4-sun"
-            }, {
+            },
+            {
                 "name": "大",
                 "img": "da4-big"
             }
@@ -121,29 +146,597 @@
     },
     "果": {
         "animation": "guo3-fruit",
-        "components": [{
+        "components": [
+            {
                 "name": "田",
                 "img": "tian2-guo3-fruit"
-            }, {
+            },
+            {
                 "name": "木",
                 "img": "mu4-guo3-fruit"
             }
         ],
-        "candidates": [{
+        "candidates": [
+            {
                 "name": "田",
                 "img": "tian2-field"
-            }, {
+            },
+            {
                 "name": "日",
                 "img": "ri4-sun"
-            }, {
+            },
+            {
                 "name": "十",
                 "img": "shi2-ten"
-            }, {
+            },
+            {
                 "name": "木",
                 "img": "mu4-wood"
             }
         ],
         "pinyin": "guǒ",
         "definition": "某些植物花落后含有种子的部分。"
+    },
+    "日": {
+        "animation": "ri4-sun",
+        "components": [
+            {
+                "name": "日",
+                "img": "ri4-sun"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "田",
+                "img": "tian2-field"
+            },
+            {
+                "name": "日",
+                "img": "ri4-sun"
+            },
+            {
+                "name": "阳",
+                "img": "yang2-sun"
+            },
+            {
+                "name": "口",
+                "img": "kou3-mouth"
+            }
+        ],
+        "pinyin": "rì",
+        "definition": "离地球最近的恒星（亦称“太阳”）。"
+    },
+    "口": {
+        "animation": "kou3-mouth",
+        "components": [
+            {
+                "name": "口",
+                "img": "kou3-mouth"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "日",
+                "img": "ri4-sun"
+            },
+            {
+                "name": "田",
+                "img": "tian2-field"
+            },
+            {
+                "name": "舌",
+                "img": "she2-tongue"
+            },
+            {
+                "name": "口",
+                "img": "kou3-mouth"
+            }
+        ],
+        "pinyin": "kǒu",
+        "definition": "人和动物吃东西和发声的器官（亦称“嘴”）。"
+    },
+    "月": {
+        "animation": "yue4-moon",
+        "components": [
+            {
+                "name": "月",
+                "img": "yue4-moon"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "月",
+                "img": "yue4-moon"
+            },
+            {
+                "name": "阴",
+                "img": "yin1-cloudy"
+            },
+            {
+                "name": "阳",
+                "img": "yang2-sun"
+            },
+            {
+                "name": "日",
+                "img": "ri4-sun"
+            }
+        ],
+        "pinyin": "yuè",
+        "definition": "地球最大的天然卫星（亦称“月亮”、“月球”）。"
+    },
+    "田": {
+        "animation": "tian2-field",
+        "components": [
+            {
+                "name": "田",
+                "img": "tian2-field"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "田",
+                "img": "tian2-field"
+            },
+            {
+                "name": "日",
+                "img": "ri4-sun"
+            },
+            {
+                "name": "口",
+                "img": "kou3-mouth"
+            },
+            {
+                "name": "凸",
+                "img": "tu1-raised"
+            }
+        ],
+        "pinyin": "tián",
+        "definition": "种植农作物的土地。"
+    },
+    "人": {
+        "animation": "ren2-man",
+        "components": [
+            {
+                "name": "人",
+                "img": "ren2-man"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "八",
+                "img": "ba1-eight"
+            },
+            {
+                "name": "大",
+                "img": "da4-big"
+            },
+            {
+                "name": "天",
+                "img": "tian1-sky"
+            },
+            {
+                "name": "人",
+                "img": "ren2-man"
+            }
+        ],
+        "pinyin": "rén",
+        "definition": "由类人猿进化而成的能制造和使用工具进行劳动、并能运用语言进行交际的动物。"
+    },
+    "雨": {
+        "animation": "yu3-rain",
+        "components": [
+            {
+                "name": "雨",
+                "img": "yu3-rain"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "雷",
+                "img": "lei2-thunder"
+            },
+            {
+                "name": "雨",
+                "img": "yu3-rain"
+            },
+            {
+                "name": "田",
+                "img": "tian2-field"
+            },
+            {
+                "name": "云",
+                "img": "yun2-cloud"
+            }
+        ],
+        "pinyin": "yǔ",
+        "definition": "从云层中降落的水滴。"
+    },
+    "草": {
+        "animation": "cao3-grass",
+        "components": [
+            {
+                "name": "早",
+                "img": "zao3-cao3-grass"
+            },
+            {
+                "name": "艹",
+                "img": "caotou-grass"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "早",
+                "img": "zao3-early"
+            },
+            {
+                "name": "艹",
+                "img": "caotou"
+            },
+            {
+                "name": "宀",
+                "img": "baogai"
+            },
+            {
+                "name": "于",
+                "img": "yu2-at"
+            }
+        ],
+        "pinyin": "yǔ",
+        "definition": "对高等植物中除了树木、庄稼、蔬菜以外的茎干柔软的植物的统称。"
+    },
+    "朋": {
+        "animation": "peng2-friend",
+        "components": [
+            {
+                "name": "月",
+                "img": "yue4-peng2-left"
+            },
+            {
+                "name": "月",
+                "img": "yue4-peng2-right"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "月",
+                "img": "yue4-moon"
+            },
+            {
+                "name": "日",
+                "img": "ri4-sun"
+            },
+            {
+                "name": "目",
+                "img": "mu4-eye"
+            },
+            {
+                "name": "月",
+                "img": "yue4-moon"
+            }
+        ],
+        "pinyin": "péng",
+        "definition": "彼此友好的人。"
+    },
+    "洗": {
+        "animation": "peng2-friend",
+        "components": [
+            {
+                "name": "氵",
+                "img": "sandianshui-xi3-wash"
+            },
+            {
+                "name": "先",
+                "img": "xian1-xi3-wash"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "氵",
+                "img": "sandianshui"
+            },
+            {
+                "name": "后",
+                "img": "hou4-behind"
+            },
+            {
+                "name": "先",
+                "img": "xian1-first"
+            },
+            {
+                "name": "扌",
+                "img": "tishou"
+            }
+        ],
+        "pinyin": "xǐ",
+        "definition": "用水去掉污垢。"
+    },
+    "明": {
+        "animation": "ming2-bright",
+        "components": [
+            {
+                "name": "日",
+                "img": "ri4-ming2-sun"
+            },
+            {
+                "name": "月",
+                "img": "yue4-ming2-bright"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "月",
+                "img": "yue4-moon"
+            },
+            {
+                "name": "日",
+                "img": "ri4-sun"
+            },
+            {
+                "name": "木",
+                "img": "mu4-wood"
+            },
+            {
+                "name": "扌",
+                "img": "tishou"
+            }
+        ],
+        "pinyin": "míng",
+        "definition": "亮，与“暗”相对。"
+    },
+    "扫": {
+        "animation": "ming2-bright",
+        "components": [
+            {
+                "name": "日",
+                "img": "ri4-ming2-sun"
+            },
+            {
+                "name": "月",
+                "img": "yue4-ming2-bright"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "扌",
+                "img": "tishou"
+            },
+            {
+                "name": "氵",
+                "img": "sandianshui"
+            },
+            {
+                "name": "彐",
+                "img": "xuntou"
+            },
+            {
+                "name": "田",
+                "img": "tian2-field"
+            }
+        ],
+        "pinyin": "sǎo",
+        "definition": "拿笤帚等除去尘土或垃圾。"
+    },
+    "林": {
+        "animation": "lin2-woods",
+        "components": [
+            {
+                "name": "木",
+                "img": "mu4-lin2-left"
+            },
+            {
+                "name": "木",
+                "img": "mu4-lin2-right"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "木",
+                "img": "mu4-wood"
+            },
+            {
+                "name": "十",
+                "img": "shi2-ten"
+            },
+            {
+                "name": "大",
+                "img": "da4-big"
+            },
+            {
+                "name": "木",
+                "img": "mu4-wood"
+            }
+        ],
+        "pinyin": "lín",
+        "definition": "长在一片土地上的许多树木或竹子。"
+    },
+    "丰": {
+        "animation": "feng1-rich",
+        "components": [
+            {
+                "name": "丰",
+                "img": "feng1-rich"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "风",
+                "img": "feng1-wind"
+            },
+            {
+                "name": "凤",
+                "img": "feng4-phoenix"
+            },
+            {
+                "name": "丰",
+                "img": "feng1-rich"
+            },
+            {
+                "name": "手",
+                "img": "shou3-hand"
+            }
+        ],
+        "pinyin": "fēng",
+        "definition": "盛，多，大。"
+    },
+    "身": {
+        "animation": "shen1-body",
+        "components": [
+            {
+                "name": "身",
+                "img": "shen1-body"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "目",
+                "img": "mu4-eye"
+            },
+            {
+                "name": "才",
+                "img": "cai2-just"
+            },
+            {
+                "name": "身",
+                "img": "feng1-rich"
+            },
+            {
+                "name": "己",
+                "img": "ji3-self"
+            }
+        ],
+        "pinyin": "shēn",
+        "definition": "人、动物的躯体，物体的主要部分。"
+    },
+    "浪": {
+        "animation": "lang4-wave",
+        "components": [
+            {
+                "name": "氵",
+                "img": "sandianshui-lang4-wave"
+            },
+            {
+                "name": "良",
+                "img": "liang2-lang4-wave"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "氵",
+                "img": "sandianshui"
+            },
+            {
+                "name": "皮",
+                "img": "pi2-skin"
+            },
+            {
+                "name": "良",
+                "img": "liang2-fair"
+            },
+            {
+                "name": "讠",
+                "img": "yanpang"
+            }
+        ],
+        "pinyin": "làng",
+        "definition": "大波；像波浪起伏的。"
+    },
+    "安": {
+        "animation": "an1-safe",
+        "components": [
+            {
+                "name": "宀",
+                "img": "baogai-an1-safe"
+            },
+            {
+                "name": "女",
+                "img": "nyu3-an1-safe"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "艹",
+                "img": "caotou"
+            },
+            {
+                "name": "宀",
+                "img": "baogai"
+            },
+            {
+                "name": "女",
+                "img": "nyu3-female"
+            },
+            {
+                "name": "子",
+                "img": "zi3-child"
+            }
+        ],
+        "pinyin": "ān",
+        "definition": "平静，稳定。"
+    },
+    "休": {
+        "animation": "xiu1-rest",
+        "components": [
+            {
+                "name": "亻",
+                "img": "danren-xiu1-rest"
+            },
+            {
+                "name": "木",
+                "img": "mu4-xiu1-wood"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "扌",
+                "img": "tishou"
+            },
+            {
+                "name": "木",
+                "img": "mu4-wood"
+            },
+            {
+                "name": "林",
+                "img": "lin2-woods"
+            },
+            {
+                "name": "亻",
+                "img": "danren"
+            }
+        ],
+        "pinyin": "xiū",
+        "definition": "歇息。"
+    },
+    "困": {
+        "animation": "kun4-hardness",
+        "components": [
+            {
+                "name": "囗",
+                "img": "wei2-kun4-hardness"
+            },
+            {
+                "name": "木",
+                "img": "mu4-kun4-hardness"
+            }
+        ],
+        "candidates": [
+            {
+                "name": "玉",
+                "img": "yu4-jade"
+            },
+            {
+                "name": "木",
+                "img": "mu4-wood"
+            },
+            {
+                "name": "囗",
+                "img": "wei2-closure"
+            },
+            {
+                "name": "宀",
+                "img": "baogai"
+            }
+        ],
+        "pinyin": "kùn",
+        "definition": "陷在艰难痛苦或无法摆脱的环境中。"
     }
 }

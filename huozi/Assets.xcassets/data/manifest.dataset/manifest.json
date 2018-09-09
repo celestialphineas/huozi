@@ -10,7 +10,13 @@
             "name": "一年级（下）",
             "index": 2,
             "entry": "book-1b",
-            "storycount": 0
+            "storycount": 1
+        },
+        {
+            "name": "二年级（上）",
+            "index": 3,
+            "entry": "book-2a",
+            "storycount": 1
         }
     ],
     "charpackages": [
