@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <title>活字</title>
+</head>
+<body>
+    <div id="comments"></div>
+</body>
+<script>
+const gitment = new Gitment({
+  id: 'huozi', // optional
+  owner: 'celestialphineas',
+  repo: 'huozi',
+  oauth: {
+    client_id: 'e40bb7933c24d32ecd59',
+    client_secret: '8338b317f7483b8097e1fe7c0962a683b0796924',
+  }
+})
+
+gitment.render('comments')
+</script>
+</html>

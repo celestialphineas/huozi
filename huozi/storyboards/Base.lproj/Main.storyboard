@@ -16,7 +16,6 @@
         <!--Side Menu Controller-->
         <scene sceneID="X06-qZ-ffI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yT7-px-Kiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="sideMenuController" id="aNL-uS-rLx" customClass="SideMenuController" customModule="SideMenuSwift" sceneMemberID="viewController">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="zoom"/>
@@ -27,13 +26,13 @@
                         <segue destination="baT-L2-Jfs" kind="custom" identifier="SideMenu.Menu" customClass="SideMenuSegue" customModule="SideMenuSwift" id="3ql-Yu-zsZ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yT7-px-Kiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1262" y="236"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="8Qy-B0-Wth">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6bq-iw-UhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="baT-L2-Jfs" customClass="SideMenuViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2o5-k2-Hef">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -164,14 +163,13 @@
                         <outlet property="sideMenuContainer" destination="7nh-Fx-fKI" id="D0M-1u-fcP"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bq-iw-UhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="152.80000000000001" y="832.53373313343332"/>
         </scene>
         <!--Medal Collection View Controller-->
         <scene sceneID="R95-gh-KIP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10G-Fb-n8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="aka-6x-xuE" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="XtC-63-fg6" customClass="MedalCollectionViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ok-Vw-hfA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -308,13 +306,14 @@
                         <outlet property="pageControl" destination="bfe-pP-sj3" id="uBe-89-BEl"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10G-Fb-n8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aka-6x-xuE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-303" y="1717"/>
         </scene>
         <!--Medal Carousel View Controller-->
         <scene sceneID="rLj-Pb-Mjk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kyd-da-WjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="D5M-SP-5UY" customClass="MedalCarouselViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="2bb-A8-xhr" customClass="iCarousel">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="427"/>
@@ -326,13 +325,13 @@
                         <outlet property="carouselView" destination="2bb-A8-xhr" id="KTc-AM-0hz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kyd-da-WjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-303" y="2416"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="cqg-pU-IRk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ol4-pc-9im" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="pJl-tP-3JQ" customClass="SettingsViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2BL-hQ-ogn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -419,24 +418,19 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ol4-pc-9im" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="665" y="1718"/>
         </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="J4R-fn-e6t">
             <objects>
-                <tapGestureRecognizer id="9eK-Y9-8s3">
-                    <connections>
-                        <action selector="pickImage" destination="BVN-7S-VBT" id="HrX-TL-i20"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LI1-xC-fka" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="BVN-7S-VBT" customClass="SettingsTableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HwT-87-dyo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="1EU-u7-2rd">
+                        <view key="tableHeaderView" opaque="NO" contentMode="scaleToFill" misplaced="YES" id="1EU-u7-2rd">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -524,7 +518,7 @@
                                 <constraint firstItem="xTB-Wu-QTl" firstAttribute="centerX" secondItem="1EU-u7-2rd" secondAttribute="centerX" id="xHB-0u-fGg"/>
                             </constraints>
                         </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="WoO-5z-WIc">
+                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="WoO-5z-WIc">
                             <rect key="frame" x="0.0" y="864" width="375" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -788,16 +782,21 @@
                         <outlet property="usernameTextfield" destination="C8G-Ra-bDw" id="Ep4-ig-ROO"/>
                     </connections>
                 </tableViewController>
+                <tapGestureRecognizer id="9eK-Y9-8s3">
+                    <connections>
+                        <action selector="pickImage" destination="BVN-7S-VBT" id="HrX-TL-i20"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LI1-xC-fka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1756" y="1718"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="x0O-FF-dxG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="psW-bb-wXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="EnV-JB-5Sj" customClass="AboutViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JfG-uL-YA9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1j-m9-mAV" customClass="GradientView" customModule="huozi" customModuleProvider="target">
@@ -871,10 +870,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqC-Mx-fUI">
-                                <rect key="frame" x="0.0" y="324.5" width="375" height="675.5"/>
+                                <rect key="frame" x="0.0" y="324.5" width="375" height="1515.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9I2-45-Hgz">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="775"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开发者" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nl-3L-Ntf">
                                                 <rect key="frame" x="157" y="32" width="61.5" height="24"/>
@@ -981,13 +980,111 @@
                                                     <constraint firstAttribute="height" constant="80" id="jw8-Kf-JUj"/>
                                                 </constraints>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uom-BM-cSW">
+                                                <rect key="frame" x="32" y="256" width="311" height="471.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="浙江大学活字团队（以下简称“我们”）重视用户的隐私。本《隐私政策》向您说明，我们如何储存和使用您的信息。当您使用活字app，即意味着您同意我们的隐私政策。如果您对本政策有任何问题，请通过应用内“">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" firstLineHeadIndent="24" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="报告问题">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="PingFangSC-Semibold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" firstLineHeadIndent="24" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">”与我们联系。
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" firstLineHeadIndent="24" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="我们可能会收集的信息">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="PingFangSC-Semibold"/>
+                                                            <font key="NSOriginalFont" size="12" name="PingFangSC-Semibold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="：">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="PingFangSC-Semibold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">用户自愿的问卷填写、评价与反馈；反馈使用问题时的屏幕截图、电量等设备使用情况。
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" firstLineHeadIndent="24" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">我们并不会获取并持有您的任何个人身份信息。您在使用app时所产生的使用记录，如用户名、头像和学习记录等，均将同步在您iCloud的私人空间中，包括开发者在内的任何个人均无权获得。
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" firstLineHeadIndent="24" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="未成年人使用我们的服务：">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="PingFangSC-Semibold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">我们鼓励父母或监护人指导未满十八岁的未成年人使用我们的服务。我们建议未成年人鼓励他们的父母或监护人阅读本《隐私政策》，并建议未成年人在提交个人信息之前寻求父母或监护人的同意与指导。
+我们不会主动故意接触和收集未成年人的个人信息。在应用中使用未成年人的信息时，包括姓名、年龄和照片等，都需要在父母或监护人同意下进行。其间可能需要使用您的麦克风、相机等，以用于软件中的交互。任何信息都会保证其私密性，活字团队不持有任何使用者的个人信息。</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" firstLineHeadIndent="24" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="隐私政策" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQ2-Of-aw4">
+                                                <rect key="frame" x="146" y="216" width="82" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="664" id="RgU-7Y-PMP"/>
+                                            <constraint firstAttribute="bottom" secondItem="Uom-BM-cSW" secondAttribute="bottom" constant="48" id="FZ4-4d-9Ib"/>
+                                            <constraint firstItem="UQ2-Of-aw4" firstAttribute="top" secondItem="oX6-Wd-eDI" secondAttribute="bottom" constant="64" id="NVm-zx-k2s"/>
+                                            <constraint firstItem="Uom-BM-cSW" firstAttribute="top" secondItem="UQ2-Of-aw4" secondAttribute="bottom" constant="16" id="ZVA-gO-Zyr"/>
                                             <constraint firstItem="oX6-Wd-eDI" firstAttribute="top" secondItem="5nl-3L-Ntf" secondAttribute="bottom" constant="16" id="Zyi-bB-gFD"/>
                                             <constraint firstItem="5nl-3L-Ntf" firstAttribute="centerX" secondItem="9I2-45-Hgz" secondAttribute="centerX" id="hi7-aL-f3S"/>
+                                            <constraint firstItem="UQ2-Of-aw4" firstAttribute="centerX" secondItem="9I2-45-Hgz" secondAttribute="centerX" id="hxh-eR-dxa"/>
+                                            <constraint firstItem="Uom-BM-cSW" firstAttribute="leading" secondItem="9I2-45-Hgz" secondAttribute="leading" constant="32" id="tl6-6V-cOV"/>
                                             <constraint firstItem="5nl-3L-Ntf" firstAttribute="top" secondItem="9I2-45-Hgz" secondAttribute="top" constant="32" id="uiA-kw-mVz"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uom-BM-cSW" secondAttribute="trailing" constant="32" id="xA1-tn-Agr"/>
                                             <constraint firstItem="oX6-Wd-eDI" firstAttribute="centerX" secondItem="9I2-45-Hgz" secondAttribute="centerX" id="yyg-BO-bvc"/>
                                         </constraints>
                                     </view>
@@ -1000,6 +1097,22 @@
                                     <constraint firstAttribute="width" secondItem="9I2-45-Hgz" secondAttribute="width" id="r0K-95-JEm"/>
                                 </constraints>
                             </scrollView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xj-XG-5J3" customClass="GradientView" customModule="huozi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="1800" width="375" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vmo-rZ-9gg"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="eMK-rq-aQ2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic2-p3-KIo" customClass="GradientView" customModule="huozi" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="324.5" width="375" height="24"/>
                                 <constraints>
@@ -1017,6 +1130,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3xj-XG-5J3" firstAttribute="leading" secondItem="XmB-aI-rVt" secondAttribute="leading" id="0NJ-Sa-OHM"/>
+                            <constraint firstItem="3xj-XG-5J3" firstAttribute="top" secondItem="XmB-aI-rVt" secondAttribute="bottom" id="4kk-GS-PA8"/>
                             <constraint firstItem="wRo-Ey-mrM" firstAttribute="centerX" secondItem="XmB-aI-rVt" secondAttribute="centerX" id="8YG-Hy-gLU"/>
                             <constraint firstItem="wTc-Gf-ovI" firstAttribute="top" secondItem="Thu-j2-vGp" secondAttribute="bottom" constant="16" id="DxC-CR-COI"/>
                             <constraint firstItem="ic2-p3-KIo" firstAttribute="trailing" secondItem="OqC-Mx-fUI" secondAttribute="trailing" id="I8G-3h-gjV"/>
@@ -1024,6 +1139,7 @@
                             <constraint firstItem="wTc-Gf-ovI" firstAttribute="centerX" secondItem="XmB-aI-rVt" secondAttribute="centerX" id="NOI-C8-7Qt"/>
                             <constraint firstItem="Thu-j2-vGp" firstAttribute="top" secondItem="XmB-aI-rVt" secondAttribute="top" constant="32" id="NlT-zi-474"/>
                             <constraint firstItem="OqC-Mx-fUI" firstAttribute="top" secondItem="wRo-Ey-mrM" secondAttribute="bottom" id="Qs7-GK-Q1K"/>
+                            <constraint firstItem="XmB-aI-rVt" firstAttribute="trailing" secondItem="3xj-XG-5J3" secondAttribute="trailing" id="RTR-8E-jQN"/>
                             <constraint firstItem="XmB-aI-rVt" firstAttribute="trailing" secondItem="OqC-Mx-fUI" secondAttribute="trailing" id="TaY-G5-bax"/>
                             <constraint firstItem="Thu-j2-vGp" firstAttribute="centerX" secondItem="XmB-aI-rVt" secondAttribute="centerX" id="WA0-iu-b6M"/>
                             <constraint firstItem="ic2-p3-KIo" firstAttribute="top" secondItem="OqC-Mx-fUI" secondAttribute="top" id="Zcm-DX-Bif"/>
@@ -1031,12 +1147,12 @@
                             <constraint firstItem="OqC-Mx-fUI" firstAttribute="leading" secondItem="XmB-aI-rVt" secondAttribute="leading" id="dQ2-LP-aE6"/>
                             <constraint firstItem="XmB-aI-rVt" firstAttribute="trailing" secondItem="D1j-m9-mAV" secondAttribute="trailing" id="f0K-Zu-9ca"/>
                             <constraint firstItem="wRo-Ey-mrM" firstAttribute="top" secondItem="wTc-Gf-ovI" secondAttribute="bottom" constant="12" id="hBF-tw-chF"/>
-                            <constraint firstItem="XmB-aI-rVt" firstAttribute="bottom" secondItem="OqC-Mx-fUI" secondAttribute="bottom" id="m9j-TH-u7E"/>
+                            <constraint firstItem="XmB-aI-rVt" firstAttribute="bottom" secondItem="OqC-Mx-fUI" secondAttribute="bottom" constant="-40" id="m9j-TH-u7E"/>
                             <constraint firstItem="XmB-aI-rVt" firstAttribute="top" secondItem="D1j-m9-mAV" secondAttribute="top" constant="60" id="ysb-c3-JJb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XmB-aI-rVt"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="1800"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -1044,13 +1160,13 @@
                         <outlet property="versionNumber" destination="wRo-Ey-mrM" id="fow-lv-0Dc"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psW-bb-wXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2510" y="1717"/>
+            <point key="canvasLocation" x="3280.8000000000002" y="1716.3418290854574"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="huozi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIq-U2-JHz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1137,13 +1253,13 @@
                         <outlet property="homeTableViewContainer" destination="3ON-sc-Xe7" id="yXI-af-LXq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="153" y="-467"/>
         </scene>
         <!--Home Table View Controller-->
         <scene sceneID="YAB-gc-P3y">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y96-Ou-7mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vny-Sa-cEs" customClass="HomeTableViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="64" sectionFooterHeight="40" id="o1T-z8-i6f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
@@ -1189,13 +1305,13 @@
                         <segue destination="xy1-4m-eQr" kind="show" identifier="homeToStory" id="AHP-rQ-TNq"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y96-Ou-7mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1353" y="-103"/>
         </scene>
         <!--Achievement View Controller-->
         <scene sceneID="UZc-7T-UBT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E18-Wb-Nmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController modalTransitionStyle="crossDissolve" id="E7I-P4-VBT" customClass="AchievementViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="2ma-n4-YXm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1350,13 +1466,13 @@
                         <outlet property="titleLabel" destination="s6G-mn-XLZ" id="2Qd-M6-gHy"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E18-Wb-Nmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1756" y="833"/>
         </scene>
         <!--Story Home View Controller-->
         <scene sceneID="o5A-ij-VDq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wes-Fp-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="xy1-4m-eQr" customClass="StoryHomeViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="agb-0K-1HW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1486,13 +1602,13 @@
                         <segue destination="E7I-P4-VBT" kind="presentation" identifier="storyHomeToPresent" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="7qX-J6-QWP"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wes-Fp-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2137" y="-102"/>
         </scene>
         <!--Telling Story View Controller-->
         <scene sceneID="wIE-1f-gLK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GK4-Pv-6Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="scm-GC-H8H" customClass="TellingStoryViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qOM-1a-zB8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1620,13 +1736,13 @@
                         <outlet property="titleLabel" destination="H4Y-Z1-qcj" id="EKo-xw-QEY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GK4-Pv-6Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2510" y="833"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="PFv-bt-sIB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="if2-Oa-n59" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PNE-O1-CeO" customClass="StoryCarouselViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="Pbe-Hh-iVn" customClass="iCarousel">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
@@ -1659,13 +1775,13 @@
                         <segue destination="zhU-Kq-qm4" kind="show" identifier="storyHomeToPiecing" id="EBy-R9-PLt"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="if2-Oa-n59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2894" y="-104"/>
         </scene>
         <!--Piecing Character View Controller-->
         <scene sceneID="YeU-PW-S1r">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QbT-49-FJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="zhU-Kq-qm4" customClass="PiecingCharacterViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ia1-L8-4vN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1804,14 +1920,13 @@
                         <segue destination="dSx-C6-ySa" kind="presentation" identifier="piecingToDetails" modalTransitionStyle="crossDissolve" id="baU-Tc-Ys9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QbT-49-FJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3718" y="-102"/>
         </scene>
         <!--Character Details View Controller-->
         <scene sceneID="fuq-bf-MnF">
             <objects>
-                <exit id="sbd-Cc-sLx" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kxS-lx-1Ge" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="dSx-C6-ySa" customClass="CharacterDetailsViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ks-eP-Mxh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1951,13 +2066,14 @@
                         <segue destination="sbd-Cc-sLx" kind="unwind" identifier="unwindCharacterDetails" unwindAction="unwindActionWithSegue:" id="7M4-HC-84H"/>
                     </connections>
                 </viewController>
+                <exit id="sbd-Cc-sLx" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxS-lx-1Ge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4526" y="-102"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="vVx-yN-zF5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="chy-AP-jiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="q4H-Ur-Y4p" customClass="SplashViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XLT-ca-A9z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1990,13 +2106,13 @@
                         <segue destination="aNL-uS-rLx" kind="show" identifier="splashToHome" id="9Vz-Qr-R29"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chy-AP-jiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2062" y="235"/>
         </scene>
         <!--Side Menu Table Controller-->
         <scene sceneID="qci-wu-GoQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qkj-K8-avw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vy9-hR-S5j" customClass="SideMenuTableController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pof-cZ-tdF">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="463"/>
@@ -2034,13 +2150,13 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkj-K8-avw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="842" y="833"/>
         </scene>
         <!--Coming Soon Modal-->
         <scene sceneID="90y-GJ-1fn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NFR-hg-Def" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController modalTransitionStyle="crossDissolve" id="AmI-xw-vsK" customClass="ComingSoonModal" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="gXY-8L-hM1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2210,13 +2326,13 @@
                         <outlet property="shadowView" destination="f36-RU-1UW" id="r1R-mX-njL"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFR-hg-Def" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1353" y="-829"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="fni-RU-S2d">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K8Y-Zd-dgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RdH-P1-ned" customClass="AboutViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L6i-0m-t2M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
@@ -3607,13 +3723,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8Y-Zd-dgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1353" y="2597"/>
         </scene>
         <!--Reset View Controller-->
         <scene sceneID="QKv-Q7-yFQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lnm-xb-6q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController modalTransitionStyle="crossDissolve" id="LEo-Th-hN6" customClass="ResetViewController" customModule="huozi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="36G-7K-Ls5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
@@ -3783,6 +3899,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <outlet property="shadowView" destination="YWH-Lj-XO5" id="Ydn-8O-ufn"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lnm-xb-6q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2137" y="2597"/>
         </scene>
