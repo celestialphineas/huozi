@@ -1,19 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-    <title>活字</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <title>活字</title>
 </head>
 <body>
-    <div id="comments"></div>
+  <div class="carousel carousel-slider center" id="carousel">
+    <div class="carousel-item black-text" href="#one!" style="background-image:url('img/bg.jpg')">
+      <div class="basic-container">
+          <div class="icon-container"></div>
+          <h1 class="app-title">活字</h1>
+          <p class="app-motto">字有颜如玉，字有黄金屋</p>
+      </div>
+    </div>
+    <div class="carousel-item amber white-text" href="#two!" style="background-image:url('img/poster.jpg');background-size:cover;background-repeat:no-repeat;background-position: center center;">
+      <h1 style="position:relative;top:calc(45% - 25px);font-weight:100;font-size:32pt;">趣味故事听不够</h1>
+    </div>
+    <!-- <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div> -->
+  </div>
+  <div class="carousel-go left"><</div>
+  <div class="carousel-go right">></div>
+  <div class="section white">
+    <div class="row container">
+      <h4 class="header">留言给我们</h4>
+      <div id="comments"></div>
+    </div>
+  </div>
+  <footer class="page-footer cyan accent-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">活字</h5>
+          <p class="grey-text text-lighten-4">古人云：“书中自有颜如玉，书中自有黄金屋”。文字是书籍的基础，也是小朋友们探索世界的起步，因此我们秉承的理念为：“字有颜如玉，字有黄金屋”。“活字”的象形动画是我们的原创作品，我们希望通过运用设计的力量，帮助小朋友更好地探索世界。</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">链接</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="http://www.happiness.zju.edu.cn">幸福设计与计算实验室</a></li>
+            <li><a class="grey-text text-lighten-3" href="mailto://elainecao@zju.edu.cn">邮件联系我们</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2018 活字团队
+      <a class="grey-text text-lighten-4 right" href="https://github.com/celestialphineas/huozi">GitHub Repo</a>
+      </div>
+    </div>
+  </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
+M.Carousel.init(document.querySelectorAll('.carousel'), {
+  fullWidth: true,
+  indicators: true,
+  duration: 200
+});
+var carousel = M.Carousel.getInstance(document.querySelector('.carousel'));
+
 const gitment = new Gitment({
   id: 'huozi', // optional
   owner: 'celestialphineas',
@@ -22,8 +79,87 @@ const gitment = new Gitment({
     client_id: 'e40bb7933c24d32ecd59',
     client_secret: '8338b317f7483b8097e1fe7c0962a683b0796924',
   }
-})
+});
+gitment.render('comments');
 
-gitment.render('comments')
+document.querySelector('.carousel-go.left').addEventListener('click', function() { carousel.prev(); });
+document.querySelector('.carousel-go.left').addEventListener('touchbegin', function() { carousel.prev(); });
+document.querySelector('.carousel-go.right').addEventListener('click', function() { carousel.next(); });
+document.querySelector('.carousel-go.right').addEventListener('touchbegin', function() { carousel.next(); });
 </script>
+<style>
+.carousel {
+  height: 100vh!important;
+}
+.carousel-item {
+  height: 100vh !important;
+}
+.basic-container {
+  position: relative;
+  top: 20%;
+}
+.icon-container {
+  width: 180px;
+  height: 180px;
+  background-image: url('img/icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 16px;
+  box-shadow: 0px 5px 75px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+}
+.indicator-item {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.75);
+}
+.indicator-item.active {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+.app-title {
+  font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+  font-weight: bold;
+}
+.app-motto {
+  font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+}
+.gitment-editor-tabs {
+  background-color: transparent;
+}
+.carousel-go {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 300%;
+  font-weight: 100;
+  user-select: none;
+}
+.carousel-go.left {
+  left: 0;
+  opacity: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+}
+.carousel-go.left:not(:hover) {
+  transition: all 500ms;
+}
+.carousel-go.left:hover {
+  transition: all 250ms;
+  opacity: 1;
+}
+.carousel-go.right {
+  right: 0;
+  opacity: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+}
+.carousel-go.right:not(:hover) {
+  transition: all 500ms;
+}
+.carousel-go.right:hover {
+  transition: all 250ms;
+  opacity: 1;
+}
+</style>
 </html>
