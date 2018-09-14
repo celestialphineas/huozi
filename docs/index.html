@@ -17,10 +17,11 @@
           <div class="icon-container"></div>
           <h1 class="app-title">活字</h1>
           <p class="app-motto">字有颜如玉，字有黄金屋</p>
+          <a href="https://itunes.apple.com/cn/app/%E6%B4%BB%E5%AD%97/id1435767297?l=zh&ls=1&mt=8">
+            <img id="badge" src="img/badge.png">
+          </a>
       </div>
-      <a href="https://itunes.apple.com/cn/app/%E6%B4%BB%E5%AD%97/id1435767297?l=zh&ls=1&mt=8">
-        <img id="badge" src="img/badge.png">
-      </a>
+      <img id="qr-code" src="img/QR.png">
     </div>
     <div class="carousel-item black-text" href="#animations" style="background-image:url('img/bg.jpg')">
       <div class="floating-desc">
@@ -113,7 +114,7 @@ document.querySelector('.carousel-go.right').addEventListener('touchbegin', func
 }
 .basic-container {
   position: relative;
-  top: 20%;
+  top: 15%;
 }
 .icon-container {
   width: 120px;
@@ -137,7 +138,14 @@ document.querySelector('.carousel-go.right').addEventListener('touchbegin', func
   position: relative;
   margin: auto;
   width: 120px;
-  top: calc(30vh);
+}
+#qr-code {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 72px;
+  top: 25%;
 }
 .floating-desc {
   float: right;
@@ -157,14 +165,17 @@ document.querySelector('.carousel-go.right').addEventListener('touchbegin', func
 }
 .func-text {
   font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
-  font-size: 24px;
+  font-size: 20px!important;
 }
 .app-title {
   font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 .app-motto {
   font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  font-size: 24px!important;
+  margin-top: 10px;
 }
 .gitment-editor-tabs {
   background-color: transparent;
