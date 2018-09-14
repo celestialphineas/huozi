@@ -12,24 +12,40 @@
 </head>
 <body>
   <div class="carousel carousel-slider center" id="carousel">
-    <div class="carousel-item black-text" href="#one!" style="background-image:url('img/bg.jpg')">
+    <div class="carousel-item black-text" href="#main" style="background-image:url('img/bg.jpg')">
       <div class="basic-container">
           <div class="icon-container"></div>
           <h1 class="app-title">活字</h1>
           <p class="app-motto">字有颜如玉，字有黄金屋</p>
       </div>
+      <a href="https://itunes.apple.com/cn/app/%E6%B4%BB%E5%AD%97/id1435767297?l=zh&ls=1&mt=8">
+        <img id="badge" src="img/badge.png">
+      </a>
     </div>
-    <div class="carousel-item amber white-text" href="#two!" style="background-image:url('img/poster.jpg');background-size:cover;background-repeat:no-repeat;background-position: center center;">
+    <div class="carousel-item black-text" href="#animations" style="background-image:url('img/bg.jpg')">
+      <div class="floating-desc">
+        <h1 class="func-title">活字动画</h1>
+        <p class="func-text">汉字动起来，神气活现。</p>
+      </div>
+      <img class="screenshot" src="img/screenshot-1.png">
+    </div>
+    <div class="carousel-item black-text" href="#piecing" style="background-image:url('img/bg.jpg')">
+      <div class="floating-desc">
+        <h1 class="func-title">拼字环节</h1>
+        <p class="func-text">拼合汉字，趣味满满。</p>
+      </div>
+      <img class="screenshot" src="img/screenshot-2.png">
+    </div>
+    <div class="carousel-item black-text" href="#medals" style="background-image:url('img/bg.jpg')">
+      <div class="floating-desc">
+        <h1 class="func-title">勋章奖励</h1>
+        <p class="func-text">解锁故事，获得勋章。</p>
+      </div>
+      <img class="screenshot" src="img/screenshot-2.png">
+    </div>
+    <div class="carousel-item amber white-text" href="#stories" style="background-image:url('img/poster.jpg');background-size:cover;background-repeat:no-repeat;background-position: center center;">
       <h1 style="position:relative;top:calc(45% - 25px);font-weight:100;font-size:32pt;">趣味故事听不够</h1>
     </div>
-    <!-- <div class="carousel-item green white-text" href="#three!">
-      <h2>Third Panel</h2>
-      <p class="white-text">This is your third panel</p>
-    </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
-    </div> -->
   </div>
   <div class="carousel-go left"><</div>
   <div class="carousel-go right">></div>
@@ -100,8 +116,8 @@ document.querySelector('.carousel-go.right').addEventListener('touchbegin', func
   top: 20%;
 }
 .icon-container {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   background-image: url('img/icon.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -116,6 +132,32 @@ document.querySelector('.carousel-go.right').addEventListener('touchbegin', func
 }
 .indicator-item.active {
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+#badge {
+  position: relative;
+  margin: auto;
+  width: 120px;
+  top: calc(30vh);
+}
+.floating-desc {
+  float: right;
+  text-align: left;
+  top: 20vh;
+  margin: 10% 20% 10% 10%;
+}
+.screenshot {
+  width: 25%!important;
+  min-width: 250px!important;
+  margin-top: 10%;
+}
+.func-title {
+  font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+  font-weight: bold;
+  font-size: 48px;
+}
+.func-text {
+  font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  font-size: 24px;
 }
 .app-title {
   font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
