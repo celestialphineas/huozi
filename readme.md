@@ -1,7 +1,7 @@
 # 活字 huozi
 
 <a href="https://itunes.apple.com/cn/app/%E6%B4%BB%E5%AD%97/id1435767297?l=zh&ls=1&mt=8">
-<img src="docs/img/badge.png" style="width:72px">
+<img src="docs/img/badge.png" width="120">
 </a>
 
 [项目页面](https://celestialphineas.github.io/huozi)
@@ -14,9 +14,9 @@
 * 儿童拼汉字的交互
 * iCloud同步用户数据
 
-<img src="docs/img/screenshot-1.png" style="width:140px">
-<img src="docs/img/screenshot-2.png" style="width:140px">
-<img src="docs/img/screenshot-3.png" style="width:140px">
+<img src="docs/img/screenshot-1.png" width="200">
+<img src="docs/img/screenshot-2.png" width="200">
+<img src="docs/img/screenshot-3.png" width="200">
 
 ## 简介
 
