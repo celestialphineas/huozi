@@ -14,9 +14,7 @@
 * 儿童拼汉字的交互
 * iCloud同步用户数据
 
-<img src="docs/img/screenshot-1.png" width="200">
-<img src="docs/img/screenshot-2.png" width="200">
-<img src="docs/img/screenshot-3.png" width="200">
+<img src="docs/img/screenshot-1.png" width="200"><img src="docs/img/screenshot-2.png" width="200"><img src="docs/img/screenshot-3.png" width="200">
 
 ## 简介
 
